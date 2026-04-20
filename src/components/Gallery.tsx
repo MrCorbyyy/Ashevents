@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface GalleryItem {
   id: number;
@@ -61,21 +62,27 @@ const galleryItems: GalleryItem[] = [
 
 const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Picnic", "Ceremony"];
 
-export function Gallery() {
+interface GalleryProps {
+  isPreview?: boolean;
+}
+
+export function Gallery({ isPreview = false }: GalleryProps) {
   const [activeCategory, setActiveCategory] = useState("All");
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
-  const filtered = activeCategory === "All"
+  const filteredItems = activeCategory === "All"
     ? galleryItems
     : galleryItems.filter((item) => item.category === activeCategory);
 
+  const displayItems = isPreview ? galleryItems.slice(0, 4) : filteredItems;
+
   return (
-    <section id="gallery" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" className={`py-20 ${isPreview ? 'bg-white' : 'bg-gradient-to-b from-white to-blue-50/30'}`}>
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <span className="inline-block text-blue-600 uppercase tracking-widest mb-3 text-[0.8rem] font-semibold">
-            Our Work
+            {isPreview ? "Sneak Peek" : "Our Full Work"}
           </span>
           <h2 className="text-gray-900 mb-4 text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold">
             Event{" "}
@@ -84,7 +91,9 @@ export function Gallery() {
             </span>
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base leading-[1.7]">
-            A glimpse into the magical events we've crafted for our amazing clients.
+            {isPreview 
+              ? "A glimpse into the magical events we've crafted for our amazing clients."
+              : "Discover the full range of beautiful celebrations and curated gifts we've delivered."}
           </p>
           <div className="mt-4 flex items-center justify-center gap-2">
             <div className="h-1 w-12 rounded-full bg-gradient-to-r from-blue-400 to-sky-500" />
@@ -93,25 +102,27 @@ export function Gallery() {
           </div>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full border transition-all duration-200 text-[0.82rem] font-medium ${activeCategory === cat
-                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow-md"
-                  : "border-blue-200 text-gray-500 hover:border-blue-400 hover:text-blue-600"
-                }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+        {/* Filter Tabs (Hidden in Preview) */}
+        {!isPreview && (
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-1.5 rounded-full border transition-all duration-200 text-[0.82rem] font-medium ${activeCategory === cat
+                    ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow-md"
+                    : "border-blue-200 text-gray-500 hover:border-blue-400 hover:text-blue-600"
+                  }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filtered.map((item) => (
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {displayItems.map((item) => (
             <div
               key={item.id}
               className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm transition-all duration-300 aspect-square"
@@ -121,7 +132,7 @@ export function Gallery() {
                 src={item.image}
                 alt={item.label}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -135,6 +146,21 @@ export function Gallery() {
             </div>
           ))}
         </div>
+
+        {/* View All Button (Preview Only) */}
+        {isPreview && (
+          <div className="mt-12 text-center">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 text-[0.9rem] font-bold"
+            >
+              View Full Gallery
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
@@ -160,3 +186,4 @@ export function Gallery() {
     </section>
   );
 }
+

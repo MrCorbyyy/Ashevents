@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const services = [
   {
     id: 1,
@@ -54,14 +56,20 @@ const services = [
   },
 ];
 
-export function Services() {
+interface ServicesProps {
+  isPreview?: boolean;
+}
+
+export function Services({ isPreview = false }: ServicesProps) {
+  const displayServices = isPreview ? services.slice(0, 4) : services;
+
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-blue-50/60 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className={`py-20 ${isPreview ? 'bg-gradient-to-b from-blue-50/60 to-white' : 'bg-white'}`}>
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="inline-block text-blue-600 uppercase tracking-widest mb-3 text-[0.8rem] font-semibold">
-            What We Offer
+            {isPreview ? "Our Featured Services" : "What We Offer"}
           </span>
           <h2 className="text-gray-900 mb-4 text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">Services</span>
@@ -77,8 +85,8 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {displayServices.map((service) => (
             <div
               key={service.id}
               className="group bg-white rounded-2xl overflow-hidden shadow-sm transition-all duration-300 border border-blue-50"
@@ -89,14 +97,9 @@ export function Services() {
                   src={service.image}
                   alt={service.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                {/* Tag */}
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-blue-600 px-2.5 py-0.5 rounded-full text-[0.7rem] font-semibold">
-                  {service.tag}
-                </div>
-
               </div>
               {/* Content */}
               <div className="p-4">
@@ -114,14 +117,30 @@ export function Services() {
                       if (el) el.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    View More
+                    Enquire Now
                   </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* View All Button (Only for Preview) */}
+        {isPreview && (
+          <div className="mt-16 text-center">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-white border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 text-[0.95rem] font-bold shadow-sm"
+            >
+              View All Services
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
 }
+

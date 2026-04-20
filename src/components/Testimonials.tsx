@@ -7,7 +7,7 @@ const testimonials = [
     role: "Birthday Mum",
     avatar: "NK",
     color: "bg-blue-500",
-    rating: 4,
+    rating: 3,
     text: "AshEvents transformed my daughter's 7th birthday into an absolute fairytale! The balloon arch, backdrop and cake table were breathtaking. Every guest was asking for their contact. 10/10!",
     event: "Kids Birthday Party",
   },

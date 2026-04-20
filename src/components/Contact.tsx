@@ -67,7 +67,7 @@ export function Contact() {
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-7 text-white">
               <h3 className="text-white mb-2 text-[1.3rem] font-bold">
-                Let's Make Magic Together ✨
+                Let's Make Magic Together
               </h3>
               <p className="text-white/80 mb-7 text-[0.87rem] leading-[1.7]">
                 We're passionate about bringing your event vision to life. Reach out and let's plan something unforgettable!
@@ -75,12 +75,12 @@ export function Contact() {
 
               <div className="space-y-4 text-white">
                 {[
-                  { icon: Phone, label: "Phone / WhatsApp", value: "+233 55 011 3874" },
+                  { icon: Phone, label: "Phone / WhatsApp", value: "+233 59 640 5164", isWhatsApp: true },
                   { icon: Mail, label: "Email", value: "hello@ashevents.ng" },
                   { icon: MapPin, label: "Location", value: "Lagos, Nigeria (Available nationwide)" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center">
+                    <div className={`flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center ${item.isWhatsApp ? 'bg-[#25D366]' : 'bg-white/20'}`}>
                       <item.icon className="w-4 h-4 text-white" />
                     </div>
                     <div>
@@ -93,12 +93,12 @@ export function Contact() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/233592116238?text=Hi%20AshEvents!%20I'd%20like%20to%20enquire%20about%20your%20services."
+                href="https://wa.me/233596405164?text=Hi%20AshEvents!%20I'd%20like%20to%20enquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-7 flex items-center gap-2 bg-white text-blue-700 px-5 py-3 rounded-xl hover:bg-blue-50 transition-colors w-full justify-center text-[0.9rem] font-bold"
+                className="mt-7 flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl hover:bg-[#20bd5c] transition-all transform hover:scale-[1.02] active:scale-[0.98] w-full justify-center text-[0.9rem] font-bold shadow-lg shadow-green-500/20"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5 fill-white/20" />
                 Chat on WhatsApp
               </a>
             </div>
@@ -228,7 +228,7 @@ export function Contact() {
                   </label>
                   <textarea
                     name="message"
-                    value={form.message} 
+                    value={form.message}
                     onChange={handleChange}
                     rows={4}
                     placeholder="Describe your event, theme, color palette, guest count, location..."
