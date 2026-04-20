@@ -4,29 +4,29 @@ const services = [
     title: "Money Bouquet",
     description: "Creative and unique money bouquets arranged beautifully — perfect as a gift for birthdays, graduations, and special milestones.",
     image: "public/images/10bouquet.png.jpg",
-    
+
   },
   {
     id: 2,
     title: "Flower Bouquet",
     description: "Gorgeous fresh and artificial flower arrangements crafted to express love, appreciation, and celebration for any occasion.",
     image: "public/images/rose.png.jpg",
-    
+
   },
   {
     id: 3,
     title: "Backdrops",
     description: "Custom and premium backdrops for photo opportunities — from floral walls to sequin panels, fabric drapes to neon signs.",
     image: "public/images/backdrop 2.jpg",
-    
-  
+
+
   },
   {
     id: 4,
     title: "Picnic Setup",
     description: "Luxurious outdoor picnic experiences with styled table setups, cushions, decorations, and all the finishing touches for a perfect day out.",
     image: "public/images/picnic setup.jpg",
-    
+
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ export function Services() {
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-blue-600 px-2.5 py-0.5 rounded-full text-[0.7rem] font-semibold">
                   {service.tag}
                 </div>
-            
+
               </div>
               {/* Content */}
               <div className="p-4">

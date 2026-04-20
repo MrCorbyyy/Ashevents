@@ -75,7 +75,7 @@ export function Contact() {
 
               <div className="space-y-4 text-white">
                 {[
-                  { icon: Phone, label: "Phone / WhatsApp", value: "+234 800 000 0000" },
+                  { icon: Phone, label: "Phone / WhatsApp", value: "+233 55 011 3874" },
                   { icon: Mail, label: "Email", value: "hello@ashevents.ng" },
                   { icon: MapPin, label: "Location", value: "Lagos, Nigeria (Available nationwide)" },
                 ].map((item) => (
@@ -93,7 +93,7 @@ export function Contact() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/2348000000000?text=Hi%20AshEvents!%20I'd%20like%20to%20enquire%20about%20your%20services."
+                href="https://wa.me/233592116238?text=Hi%20AshEvents!%20I'd%20like%20to%20enquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-7 flex items-center gap-2 bg-white text-blue-700 px-5 py-3 rounded-xl hover:bg-blue-50 transition-colors w-full justify-center text-[0.9rem] font-bold"
@@ -228,7 +228,7 @@ export function Contact() {
                   </label>
                   <textarea
                     name="message"
-                    value={form.message}
+                    value={form.message} 
                     onChange={handleChange}
                     rows={4}
                     placeholder="Describe your event, theme, color palette, guest count, location..."

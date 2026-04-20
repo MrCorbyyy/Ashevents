@@ -99,11 +99,10 @@ export function Gallery() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full border transition-all duration-200 text-[0.82rem] font-medium ${
-                activeCategory === cat
+              className={`px-4 py-1.5 rounded-full border transition-all duration-200 text-[0.82rem] font-medium ${activeCategory === cat
                   ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow-md"
                   : "border-blue-200 text-gray-500 hover:border-blue-400 hover:text-blue-600"
-              }`}
+                }`}
             >
               {cat}
             </button>

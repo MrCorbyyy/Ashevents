@@ -3,27 +3,27 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Adaeze Okonkwo",
+    name: "Nana Kweku Gyasi",
     role: "Birthday Mum",
-    avatar: "AO",
+    avatar: "NK",
     color: "bg-blue-500",
-    rating: 5,
+    rating: 4,
     text: "AshEvents transformed my daughter's 7th birthday into an absolute fairytale! The balloon arch, backdrop and cake table were breathtaking. Every guest was asking for their contact. 10/10!",
     event: "Kids Birthday Party",
   },
   {
     id: 2,
-    name: "Chisom Ihejirika",
+    name: "Sakyiamah Esther",
     role: "New Mother",
-    avatar: "CI",
+    avatar: "SE",
     color: "bg-sky-500",
-    rating: 5,
+    rating: 4,
     text: "The naming ceremony decor was everything I dreamed of and more. The floral arrangements, the backdrop, and that beautiful setup — I cried tears of joy. Absolutely professional and dedicated team!",
-    event: "Naming Ceremony",
+    event: "Picnic Setup"
   },
   {
     id: 3,
-    name: "Blessing Nwosu",
+    name: "Aboagye Terry",
     role: "Anniversary Celebrant",
     avatar: "BN",
     color: "bg-blue-700",
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Kelechi Eze",
+    name: "Ursula Aseye",
     role: "Event Host",
     avatar: "KE",
     color: "bg-indigo-500",
@@ -43,7 +43,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Ngozi Amamchukwu",
+    name: "Teye Mabel",
     role: "Birthday Girl",
     avatar: "NA",
     color: "bg-cyan-600",
@@ -53,7 +53,7 @@ const testimonials = [
   },
   {
     id: 6,
-    name: "Emeka Obi",
+    name: "Precious Acheampong",
     role: "Proud Father",
     avatar: "EO",
     color: "bg-blue-800",
