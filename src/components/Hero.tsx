@@ -8,31 +8,46 @@ const heroSlides = [
     image: "public/images/10bouquet.png.jpg",
     label: "Money Bouquet",
     type: "Featured Gift",
-    icon: <Star className="w-5 h-5 fill-current" />
+    icon: <Star className="w-5 h-5 fill-current" />,
+    colorClass: "bg-emerald-600",
+    textClass: "text-emerald-600",
+    shadowClass: "shadow-emerald-600/20"
   },
   {
     image: "public/images/fb.jpg",
     label: "Flower Bouquet",
     type: "Featured Gift",
-    icon: <Star className="w-5 h-5  500 fill-current" />
+    icon: <Star className="w-5 h-5 fill-current" />,
+    colorClass: "bg-rose-500",
+    textClass: "text-rose-500",
+    shadowClass: "shadow-rose-500/20"
   },
   {
     image: "public/images/money bouquet 22.jpg",
     label: "Money Bouquet",
     type: "Featured Gift",
-    icon: <Star className="w-5 h-5 fill-current" />
+    icon: <Star className="w-5 h-5 fill-current" />,
+    colorClass: "bg-emerald-600",
+    textClass: "text-emerald-600",
+    shadowClass: "shadow-emerald-600/20"
   },
   {
     image: "public/images/setup.jpg",
     label: "Event Setup",
     type: "Premium Service",
-    icon: <Star className="w-5 h-5 fill-current" />
+    icon: <Star className="w-5 h-5 fill-current" />,
+    colorClass: "bg-blue-600",
+    textClass: "text-blue-600",
+    shadowClass: "shadow-blue-600/20"
   },
   {
     image: "public/images/birthday packages.jpg",
     label: "Birthday Styling",
     type: "Premium Service",
-    icon: <Star className="w-5 h-5 fill-current" />
+    icon: <Star className="w-5 h-5 fill-current" />,
+    colorClass: "bg-amber-500",
+    textClass: "text-amber-500",
+    shadowClass: "shadow-amber-500/20"
   },
 ];
 
@@ -84,7 +99,7 @@ export function Hero() {
               <span className="text-blue-600">Moment Magical</span>
             </h1>
 
-            {/* Description (More visible & clear) */}
+            {/* Description */}
             <p className="text-slate-900 max-w-xl mb-10 text-[clamp(1.15rem,2.2vw,1.4rem)] leading-[1.8] font-bold tracking-tight">
               Ashevents specializes in balloon decor, event setups, stunning backdrops, gift curation, bouquets, and customized cards. ✨
               We bring your ideas to life with services thoughtfully tailored to suit your style and special moments.
@@ -145,10 +160,9 @@ export function Hero() {
                 />
               </AnimatePresence>
 
-              {/* Premium Glossy & Depth Overlays */}
+              {/* Overlays */}
               <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-50 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.2)] pointer-events-none" />
 
               {/* Navigation Arrows */}
               <button
@@ -186,11 +200,11 @@ export function Hero() {
                 transition={{ type: "spring", damping: 15, stiffness: 200 }}
                 className="absolute -top-6 -right-6 md:top-10 md:-right-10 bg-white p-4 pr-8 rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] border border-blue-50 flex items-center gap-4 z-40"
               >
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
+                <div className={`w-12 h-12 rounded-2xl ${heroSlides[currentSlide].colorClass} flex items-center justify-center text-white shadow-lg ${heroSlides[currentSlide].shadowClass} transition-colors duration-500`}>
                   {heroSlides[currentSlide].icon}
                 </div>
                 <div className="text-left">
-                  <p className="text-[0.65rem] text-blue-600 font-black uppercase tracking-[0.2em] mb-0.5">
+                  <p className={`text-[0.65rem] ${heroSlides[currentSlide].textClass} font-black uppercase tracking-[0.2em] mb-0.5 transition-colors duration-500`}>
                     {heroSlides[currentSlide].type}
                   </p>
                   <p className="text-[1.05rem] text-slate-900 font-black tracking-tight whitespace-nowrap leading-tight">
@@ -199,9 +213,6 @@ export function Hero() {
                 </div>
               </motion.div>
             </AnimatePresence>
-
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-blue-600/10 blur-[120px] rounded-full -z-10" />
           </motion.div>
         </div>
       </div>

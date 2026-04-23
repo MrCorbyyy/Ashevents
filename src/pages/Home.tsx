@@ -3,6 +3,7 @@ import { Services } from "../components/Services";
 import { Gallery } from "../components/Gallery";
 import { BirthdayPackages } from "../components/BirthdayPackages";
 import { Testimonials } from "../components/Testimonials";
+import { ContactChannels } from "../components/ContactChannels";
 import { Contact } from "../components/Contact";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Gallery isPreview={true} />
       <BirthdayPackages isPreview={true} />
       <Testimonials />
+      <ContactChannels />
       <Contact />
     </>
   );
