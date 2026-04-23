@@ -48,6 +48,21 @@ const packages = [
       "Dedicated Event Manager"
     ],
     popular: false
+  },
+  {
+    id: 4,
+    name: "Bespoke Signature",
+    price: "Custom",
+    description: "A completely tailor-made experience designed from scratch for your vision.",
+    features: [
+      "Personalized Event Design",
+      "Custom Fabricated Props",
+      "High-end Vendor Selection",
+      "Full Weekend Coordination",
+      "Unlimited Consultations",
+      "VIP On-site Concierge"
+    ],
+    popular: false
   }
 ];
 
@@ -58,7 +73,7 @@ interface PackagesProps {
 export function BirthdayPackages({ isPreview = false }: PackagesProps) {
   return (
     <section id="packages" className={`py-20 ${isPreview ? 'bg-gradient-to-b from-white to-blue-50/40' : 'bg-white'}`}>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="inline-block text-blue-600 uppercase tracking-widest mb-3 text-[0.8rem] font-semibold">
@@ -78,13 +93,13 @@ export function BirthdayPackages({ isPreview = false }: PackagesProps) {
         </div>
 
         {/* Packages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {packages.map((pkg) => (
             <div
               key={pkg.id}
               className={`relative bg-white rounded-3xl p-8 border transition-all duration-300 flex flex-col h-full ${pkg.popular
-                  ? "border-blue-500 shadow-xl shadow-blue-500/10 scale-105 z-10"
-                  : "border-blue-100 shadow-sm hover:shadow-md"
+                ? "border-blue-500 shadow-xl shadow-blue-500/10 scale-105 z-10"
+                : "border-blue-100 shadow-sm hover:shadow-md"
                 }`}
             >
               {pkg.popular && (
@@ -111,8 +126,8 @@ export function BirthdayPackages({ isPreview = false }: PackagesProps) {
 
               <button
                 className={`w-full py-3.5 rounded-xl text-[0.9rem] font-bold transition-all duration-300 ${pkg.popular
-                    ? "bg-gradient-to-r from-blue-600 to-sky-500 text-white hover:opacity-90"
-                    : "bg-blue-50 text-blue-700 hover:bg-blue-100"
+                  ? "bg-gradient-to-r from-blue-600 to-sky-500 text-white hover:opacity-90"
+                  : "bg-blue-50 text-blue-700 hover:bg-blue-100"
                   }`}
                 onClick={() => {
                   const el = document.querySelector("#contact");

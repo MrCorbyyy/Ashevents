@@ -1,143 +1,210 @@
-import { Star } from "lucide-react";
+import { Star, ChevronRight, ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState, useEffect } from "react";
 
-const heroBg = "/images/hero.image.jpg";
+const heroSlides = [
+  {
+    image: "public/images/10bouquet.png.jpg",
+    label: "Money Bouquet",
+    type: "Featured Gift",
+    icon: <Star className="w-5 h-5 fill-current" />
+  },
+  {
+    image: "public/images/fb.jpg",
+    label: "Flower Bouquet",
+    type: "Featured Gift",
+    icon: <Star className="w-5 h-5  500 fill-current" />
+  },
+  {
+    image: "public/images/money bouquet 22.jpg",
+    label: "Money Bouquet",
+    type: "Featured Gift",
+    icon: <Star className="w-5 h-5 fill-current" />
+  },
+  {
+    image: "public/images/setup.jpg",
+    label: "Event Setup",
+    type: "Premium Service",
+    icon: <Star className="w-5 h-5 fill-current" />
+  },
+  {
+    image: "public/images/birthday packages.jpg",
+    label: "Birthday Styling",
+    type: "Premium Service",
+    icon: <Star className="w-5 h-5 fill-current" />
+  },
+];
 
 export function Hero() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 200]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleScroll = (href: string) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  } as const;
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30, rotateX: 45, filter: "blur(4px)" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateX: 0,
-      filter: "blur(0px)",
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  } as const;
-
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-blue-950"
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-20 overflow-hidden bg-white"
     >
-      {/* Parallax Background */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
-        style={{
-          backgroundImage: `url("${heroBg}")`,
-          y,
-        }}
-      />
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 right-0 w-[50%] h-full bg-blue-50/30 -skew-x-12 translate-x-20 z-0" />
+      <div className="absolute top-20 right-40 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl z-0" />
 
-      {/* Smoother Overlay for visibility */}
-      <div className="absolute inset-0 bg-blue-950/45 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-950/60 via-transparent to-blue-950/80 backdrop-blur-[2px]" />
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-      {/* Content Container with 3D Perspective */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        style={{ perspective: 1200 }}
-        className="relative z-10 text-center px-4 max-w-4xl mx-auto"
-      >
-        {/* Animated Badge */}
-        <motion.div
-          variants={itemVariants}
-          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full mb-8 shadow-2xl"
-        >
-          <Star className="w-4 h-4 text-sky-400 fill-sky-400 animate-pulse" />
-          <span className="text-[0.75rem] tracking-[0.2em] font-bold uppercase text-sky-50">
-            Events · Bouquets · Gift Curation
-          </span>
-          <Star className="w-4 h-4 text-sky-400 fill-sky-400 animate-pulse" />
-        </motion.div>
-
-        {/* 3D Modern Heading */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-white mb-6 text-[clamp(2.8rem,8vw,5.5rem)] font-black leading-[1.05] tracking-tight drop-shadow-2xl"
-        >
-          Making Every{" "}
-          <span className="relative inline-block">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300 drop-shadow-[0_0_15px_rgba(125,211,252,0.5)]">
-              Moment
-            </span>
-            {/* Soft Glow Layer */}
-            <span className="absolute inset-0 blur-2xl bg-sky-400/20 -z-10 animate-pulse" />
-          </span>{" "}
-          Magical
-        </motion.h1>
-
-        {/* Body Text */}
-        <motion.p
-          variants={itemVariants}
-          className="text-blue-50/90 max-w-2xl mx-auto mb-10 text-[clamp(1rem,2.5vw,1.2rem)] leading-[1.8] font-medium drop-shadow-md"
-        >
-          Ashevents specializes in balloon decor, event setups, stunning backdrops, gift curation, bouquets, and customized cards. ✨
-          We bring your ideas to life.
-          Our services are thoughtfully tailored to suit your style, preferences, and special moments because every celebration deserves a personal touch. 💐🎈
-          Let us make your moments beautiful and unforgettable!
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-wrap items-center justify-center gap-6"
-        >
-          <Link
-            to="/services"
-            className="group relative px-10 py-4 bg-gradient-to-r from-blue-600 to-sky-500 text-white rounded-full font-bold overflow-hidden shadow-xl shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300"
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-left"
           >
-            <span className="relative z-10">Explore Services</span>
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </Link>
-          <button
-            onClick={() => handleScroll("#contact")}
-            className="px-10 py-4 bg-white/5 backdrop-blur-lg border-2 border-white/30 text-white rounded-full font-bold hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-xl"
-          >
-            Book Your Event
-          </button>
-        </motion.div>
-      </motion.div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-blue-100/50 border border-blue-200 px-4 py-1.5 rounded-full mb-8">
+              <Star className="w-3.5 h-3.5 text-blue-600 fill-blue-600" />
+              <span className="text-[0.7rem] tracking-[0.2em] font-black uppercase text-blue-700">
+                Events · Bouquets · Gift Curation
+              </span>
+            </div>
 
-      {/* Decorative Floating Elements */}
-      <motion.div
-        animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-sky-500/20 blur-[80px]"
-      />
-      <motion.div
-        animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 right-10 w-48 h-48 rounded-full bg-blue-400/20 blur-[100px]"
-      />
+            {/* Heading */}
+            <h1 className="text-slate-900 mb-6 text-[clamp(2.5rem,6vw,4.8rem)] font-black leading-[1.1] tracking-tighter">
+              Making Every <br />
+              <span className="text-blue-600">Moment Magical</span>
+            </h1>
+
+            {/* Description (More visible & clear) */}
+            <p className="text-slate-900 max-w-xl mb-10 text-[clamp(1.15rem,2.2vw,1.4rem)] leading-[1.8] font-bold tracking-tight">
+              Ashevents specializes in balloon decor, event setups, stunning backdrops, gift curation, bouquets, and customized cards. ✨
+              We bring your ideas to life with services thoughtfully tailored to suit your style and special moments.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-5">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative group p-[2px] rounded-full overflow-hidden shadow-xl shadow-blue-600/20"
+              >
+                <Link
+                  to="/services"
+                  className="relative inline-flex items-center justify-center px-10 py-4 bg-blue-600 text-white rounded-full font-bold transition-all duration-300"
+                >
+                  Explore Services
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative group p-[2px] rounded-full overflow-hidden shadow-xl shadow-blue-600/10"
+              >
+                {/* Deep Orbiting Beam */}
+                <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#3b82f6_5%,#60a5fa_10%,#3b82f6_15%,transparent_20%)] opacity-100" />
+
+                <button
+                  onClick={() => handleScroll("#contact")}
+                  className="relative px-10 py-4 bg-white border-2 border-blue-100 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all duration-300"
+                >
+                  Contact Us
+                </button>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* - Display Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative"
+          >
+            {/* Main Image Container */}
+            <div className="relative aspect-[4/3] rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] bg-slate-100 group">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentSlide}
+                  src={heroSlides[currentSlide].image}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.9, ease: [0.43, 0.13, 0.23, 0.96] }}
+                  className="absolute inset-0 w-full h-full object-cover brightness-[1.05] contrast-[1.1] saturate-[1.1] select-none"
+                  alt={heroSlides[currentSlide].label}
+                />
+              </AnimatePresence>
+
+              {/* Premium Glossy & Depth Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-50 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.2)] pointer-events-none" />
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+                className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-white hover:text-blue-600 z-30"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+                className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-white hover:text-blue-600 z-30"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Round Indicators */}
+              <div className="absolute bottom-10 right-10 flex gap-3 z-30">
+                {heroSlides.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${idx === currentSlide ? 'bg-white scale-125 shadow-[0_0_12px_rgba(255,255,255,0.8)]' : 'bg-white/30 hover:bg-white/50'}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Floating Dynamic Badge */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, scale: 0.5, x: 20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.5, x: -20 }}
+                transition={{ type: "spring", damping: 15, stiffness: 200 }}
+                className="absolute -top-6 -right-6 md:top-10 md:-right-10 bg-white p-4 pr-8 rounded-[2rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] border border-blue-50 flex items-center gap-4 z-40"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
+                  {heroSlides[currentSlide].icon}
+                </div>
+                <div className="text-left">
+                  <p className="text-[0.65rem] text-blue-600 font-black uppercase tracking-[0.2em] mb-0.5">
+                    {heroSlides[currentSlide].type}
+                  </p>
+                  <p className="text-[1.05rem] text-slate-900 font-black tracking-tight whitespace-nowrap leading-tight">
+                    {heroSlides[currentSlide].label}
+                  </p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-blue-600/10 blur-[120px] rounded-full -z-10" />
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 }
-
-

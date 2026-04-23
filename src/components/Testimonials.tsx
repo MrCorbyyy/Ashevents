@@ -7,7 +7,7 @@ const testimonials = [
     role: "Birthday Mum",
     avatar: "NK",
     color: "bg-blue-500",
-    rating: 3,
+    rating: 5,
     text: "AshEvents transformed my daughter's 7th birthday into an absolute fairytale! The balloon arch, backdrop and cake table were breathtaking. Every guest was asking for their contact. 10/10!",
     event: "Kids Birthday Party",
   },
@@ -17,25 +17,25 @@ const testimonials = [
     role: "New Mother",
     avatar: "SE",
     color: "bg-sky-500",
-    rating: 4,
+    rating: 5,
     text: "The naming ceremony decor was everything I dreamed of and more. The floral arrangements, the backdrop, and that beautiful setup — I cried tears of joy. Absolutely professional and dedicated team!",
-    event: "Picnic Setup"
+    event: "Naming Ceremony"
   },
   {
     id: 3,
     name: "Aboagye Terry",
     role: "Anniversary Celebrant",
-    avatar: "BN",
+    avatar: "AT",
     color: "bg-blue-700",
     rating: 5,
-    text: "We booked the Diamond package and it was worth every naira! The picnic setup was stunning. The money bouquet my husband received was gorgeous. Everyone was amazed. Highly recommend!",
+    text: "We booked the Diamond package and it was worth every cedi! The picnic setup was stunning. The money bouquet my husband received was gorgeous. Everyone was amazed. Highly recommend!",
     event: "Anniversary Picnic",
   },
   {
     id: 4,
     name: "Ursula Aseye",
     role: "Event Host",
-    avatar: "KE",
+    avatar: "UA",
     color: "bg-indigo-500",
     rating: 5,
     text: "From the event flyers to the balloon decor on the day, everything was handled with precision and love. The team is super responsive and creative. Will definitely book again!",
@@ -45,7 +45,7 @@ const testimonials = [
     id: 5,
     name: "Teye Mabel",
     role: "Birthday Girl",
-    avatar: "NA",
+    avatar: "TM",
     color: "bg-cyan-600",
     rating: 5,
     text: "My 30th birthday was absolutely magical! The flower bouquets, the backdrop for photos, and the overall vibe — it felt like a movie set. My friends won't stop talking about it!",
@@ -55,18 +55,38 @@ const testimonials = [
     id: 6,
     name: "Precious Acheampong",
     role: "Proud Father",
-    avatar: "EO",
+    avatar: "PA",
     color: "bg-blue-800",
     rating: 5,
     text: "I surprised my wife with a luxury picnic set up by AshEvents and she was completely blown away. The attention to detail is unmatched. This is the only event company I'll ever use!",
     event: "Surprise Picnic",
+  },
+  {
+    id: 7,
+    name: "Kojo Mensah",
+    role: "Groom",
+    avatar: "KM",
+    color: "bg-blue-600",
+    rating: 5,
+    text: "The proposal decor was beyond my expectations. They set up the most romantic candlelit path and a stunning 'Marry Me' sign. She said yes and we couldn't be happier!",
+    event: "Proposal Setup",
+  },
+  {
+    id: 8,
+    name: "Linda Boateng",
+    role: "Graduant",
+    avatar: "LB",
+    color: "bg-sky-600",
+    rating: 5,
+    text: "Best graduation gift ever! The money bouquet was so creative and perfectly arranged. It made my day so special and the photos are incredible. Thank you AshEvents!",
+    event: "Graduation Gift",
   },
 ];
 
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-b from-blue-50/50 to-sky-50/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="inline-block text-blue-600 uppercase tracking-widest mb-3 text-[0.8rem] font-semibold">
@@ -88,41 +108,41 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid: 4 per row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white rounded-2xl p-6 shadow-sm transition-shadow duration-300 border border-blue-50 relative"
+              className="bg-white rounded-[2.5rem] p-8 shadow-sm transition-all duration-500 border border-blue-50 relative hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
             >
               {/* Quote Icon */}
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-blue-100" fill="currentColor" />
+              <Quote className="absolute top-6 right-8 w-8 h-8 text-blue-50" fill="currentColor" />
 
               {/* Stars */}
-              <div className="flex gap-0.5 mb-4">
+              <div className="flex gap-0.5 mb-6">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-blue-500 fill-blue-500" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-gray-600 mb-5 text-[0.88rem] leading-[1.7]">
+              <p className="text-gray-600 mb-6 text-[0.88rem] leading-[1.8] italic">
                 "{t.text}"
               </p>
 
               {/* Footer */}
-              <div className="flex items-center gap-3 pt-4 border-t border-blue-50">
+              <div className="flex items-center gap-4 pt-6 border-t border-blue-50">
                 <div
-                  className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white flex-shrink-0 text-[0.8rem] font-bold`}
+                  className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white flex-shrink-0 text-[0.9rem] font-black shadow-lg shadow-blue-500/20`}
                 >
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="text-gray-900 text-[0.9rem] font-bold">
+                  <div className="text-gray-900 text-[0.95rem] font-black tracking-tight">
                     {t.name}
                   </div>
-                  <div className="text-blue-500 text-[0.75rem]">
-                    {t.event} · {t.role}
+                  <div className="text-blue-500 text-[0.75rem] font-bold uppercase tracking-wider">
+                    {t.event}
                   </div>
                 </div>
               </div>

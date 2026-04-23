@@ -47,7 +47,7 @@ export function Contact() {
             Get In Touch
           </span>
           <h2 className="text-gray-900 mb-4 text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold">
-            Book Your{" "}
+            Let's Plan Your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">
               Dream Event
             </span>
@@ -75,32 +75,21 @@ export function Contact() {
 
               <div className="space-y-4 text-white">
                 {[
-                  { icon: Phone, label: "Phone / WhatsApp", value: "+233 59 640 5164", isWhatsApp: true },
-                  { icon: Mail, label: "Email", value: "hello@ashevents.ng" },
-                  { icon: MapPin, label: "Location", value: "Lagos, Nigeria (Available nationwide)" },
+                  { icon: Phone, label: "Phone Number", value: "+233 59 640 5164" },
+                  { icon: Mail, label: "Email Address", value: "hello@ashevents.ng" },
+                  { icon: MapPin, label: "Studio Location", value: "Lagos, Nigeria (Available nationwide)" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
-                    <div className={`flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center ${item.isWhatsApp ? 'bg-[#25D366]' : 'bg-white/20'}`}>
+                    <div className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center bg-white/10">
                       <item.icon className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <div className="text-white/70 text-[0.72rem]">{item.label}</div>
+                      <div className="text-white/70 text-[0.72rem] uppercase tracking-wider font-bold">{item.label}</div>
                       <div className="text-white text-[0.88rem] font-semibold">{item.value}</div>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* WhatsApp CTA */}
-              <a
-                href="https://wa.me/233596405164?text=Hi%20AshEvents!%20I'd%20like%20to%20enquire%20about%20your%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-7 flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-xl hover:bg-[#20bd5c] transition-all transform hover:scale-[1.02] active:scale-[0.98] w-full justify-center text-[0.9rem] font-bold shadow-lg shadow-green-500/20"
-              >
-                <MessageCircle className="w-5 h-5 fill-white/20" />
-                Chat on WhatsApp
-              </a>
             </div>
 
             {/* Working Hours */}
@@ -127,7 +116,7 @@ export function Contact() {
               <div className="h-full flex flex-col items-center justify-center text-center py-16 bg-blue-50 rounded-3xl border border-blue-100">
                 <CheckCircle className="w-16 h-16 text-blue-500 mb-4" />
                 <h3 className="text-gray-900 mb-2 text-[1.4rem] font-bold">
-                  Booking Request Sent! 🎉
+                  Message Sent! 🎉
                 </h3>
                 <p className="text-gray-500 max-w-xs text-sm leading-[1.7]">
                   Thank you, <strong>{form.name}</strong>! We've received your enquiry and will get back to you within 24 hours.
@@ -249,7 +238,7 @@ export function Contact() {
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      Send Booking Enquiry
+                      Send Enquiry
                     </>
                   )}
                 </button>

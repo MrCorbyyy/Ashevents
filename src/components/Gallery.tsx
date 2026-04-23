@@ -58,6 +58,12 @@ const galleryItems: GalleryItem[] = [
     label: "Table Setup",
     category: "Ceremony",
   },
+  {
+    id: 9,
+    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop",
+    label: "Dreamy Engagement",
+    category: "Ceremony",
+  },
 ];
 
 const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Picnic", "Ceremony"];
@@ -74,11 +80,11 @@ export function Gallery({ isPreview = false }: GalleryProps) {
     ? galleryItems
     : galleryItems.filter((item) => item.category === activeCategory);
 
-  const displayItems = isPreview ? galleryItems.slice(0, 4) : filteredItems;
+  const displayItems = isPreview ? galleryItems.slice(0, 5) : filteredItems;
 
   return (
     <section id="gallery" className={`py-20 ${isPreview ? 'bg-white' : 'bg-gradient-to-b from-white to-blue-50/30'}`}>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <span className="inline-block text-blue-600 uppercase tracking-widest mb-3 text-[0.8rem] font-semibold">
@@ -91,7 +97,7 @@ export function Gallery({ isPreview = false }: GalleryProps) {
             </span>
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base leading-[1.7]">
-            {isPreview 
+            {isPreview
               ? "A glimpse into the magical events we've crafted for our amazing clients."
               : "Discover the full range of beautiful celebrations and curated gifts we've delivered."}
           </p>
@@ -110,8 +116,8 @@ export function Gallery({ isPreview = false }: GalleryProps) {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full border transition-all duration-200 text-[0.82rem] font-medium ${activeCategory === cat
-                    ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow-md"
-                    : "border-blue-200 text-gray-500 hover:border-blue-400 hover:text-blue-600"
+                  ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-transparent shadow-md"
+                  : "border-blue-200 text-gray-500 hover:border-blue-400 hover:text-blue-600"
                   }`}
               >
                 {cat}
@@ -121,7 +127,7 @@ export function Gallery({ isPreview = false }: GalleryProps) {
         )}
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {displayItems.map((item) => (
             <div
               key={item.id}
