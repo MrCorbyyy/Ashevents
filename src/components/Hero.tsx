@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const heroSlides = [
   {
-    image: "public/images/10bouquet.png.jpg",
+    image: "public/images/10 bouquet.4k.png",
     label: "Money Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -14,7 +14,7 @@ const heroSlides = [
     shadowClass: "shadow-emerald-600/20"
   },
   {
-    image: "public/images/fb.jpg",
+    image: "public/images/flower_bouquet_4k.png",
     label: "Flower Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -23,7 +23,7 @@ const heroSlides = [
     shadowClass: "shadow-rose-500/20"
   },
   {
-    image: "public/images/money bouquet 22.jpg",
+    image: "public/images/money_bouquet_4k.png",
     label: "Money Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -32,8 +32,8 @@ const heroSlides = [
     shadowClass: "shadow-emerald-600/20"
   },
   {
-    image: "public/images/setup.jpg",
-    label: "Event Setup",
+    image: "public/images/birthday packages..jpg",
+    label: "Birthday Packages",
     type: "Premium Service",
     icon: <Star className="w-5 h-5 fill-current" />,
     colorClass: "bg-blue-600",
@@ -146,18 +146,29 @@ export function Hero() {
             className="relative"
           >
             {/* Main Image Container */}
-            <div className="relative aspect-[4/3] rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] bg-slate-100 group">
+            <div className="relative aspect-square rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] bg-slate-100 group">
               <AnimatePresence mode="wait">
-                <motion.img
+                <motion.div
                   key={currentSlide}
-                  src={heroSlides[currentSlide].image}
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   transition={{ duration: 0.9, ease: [0.43, 0.13, 0.23, 0.96] }}
-                  className="absolute inset-0 w-full h-full object-cover brightness-[1.05] contrast-[1.1] saturate-[1.1] select-none"
-                  alt={heroSlides[currentSlide].label}
-                />
+                  className="absolute inset-0 w-full h-full"
+                >
+                  {/* Blurred background fill — fully opaque, eliminates all gaps */}
+                  <img
+                    src={heroSlides[currentSlide].image}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-lg scale-110 opacity-100 select-none"
+                  />
+                  {/* Main image — fills container like flower bouquet */}
+                  <img
+                    src={heroSlides[currentSlide].image}
+                    alt={heroSlides[currentSlide].label}
+                    className="relative z-10 w-full h-full object-cover select-none"
+                  />
+                </motion.div>
               </AnimatePresence>
 
               {/* Overlays */}

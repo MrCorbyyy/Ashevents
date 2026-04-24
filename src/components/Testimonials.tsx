@@ -113,7 +113,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white rounded-[2.5rem] p-8 shadow-sm transition-all duration-500 border border-blue-50 relative hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10"
+              className="bg-white rounded-[2.5rem] p-8 shadow-sm border border-blue-50 relative"
             >
               {/* Quote Icon */}
               <Quote className="absolute top-6 right-8 w-8 h-8 text-blue-50" fill="currentColor" />

@@ -24,7 +24,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    image: "public/images/fb.jpg",
+    image: "public/images/flower_bouquet_4k.png",
     label: "Flower Bouquet",
     category: "Bouquet",
   },
@@ -48,7 +48,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    image: "public/images/money bouquet 22.jpg",
+    image: "public/images/money_bouquet_4k.png",
     label: "Money Bouquet Gift",
     category: "Bouquet",
   },
@@ -131,21 +131,22 @@ export function Gallery({ isPreview = false }: GalleryProps) {
           {displayItems.map((item) => (
             <div
               key={item.id}
-              className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm transition-all duration-300 aspect-square"
+              className="relative rounded-2xl overflow-hidden cursor-pointer shadow-sm border border-slate-100 aspect-square"
               onClick={() => setLightboxImg(item.image)}
             >
               <img
                 src={item.image}
                 alt={item.label}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-white text-[0.82rem] font-semibold">
+              {/* Captions are now always visible at the bottom for clarity since hover is removed */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="text-white text-[0.82rem] font-semibold leading-tight">
                   {item.label}
                 </p>
-                <span className="text-sky-300 text-[0.72rem]">
+                <span className="text-sky-300 text-[0.72rem] font-medium">
                   {item.category}
                 </span>
               </div>
@@ -153,20 +154,22 @@ export function Gallery({ isPreview = false }: GalleryProps) {
           ))}
         </div>
 
-        {/* View All Button (Preview Only) */}
-        {isPreview && (
           <div className="mt-12 text-center">
-            <Link
-              to="/gallery"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 text-[0.9rem] font-bold"
-            >
-              View Full Gallery
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
+            <div className="inline-block relative group p-[2px] rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
+              {/* Deep Orbiting Beam */}
+              <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#1e40af_5%,#2563eb_10%,#1e40af_15%,transparent_20%)] opacity-100" />
+
+              <Link
+                to="/gallery"
+                className="relative inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.9rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
+              >
+                View Full Gallery
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
-        )}
       </div>
 
       {/* Lightbox */}
@@ -192,4 +195,3 @@ export function Gallery({ isPreview = false }: GalleryProps) {
     </section>
   );
 }
-

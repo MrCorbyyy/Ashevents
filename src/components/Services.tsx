@@ -6,7 +6,7 @@ const services = [
     id: 1,
     title: "Money Bouquet",
     description: "Creative and unique money bouquets arranged beautifully — perfect as a gift for birthdays, graduations, and special milestones.",
-    image: "public/images/10bouquet.png.jpg",
+    image: "public/images/10 bouquet.4k.png",
     anchor: "#money-bouquet",
   },
   {
@@ -138,7 +138,7 @@ export function Services({ isPreview = false }: ServicesProps) {
           {displayServices.map((service) => (
             <div
               key={service.id}
-              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-2 border border-blue-50 hover:shadow-2xl hover:shadow-blue-500/10"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-50 transition-all duration-300"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
@@ -146,7 +146,7 @@ export function Services({ isPreview = false }: ServicesProps) {
                   src={service.image}
                   alt={service.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
@@ -160,7 +160,7 @@ export function Services({ isPreview = false }: ServicesProps) {
                 </p>
                 <div className="mt-4">
                   <button
-                    className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white hover:shadow-lg hover:shadow-blue-200 transition-all duration-300 text-[0.75rem] font-semibold"
+                    className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold"
                     onClick={() => handleAction(service.anchor)}
                   >
                     View Prices
@@ -180,7 +180,7 @@ export function Services({ isPreview = false }: ServicesProps) {
 
               <Link
                 to="/services"
-                className="relative inline-flex items-center gap-2 px-10 py-3.5 bg-white text-blue-600 rounded-full transition-all duration-300 text-[0.95rem] font-bold group-hover:bg-blue-600 group-hover:text-white"
+                className="relative inline-flex items-center gap-2 px-10 py-3.5 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.95rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
               >
                 View All Services
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,4 +194,3 @@ export function Services({ isPreview = false }: ServicesProps) {
     </section>
   );
 }
-

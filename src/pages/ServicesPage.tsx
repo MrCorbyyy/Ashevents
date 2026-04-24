@@ -11,11 +11,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#money-bouquet": {
     title: "Money Bouquet",
     description: "Get affordable money bouquet prices at AshEvents. Our money bouquets are handcrafted with precision, luxury wrapping, and elegant floral accents to make your gift truly unforgettable. We use only high-quality materials and artistic techniques to ensure a stunning presentation that delights your loved ones for birthdays, anniversaries, and more.",
-    image: "public/images/10bouquet.png.jpg",
+    image: "public/images/money_bouquet_4k.png",
     items: [
       { id: 1, name: "Classic Mini", price: "250", image: "public/images/10bouquet.png.jpg" },
       { id: 2, name: "Premium Bloom", price: "550", popular: true, image: "public/images/rose.png.jpg" },
-      { id: 3, name: "Royal Mega", price: "1,200", image: "public/images/money bouquet 22.jpg" },
+      { id: 3, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
     ]
   },
   "#flower-bouquet": {
@@ -196,15 +196,14 @@ export default function ServicesPage() {
 
 function PricingCard({ item, currency }: { item: any, currency: string }) {
   return (
-    <motion.div
-      layout
-      className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 transition-all duration-500 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10"
+    <div
+      className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm"
     >
       <div className="relative h-72 overflow-hidden">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover"
         />
         {item.popular && (
           <div className="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[0.65rem] font-black uppercase tracking-widest shadow-xl">
@@ -218,6 +217,6 @@ function PricingCard({ item, currency }: { item: any, currency: string }) {
       <div className="p-7 text-center">
         <h3 className="text-slate-900 text-[1.15rem] font-black tracking-tight">{item.name}</h3>
       </div>
-    </motion.div>
+    </div>
   );
 }
