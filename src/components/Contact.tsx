@@ -77,7 +77,7 @@ export function Contact() {
                 {[
                   { icon: Phone, label: "Phone Number", value: "+233 59 640 5164" },
                   { icon: Mail, label: "Email Address", value: "hello@ashevents.ng" },
-                  { icon: MapPin, label: "Studio Location", value: "Lagos, Nigeria (Available nationwide)" },
+                  { icon: MapPin, label: "Studio Location", value: "Kumasi, Ghana (Available nationwide)" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center bg-white/10">

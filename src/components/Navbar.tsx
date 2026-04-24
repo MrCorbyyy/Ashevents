@@ -14,7 +14,7 @@ const navLinks = [
 const contactOptions = [
   {
     name: "WhatsApp",
-    href: "https://wa.me/233596405164?text=Hello%20AshEvents!%20%F0%9F%91%8B%20I%20came%20across%20your%20website%20and%20I%27m%20interested%20in%20your%20event%20planning%20services.%20I%27d%20love%20to%20discuss%20how%20you%20can%20make%20my%20event%20unforgettable!%20%F0%9F%8E%89",
+    href: "https://wa.me/233596405164?text=Hi%20Ashevents%20!%20I%20came%20across%20your%20website%20and%20I%27d%20like%20to%20enquire%20about%20your%20services.",
     bg: "bg-[#25D366]",
     textDark: false,
     icon: (
