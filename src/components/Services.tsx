@@ -163,7 +163,7 @@ export function Services({ isPreview = false }: ServicesProps) {
                     className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold"
                     onClick={() => handleAction(service.anchor)}
                   >
-                    View Prices
+                    Learn More
                   </button>
                 </div>
               </div>

@@ -107,7 +107,7 @@ export function CEOSection() {
               during her university days. Driven by her love for celebrations and her innovative mindset, she
               transformed her passion into a growing business. Asha is known for her creativity, attention to
               detail, and ability to bring unique ideas to life. Through Ashevents, she specializes in creating
-              memorable experiences — from intimate setups to elegant event décor — ensuring every moment feels
+              memorable experiences from intimate setups to elegant event decor  ensuring every moment feels
               special and unforgettable.
             </p>
 

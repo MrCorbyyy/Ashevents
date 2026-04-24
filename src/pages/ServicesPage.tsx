@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, Sparkles, MessageSquare, PenTool, PartyPopper, Scroll, Flower, Zap, QrCode } from "lucide-react";
 import { Contact } from "../components/Contact";
 import { Services } from "../components/Services";
 import { Link } from "react-router-dom";
@@ -164,7 +164,7 @@ export default function ServicesPage() {
             <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 mb-16">
               <div className="flex flex-col items-center text-center">
                 <h2 className="text-slate-900 text-[2.2rem] font-black tracking-tighter mb-4">
-                  {currentCategory.title} <span className="text-blue-600">Prices List</span>
+                  {currentCategory.title} <span className="text-blue-600">Collection</span>
                 </h2>
                 <div className="h-1.5 w-24 bg-gradient-to-r from-blue-600 to-sky-400 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.3)]" />
               </div>
@@ -174,14 +174,100 @@ export default function ServicesPage() {
           {/* Main Content (Grid) */}
           <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 pb-20">
             {!showAll ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-32">
                 {currentCategory.items.map((item: any) => (
-                  <PricingCard key={item.id} item={item} currency="GH₵" />
+                  <ServiceItemCard key={item.id} item={item} />
                 ))}
               </div>
             ) : (
-              <Services isPreview={false} />
+              <div className="mb-32">
+                <Services isPreview={false} />
+              </div>
             )}
+
+            {/* ── OUR PROCESS SECTION ── */}
+            <div className="mb-32">
+              <div className="text-center mb-16">
+                <span className="text-blue-600 font-black uppercase tracking-[0.3em] text-[0.7rem] mb-3 block">How we work</span>
+                <h2 className="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight mb-4">
+                  Our <span className="text-blue-600">3-Step</span> Process
+                </h2>
+                <p className="text-slate-500 max-w-xl mx-auto font-medium">From the first spark of an idea to the final magical moment, we ensure every detail is handled with boutique precision.</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
+                {/* Connecting lines for desktop */}
+                <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-blue-100 -z-10 translate-y-[-50%]" />
+                
+                {[
+                  { 
+                    step: "01", 
+                    title: "The Vision", 
+                    desc: "We start with a detailed consultation to understand your dream, color palette, and specific needs.",
+                    icon: <MessageSquare className="w-8 h-8 text-blue-600" />
+                  },
+                  { 
+                    step: "02", 
+                    title: "The Design", 
+                    desc: "Our creative team crafts a bespoke concept, selecting the finest materials and unique arrangements.",
+                    icon: <PenTool className="w-8 h-8 text-blue-600" />
+                  },
+                  { 
+                    step: "03", 
+                    title: "The Magic", 
+                    desc: "We bring it all to life with flawless execution, leaving you free to enjoy your celebration.",
+                    icon: <PartyPopper className="w-8 h-8 text-blue-600" />
+                  }
+                ].map((item, i) => (
+                  <motion.div 
+                    key={i}
+                    whileHover={{ y: -10 }}
+                    className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group"
+                  >
+                    <div className="absolute top-8 right-10 text-[3.5rem] font-black text-blue-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                      {item.step}
+                    </div>
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-2xl font-black text-slate-900 mb-4">{item.title}</h3>
+                    <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* ── PREMIUM ADD-ONS SECTION ── */}
+            <div className="py-20 relative">
+              <div className="text-center mb-16 relative z-10">
+                <span className="text-blue-600 font-black uppercase tracking-[0.3em] text-[0.7rem] mb-3 block">Small details, big impact</span>
+                <h2 className="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight mb-4">
+                  Premium <span className="text-blue-600">Add-ons</span>
+                </h2>
+                <p className="text-slate-500 max-w-xl mx-auto font-medium">Elevate your gift or event with our curated extras. These small touches transform a service into a lasting memory.</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                {[
+                  { title: "Customized Cards", sub: "Handwritten messages", icon: <Scroll className="w-8 h-8" /> },
+                  { title: "Scented Packaging", sub: "Signature floral scent", icon: <Flower className="w-8 h-8" /> },
+                  { title: "Rush Delivery", sub: "For urgent surprises", icon: <Zap className="w-8 h-8" /> },
+                  { title: "Video Message", sub: "Scan-to-play QR card", icon: <QrCode className="w-8 h-8" /> },
+                ].map((addon, i) => (
+                  <motion.div 
+                    key={i}
+                    whileHover={{ y: -10 }}
+                    className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center"
+                  >
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform">
+                      {addon.icon}
+                    </div>
+                    <h3 className="text-xl font-black text-slate-900 mb-3">{addon.title}</h3>
+                    <p className="text-slate-500 font-medium leading-relaxed">{addon.sub}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </AnimatePresence>
@@ -194,25 +280,22 @@ export default function ServicesPage() {
   );
 }
 
-function PricingCard({ item, currency }: { item: any, currency: string }) {
+function ServiceItemCard({ item }: { item: any }) {
   return (
     <div
-      className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm"
+      className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm group hover:shadow-xl transition-all duration-500"
     >
       <div className="relative h-72 overflow-hidden">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
         {item.popular && (
           <div className="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[0.65rem] font-black uppercase tracking-widest shadow-xl">
             Popular
           </div>
         )}
-        <div className="absolute bottom-5 right-5 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl shadow-2xl border border-slate-100">
-          <span className="text-slate-900 font-black text-[1.05rem]">{currency} {item.price}</span>
-        </div>
       </div>
       <div className="p-7 text-center">
         <h3 className="text-slate-900 text-[1.15rem] font-black tracking-tight">{item.name}</h3>
