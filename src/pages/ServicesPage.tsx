@@ -21,7 +21,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#flower-bouquet": {
     title: "Flower Bouquet",
     description: "Get beautiful flower bouquet prices at AshEvents. Exquisite fresh and artificial floral arrangements designed to convey love, gratitude, and joy. Each bouquet is artistically curated with premium blooms, lush greenery, and bespoke ribbons to match your specific celebration and personal style perfectly.",
-    image: "public/images/rose.png.jpg",
+    image: "public/images/rose bouquet.png",
     items: [
       { id: 1, name: "Sweet Petite", price: "150", image: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=600&auto=format&fit=crop" },
       { id: 2, name: "Blossom Joy", price: "350", popular: true, image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=600&auto=format&fit=crop" },

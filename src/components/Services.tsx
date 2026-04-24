@@ -13,7 +13,7 @@ const services = [
     id: 2,
     title: "Flower Bouquet",
     description: "Gorgeous fresh and artificial flower arrangements crafted to express love, appreciation, and celebration for any occasion.",
-    image: "public/images/rose.png.jpg",
+    image: "public/images/rose bouquet.png",
     anchor: "#flower-bouquet",
   },
   {

@@ -5,7 +5,8 @@ import { Gallery } from "../components/Gallery";
 import { BirthdayPackages } from "../components/BirthdayPackages";
 import { Testimonials } from "../components/Testimonials";
 import { ContactChannels } from "../components/ContactChannels";
-import { Contact } from "../components/Contact";
+import { CEOSection } from "../components/CEOSection";
+
 
 export default function Home() {
   return (
@@ -13,11 +14,12 @@ export default function Home() {
       <Hero />
       <Services isPreview={true} />
       <Gallery isPreview={true} />
+      <CEOSection />
       <WhyChoose />
       <BirthdayPackages isPreview={true} />
       <Testimonials />
       <ContactChannels />
-      <Contact />
+
     </>
   );
 }

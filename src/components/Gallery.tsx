@@ -18,8 +18,8 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    image: "public/images/setup.jpg",
-    label: "Balloon Setup",
+    image: "public/images/10 bouquet.4k.png",
+    label: "Money Bouquet",
     category: "Balloon",
   },
   {

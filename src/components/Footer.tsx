@@ -66,7 +66,7 @@ export function Footer() {
                     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.395 5.608L0 24l6.545-1.371A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.366l-.36-.214-3.733.782.8-3.647-.234-.373A9.818 9.818 0 1112 21.818z"/>
                   </svg>
                 ),
-                href: "https://wa.me/233596405164?text=Hello%20AshEvents!%20%F0%9F%91%8B%20I%20came%20across%20your%20website%20and%20I%27m%20interested%20in%20your%20event%20planning%20services.%20I%27d%20love%20to%20discuss%20how%20you%20can%20make%20my%20event%20unforgettable!%20%F0%9F%8E%89",
+                href: "https://wa.me/233596405164?text=Hi%20Ashevents%20!%20I%20came%20across%20your%20website%20and%20I%27d%20like%20to%20enquire%20about%20your%20services.",
                 label: "WhatsApp",
                 bg: "bg-[#25D366]",
                 iconColor: "text-white"

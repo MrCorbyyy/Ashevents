@@ -95,8 +95,47 @@ export function Hero() {
 
             {/* Heading */}
             <h1 className="text-slate-900 mb-6 text-[clamp(2.5rem,6vw,4.8rem)] font-black leading-[1.1] tracking-tighter">
-              Making Every <br />
-              <span className="text-blue-600">Moment Magical</span>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.05,
+                    },
+                  },
+                }}
+              >
+                {"Making Every".split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={{
+                      hidden: { opacity: 0, y: 5 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+                <br />
+                <motion.div 
+                  className="text-blue-600 inline-block"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  {"Moment Magical".split("").map((char, index) => (
+                    <motion.span
+                      key={index}
+                      variants={{
+                        hidden: { opacity: 0, x: -5 },
+                        visible: { opacity: 1, x: 0 },
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.div>
+              </motion.div>
             </h1>
 
             {/* Description */}
