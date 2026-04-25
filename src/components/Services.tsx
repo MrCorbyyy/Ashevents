@@ -55,7 +55,7 @@ const services = [
     id: 8,
     title: "Birthday Packages",
     description: "All-inclusive birthday packages with cake table setups, balloon decor, backdrops, and personalized styling for a truly unforgettable celebration.",
-    image: "public/images/birthday packages.jpg",
+    image: "public/images/birthday packages..jpg",
     anchor: "#birthday-packages",
   },
   {
@@ -163,7 +163,7 @@ export function Services({ isPreview = false }: ServicesProps) {
                     className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold"
                     onClick={() => handleAction(service.anchor)}
                   >
-                    Learn More
+                    View More
                   </button>
                 </div>
               </div>

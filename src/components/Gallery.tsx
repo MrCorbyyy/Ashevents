@@ -12,15 +12,15 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    image: "public/images/birthday celeb.jpg",
-    label: "Birthday Celebration",
+    image: "public/images/birthday packages..jpg",
+    label: "Birthday Packages",
     category: "Birthday",
   },
   {
     id: 2,
     image: "public/images/10 bouquet.4k.png",
     label: "Money Bouquet",
-    category: "Balloon",
+    category: "Bouquet",
   },
   {
     id: 3,
@@ -64,6 +64,19 @@ const galleryItems: GalleryItem[] = [
     label: "Dreamy Engagement",
     category: "Ceremony",
   },
+  {
+    id: 10,
+    image: "public/images/backdrop 2.jpg",
+    label: "Luxury Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 11,
+    image: "public/images/backdrops.jpg",
+    label: "Luxury Backdrop",
+    category: "Backdrop",
+  },
+
 ];
 
 const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Picnic", "Ceremony"];
@@ -154,22 +167,22 @@ export function Gallery({ isPreview = false }: GalleryProps) {
           ))}
         </div>
 
-          <div className="mt-12 text-center">
-            <div className="inline-block relative group p-[2px] rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
-              {/* Deep Orbiting Beam */}
-              <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#1e40af_5%,#2563eb_10%,#1e40af_15%,transparent_20%)] opacity-100" />
+        <div className="mt-12 text-center">
+          <div className="inline-block relative group p-[2px] rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
+            {/* Deep Orbiting Beam */}
+            <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#1e40af_5%,#2563eb_10%,#1e40af_15%,transparent_20%)] opacity-100" />
 
-              <Link
-                to="/gallery"
-                className="relative inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.9rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
-              >
-                View Full Gallery
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
+            <Link
+              to="/gallery"
+              className="relative inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.9rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
+            >
+              View Full Gallery
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
           </div>
+        </div>
       </div>
 
       {/* Lightbox */}

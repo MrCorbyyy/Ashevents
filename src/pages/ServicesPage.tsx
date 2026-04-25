@@ -16,6 +16,17 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Classic Mini", price: "250", image: "public/images/10bouquet.png.jpg" },
       { id: 2, name: "Premium Bloom", price: "550", popular: true, image: "public/images/rose.png.jpg" },
       { id: 3, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+      { id: 4, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+      { id: 5, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+      { id: 6, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+      { id: 7, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+      { id: 8, name: "Royal Mega", price: "1,200", image: "public/images/money_bouquet_4k.png" },
+
+
+
+
+
+
     ]
   },
   "#flower-bouquet": {
@@ -26,6 +37,12 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Sweet Petite", price: "150", image: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=600&auto=format&fit=crop" },
       { id: 2, name: "Blossom Joy", price: "350", popular: true, image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Grand Romance", price: "750", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
+
     ]
   },
   "#backdrops": {
@@ -36,6 +53,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Shimmer Wall", price: "500", image: "public/images/backdrop 2.jpg" },
       { id: 2, name: "Floral Arch", price: "1,200", popular: true, image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Custom Neon", price: "2,500", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
     ]
   },
   "#picnic-setup": {
@@ -46,6 +68,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Cozy Duo", price: "400", image: "public/images/picnic setup.jpg" },
       { id: 2, name: "Garden Party", price: "850", popular: true, image: "https://images.unsplash.com/photo-1657447512778-7d6f7a0d5b91?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Luxury Sunset", price: "1,600", image: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=600&auto=format&fit=crop" },
     ]
   },
   "#room-decor": {
@@ -56,6 +83,12 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Standard Glow", price: "600", image: "public/images/room decor.jpg" },
       { id: 2, name: "Romantic Night", price: "1,500", popular: true, image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Luxury Surprise", price: "3,000", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
+
     ]
   },
   "#balloon-decor": {
@@ -66,6 +99,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Basic Arch", price: "300", image: "public/images/ballon decor 2.jpg" },
       { id: 2, name: "Celebration Wall", price: "850", popular: true, image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Ceiling Masterpiece", price: "1,800", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=600&auto=format&fit=crop" },
     ]
   },
   "#cards-magazines": {
@@ -73,19 +111,33 @@ const servicesData: Record<string, { title: string, description: string, image: 
     description: "Get custom card and magazine prices at AshEvents. Capture your most cherished memories in a beautiful, lasting format. Our professionally designed cards and premium magazines serve as perfect keepsakes, beautifully documenting your unique life stories, special events, and heartfelt messages in high resolution.",
     image: "public/images/cards.jpg",
     items: [
-      { id: 1, name: "Single Card", price: "50", image: "public/images/cards.jpg" },
+      { id: 1, name: "", price: "50", image: "public/images/cards.jpg" },
       { id: 2, name: "Gift Pack (10)", price: "400", popular: true, image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+
+
+
+
     ]
   },
   "#birthday-packages": {
     title: "Birthday Packages",
     description: "Get all-inclusive birthday package prices at AshEvents. Our birthday packages combine our best services—including backdrops, balloon decor, and table styling—into a cohesive, stunning event experience that is stress-free, beautiful, and tailored perfectly to the celebrant's unique personality and vision.",
-    image: "public/images/birthday packages.jpg",
+    image: "public/images/birthday packages..jpg",
     items: [
-      { id: 1, name: "Sweet 16", price: "1,500", image: "public/images/birthday packages.jpg" },
+      { id: 1, name: "Sweet 16", price: "1,500", image: "public/images/birthday packages..jpg" },
       { id: 2, name: "Dirty 30", price: "3,000", popular: true, image: "https://images.unsplash.com/photo-1464347601390-25e2842a37f7?q=80&w=600&auto=format&fit=crop" },
       { id: 3, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
+      { id: 4, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
+      { id: 5, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
+      { id: 6, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
+      { id: 7, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
+      { id: 8, name: "Golden Jubilee", price: "5,500", image: "https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=600&auto=format&fit=crop" },
     ]
   },
 };
@@ -198,28 +250,28 @@ export default function ServicesPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
                 {/* Connecting lines for desktop */}
                 <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-blue-100 -z-10 translate-y-[-50%]" />
-                
+
                 {[
-                  { 
-                    step: "01", 
-                    title: "The Vision", 
+                  {
+                    step: "01",
+                    title: "The Vision",
                     desc: "We start with a detailed consultation to understand your dream, color palette, and specific needs.",
                     icon: <MessageSquare className="w-8 h-8 text-blue-600" />
                   },
-                  { 
-                    step: "02", 
-                    title: "The Design", 
+                  {
+                    step: "02",
+                    title: "The Design",
                     desc: "Our creative team crafts a bespoke concept, selecting the finest materials and unique arrangements.",
                     icon: <PenTool className="w-8 h-8 text-blue-600" />
                   },
-                  { 
-                    step: "03", 
-                    title: "The Magic", 
+                  {
+                    step: "03",
+                    title: "The Magic",
                     desc: "We bring it all to life with flawless execution, leaving you free to enjoy your celebration.",
                     icon: <PartyPopper className="w-8 h-8 text-blue-600" />
                   }
                 ].map((item, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     whileHover={{ y: -10 }}
                     className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group"
@@ -254,7 +306,7 @@ export default function ServicesPage() {
                   { title: "Rush Delivery", sub: "For urgent surprises", icon: <Zap className="w-8 h-8" /> },
                   { title: "Video Message", sub: "Scan-to-play QR card", icon: <QrCode className="w-8 h-8" /> },
                 ].map((addon, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     whileHover={{ y: -10 }}
                     className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center"

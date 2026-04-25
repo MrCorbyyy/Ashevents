@@ -118,7 +118,7 @@ export function Hero() {
                   </motion.span>
                 ))}
                 <br />
-                <motion.div 
+                <motion.div
                   className="text-blue-600 inline-block"
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
