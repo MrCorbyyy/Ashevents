@@ -1,11 +1,11 @@
 import { Gallery } from "../components/Gallery";
-import { Contact } from "../components/Contact";
+import { EventRoadmap } from "../components/EventRoadmap";
 
 export default function GalleryPage() {
   return (
     <div className="pt-20">
       <Gallery isPreview={false} />
-      <Contact />
+      <EventRoadmap />
     </div>
   );
 }

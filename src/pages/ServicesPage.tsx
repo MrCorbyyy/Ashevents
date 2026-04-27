@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft, Sparkles, MessageSquare, PenTool, PartyPopper, Scroll, Flower, Zap, QrCode } from "lucide-react";
-import { Contact } from "../components/Contact";
+import { EventRoadmap } from "../components/EventRoadmap";
 import { Services } from "../components/Services";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
@@ -322,9 +322,9 @@ export default function ServicesPage() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Contact Section */}
+      {/* Event Roadmap Section (Replacing Contact) */}
       <div className="border-t border-slate-50 pt-20">
-        <Contact />
+        <EventRoadmap />
       </div>
     </div>
   );
