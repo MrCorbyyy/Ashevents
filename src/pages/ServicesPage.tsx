@@ -109,16 +109,16 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#cards-magazines": {
     title: "Cards & Magazines",
     description: "Get custom card and magazine prices at AshEvents. Capture your most cherished memories in a beautiful, lasting format. Our professionally designed cards and premium magazines serve as perfect keepsakes, beautifully documenting your unique life stories, special events, and heartfelt messages in high resolution.",
-    image: "public/images/cards.jpg",
+    image: "public/images/carda1.jpg",
     items: [
       { id: 1, name: "", price: "50", image: "public/images/cards.jpg" },
       { id: 2, name: "", price: "400", popular: true, image: "public/images/cards...jpg" },
-      { id: 3, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
-      { id: 4, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
-      { id: 5, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
-      { id: 6, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
-      { id: 7, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
-      { id: 8, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
+      { id: 3, name: "", price: "1,200", image: "public/images/carda1.jpg" },
+      { id: 4, name: "", price: "1,200", image: "public/images/card 2.jpg" },
+      { id: 5, name: "", price: "1,200", image: "public/images/card 3.jpg" },
+      { id: 6, name: "", price: "1,200", image: "public/images/card 4.jpg" },
+      { id: 7, name: "", price: "1,200", image: "public/images/card 5.jpg" },
+      { id: 8, name: "", price: "1,200", image: "" },
 
 
 
@@ -271,9 +271,8 @@ export default function ServicesPage() {
                     icon: <PartyPopper className="w-8 h-8 text-blue-600" />
                   }
                 ].map((item, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    whileHover={{ y: -10 }}
                     className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group"
                   >
                     <div className="absolute top-8 right-10 text-[3.5rem] font-black text-blue-50 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -284,7 +283,7 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="text-2xl font-black text-slate-900 mb-4">{item.title}</h3>
                     <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -306,9 +305,8 @@ export default function ServicesPage() {
                   { title: "Rush Delivery", sub: "For urgent surprises", icon: <Zap className="w-8 h-8" /> },
                   { title: "Video Message", sub: "Scan-to-play QR card", icon: <QrCode className="w-8 h-8" /> },
                 ].map((addon, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    whileHover={{ y: -10 }}
                     className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center"
                   >
                     <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform">
@@ -316,7 +314,7 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="text-xl font-black text-slate-900 mb-3">{addon.title}</h3>
                     <p className="text-slate-500 font-medium leading-relaxed">{addon.sub}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -335,22 +333,19 @@ export default function ServicesPage() {
 function ServiceItemCard({ item }: { item: any }) {
   return (
     <div
-      className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm group hover:shadow-xl transition-all duration-500"
+      className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-500"
     >
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-[30rem] overflow-hidden">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover"
         />
         {item.popular && (
           <div className="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[0.65rem] font-black uppercase tracking-widest shadow-xl">
             Popular
           </div>
         )}
-      </div>
-      <div className="p-7 text-center">
-        <h3 className="text-slate-900 text-[1.15rem] font-black tracking-tight">{item.name}</h3>
       </div>
     </div>
   );
