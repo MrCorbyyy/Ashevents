@@ -131,12 +131,12 @@ export function EventRoadmap() {
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-3 px-12 py-5 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-[2.5rem] transition-all duration-300 text-[1.1rem] font-black group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
             >
-              Begin Your Story
+              Let's Get Started
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
           <p className="mt-8 text-slate-400 dark:text-slate-500 font-bold text-[0.8rem] uppercase tracking-[0.2em]">
-            Limited availability for 2024/2025
+            Ashevents!!!!!!!!!!!
           </p>
         </motion.div>
       </div>
