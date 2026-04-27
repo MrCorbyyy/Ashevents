@@ -42,7 +42,7 @@ const heroSlides = [
   },
   {
     image: "public/images/birthday packages.jpg",
-    label: "Birthday Styling",
+    label: "Cards",
     type: "Premium Service",
     icon: <Star className="w-5 h-5 fill-current" />,
     colorClass: "bg-amber-500",
@@ -171,7 +171,7 @@ export function Hero() {
                   onClick={() => handleScroll("#contact")}
                   className="relative px-10 py-4 bg-white border-2 border-blue-100 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all duration-300"
                 >
-                  Contact Us
+                  Event Gallery
                 </button>
               </motion.div>
             </div>

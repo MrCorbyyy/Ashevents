@@ -112,7 +112,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
     image: "public/images/cards.jpg",
     items: [
       { id: 1, name: "", price: "50", image: "public/images/cards.jpg" },
-      { id: 2, name: "Gift Pack (10)", price: "400", popular: true, image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=600&auto=format&fit=crop" },
+      { id: 2, name: "", price: "400", popular: true, image: "public/images/cards...jpg" },
       { id: 3, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
       { id: 4, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },
       { id: 5, name: "Premium Magazine", price: "1,200", image: "https://images.unsplash.com/photo-1544648397-72ab67478511?q=80&w=600&auto=format&fit=crop" },

@@ -48,13 +48,58 @@ const contactOptions = [
   },
 ];
 
+const searchData = [
+  // Nav Links
+  { title: "Home", category: "Page", href: "/", type: "route" },
+  { title: "Services", category: "Page", href: "/services", type: "route" },
+  { title: "Gallery", category: "Page", href: "/gallery", type: "route" },
+  { title: "Packages", category: "Page", href: "/packages", type: "route" },
+  { title: "Testimonials", category: "Section", href: "#testimonials", type: "anchor" },
+  // Services
+  { title: "Money Bouquet", category: "Service", href: "/services#money-bouquet", type: "route" },
+  { title: "Flower Bouquet", category: "Service", href: "/services#flower-bouquet", type: "route" },
+  { title: "Backdrops", category: "Service", href: "/services#backdrops", type: "route" },
+  { title: "Picnic Setup", category: "Service", href: "/services#picnic-setup", type: "route" },
+  { title: "Room Decor", category: "Service", href: "/services#room-decor", type: "route" },
+  { title: "Balloon Decor", category: "Service", href: "/services#balloon-decor", type: "route" },
+  { title: "Card/Magazines", category: "Service", href: "/services#cards-magazines", type: "route" },
+  { title: "Birthday Packages", category: "Service", href: "/services#birthday-packages", type: "route" },
+  { title: "Proposal Decor", category: "Service", href: "/services#proposal-decor", type: "route" },
+  // Packages
+  { title: "Basic Joy Package", category: "Package", href: "/packages", type: "route" },
+  { title: "Premium Magic Package", category: "Package", href: "/packages", type: "route" },
+  { title: "Luxury Grandeur Package", category: "Package", href: "/packages", type: "route" },
+  { title: "Bespoke Signature Package", category: "Package", href: "/packages", type: "route" },
+];
+
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const contactRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const filteredResults = searchQuery.trim() === "" 
+    ? [] 
+    : searchData.filter(item => 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchQuery.toLowerCase())
+      ).slice(0, 6);
+
+  const handleSearchSelect = (item: typeof searchData[0]) => {
+    setSearchQuery("");
+    setIsSearchOpen(false);
+    if (item.type === "anchor") {
+      handleNav(item.href, "/");
+    } else {
+      navigate(item.href);
+      window.scrollTo(0, 0);
+    }
+  };
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -68,6 +113,9 @@ export function Navbar() {
     const handleClickOutside = (e: MouseEvent) => {
       if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
         setShowContact(false);
+      }
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setIsSearchOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -181,9 +229,77 @@ export function Navbar() {
               </div>
 
               {/* Search */}
-              <button className="p-2 text-gray-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                <Search className="w-5 h-5" />
-              </button>
+              <div className="relative flex items-center" ref={searchRef}>
+                <motion.div
+                  initial={false}
+                  animate={{ width: isSearchOpen ? 240 : 40 }}
+                  className="relative flex items-center h-10 bg-gray-100 dark:bg-slate-800/50 rounded-full"
+                >
+                  <button
+                    onClick={() => setIsSearchOpen(!isSearchOpen)}
+                    className="flex items-center justify-center min-w-[40px] h-10 text-gray-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors z-10"
+                  >
+                    <Search className="w-5 h-5" />
+                  </button>
+                  <AnimatePresence>
+                    {isSearchOpen && (
+                      <div className="flex-1 flex flex-col relative">
+                        <motion.input
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -10 }}
+                          autoFocus
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" && filteredResults.length > 0) {
+                              handleSearchSelect(filteredResults[0]);
+                            }
+                          }}
+                          placeholder="Search services..."
+                          className="w-full bg-transparent border-none outline-none text-[0.88rem] pr-4 text-gray-700 dark:text-slate-200 placeholder:text-gray-400 dark:placeholder:text-slate-500"
+                        />
+                        {/* Results Dropdown */}
+                        <AnimatePresence>
+                          {searchQuery.trim() !== "" && filteredResults.length > 0 && (
+                            <motion.div
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 10 }}
+                              className="absolute top-full left-[-40px] right-0 mt-4 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 overflow-hidden z-[100] min-w-[280px]"
+                            >
+                              <div className="px-4 py-2 bg-gray-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
+                                <span className="text-[0.65rem] font-bold text-gray-400 uppercase tracking-widest">
+                                  Search Results
+                                </span>
+                              </div>
+                              {filteredResults.map((item, i) => (
+                                <button
+                                  key={i}
+                                  onClick={() => handleSearchSelect(item)}
+                                  className="w-full px-4 py-3 text-left hover:bg-blue-50 dark:hover:bg-blue-900/30 flex items-center justify-between group transition-colors"
+                                >
+                                  <div className="flex flex-col">
+                                    <span className="text-[0.9rem] font-bold text-gray-800 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                      {item.title}
+                                    </span>
+                                    <span className="text-[0.7rem] text-gray-400 uppercase tracking-wider">
+                                      {item.category}
+                                    </span>
+                                  </div>
+                                  <svg className="w-4 h-4 text-gray-300 group-hover:text-blue-500 opacity-0 group-hover:opacity-100 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                  </svg>
+                                </button>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              </div>
 
               {/* Theme Toggle */}
               <button
@@ -205,17 +321,94 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Tools */}
           <div className="flex md:hidden items-center gap-2 ml-auto">
-            <button className="p-2 text-gray-500 dark:text-slate-400 hover:text-blue-600">
-              <Search className="w-5 h-5" />
-            </button>
-            <button onClick={toggleTheme} className="p-2 text-gray-500 dark:text-slate-400">
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-            <button className="p-2 text-gray-600 dark:text-slate-400" onClick={() => setMenuOpen(!menuOpen)}>
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className={`relative flex items-center ${isSearchOpen ? 'fixed inset-x-0 top-0 h-20 px-4 bg-white dark:bg-slate-950 z-[60] flex items-center' : ''}`} ref={isSearchOpen ? searchRef : null}>
+              {isSearchOpen && (
+                <div className="flex flex-col w-full">
+                  <div className="flex items-center w-full gap-3 h-20">
+                    <Search className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <input
+                      autoFocus
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && filteredResults.length > 0) {
+                          handleSearchSelect(filteredResults[0]);
+                        }
+                      }}
+                      placeholder="Search for events, packages..."
+                      className="flex-1 bg-transparent border-none outline-none text-[1rem] text-gray-700 dark:text-slate-200 placeholder:text-gray-400 dark:placeholder:text-slate-500"
+                    />
+                    <button
+                      onClick={() => {
+                        setIsSearchOpen(false);
+                        setSearchQuery("");
+                      }}
+                      className="p-2 text-gray-400 dark:text-slate-500"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+                  
+                  {/* Mobile Results Dropdown */}
+                  <AnimatePresence>
+                    {searchQuery.trim() !== "" && filteredResults.length > 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-20 left-0 right-0 bg-white dark:bg-slate-900 shadow-2xl border-t border-blue-50 dark:border-slate-800 max-h-[60vh] overflow-y-auto z-[70]"
+                      >
+                        <div className="px-6 py-3 bg-gray-50 dark:bg-slate-800/50 border-b border-gray-100 dark:border-slate-800">
+                          <span className="text-[0.7rem] font-bold text-gray-400 uppercase tracking-[0.15em]">
+                            Search Results
+                          </span>
+                        </div>
+                        {filteredResults.map((item, i) => (
+                          <button
+                            key={i}
+                            onClick={() => handleSearchSelect(item)}
+                            className="w-full px-6 py-5 text-left border-b border-gray-50 dark:border-slate-800/30 flex items-center justify-between active:bg-blue-50 dark:active:bg-blue-900/20"
+                          >
+                            <div className="flex flex-col">
+                              <span className="text-[1.05rem] font-bold text-gray-800 dark:text-slate-200">
+                                {item.title}
+                              </span>
+                              <span className="text-[0.75rem] text-gray-400 uppercase tracking-widest mt-0.5">
+                                {item.category}
+                              </span>
+                            </div>
+                            <div className="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
+                              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                              </svg>
+                            </div>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
+              {!isSearchOpen && (
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-gray-500 dark:text-slate-400 hover:text-blue-600"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              )}
+            </div>
+            {!isSearchOpen && (
+              <>
+                <button onClick={toggleTheme} className="p-2 text-gray-500 dark:text-slate-400">
+                  {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
+                <button className="p-2 text-gray-600 dark:text-slate-400" onClick={() => setMenuOpen(!menuOpen)}>
+                  {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
