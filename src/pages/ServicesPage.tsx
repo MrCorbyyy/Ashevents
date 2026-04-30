@@ -11,16 +11,16 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#money-bouquet": {
     title: "Money Bouquet",
     description: "Get affordable money bouquet prices at AshEvents. Our money bouquets are handcrafted with precision, luxury wrapping, and elegant floral accents to make your gift truly unforgettable. We use only high-quality materials and artistic techniques to ensure a stunning presentation that delights your loved ones for birthdays, anniversaries, and more.",
-    image: "public/images/money_bouquet_4k.png",
+    image: "public/images/MB 4K 5.jpg",
     items: [
-      { id: 1, name: "Classic Mini", price: "", image: "public/images/10bouquet.png.jpg" },
-      { id: 2, name: "Premium Bloom", price: "", popular: true, image: "public/images/rose.png.jpg" },
-      { id: 3, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
-      { id: 4, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
-      { id: 5, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
-      { id: 6, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
-      { id: 7, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
-      { id: 8, name: "Royal Mega", price: "", image: "public/images/money_bouquet_4k.png" },
+      { id: 1, name: "Classic Mini", price: "", image: "public/images/money_bouquet_4k.png" },
+      { id: 2, name: "Premium Bloom", price: "", popular: true, image: "public/images/10 bouquet.4k.png" },
+      { id: 3, name: "Royal Mega", price: "", image: "public/images/MB 4k 1.png" },
+      { id: 4, name: "Royal Mega", price: "", image: "public/images/MB 4K 2.png" },
+      { id: 5, name: "Royal Mega", price: "", image: "public/images/MB 4K 3.png" },
+      { id: 6, name: "Royal Mega", price: "", image: "public/images/MB 4K 6.jpg" },
+      { id: 7, name: "Royal Mega", price: "", image: "public/images/MB 4K 5.jpg" },
+      { id: 8, name: "Royal Mega", price: "", image: "public/images/MB 4K 4.jpg" },
 
 
 
@@ -34,15 +34,14 @@ const servicesData: Record<string, { title: string, description: string, image: 
     description: "Get beautiful flower bouquet prices at AshEvents. Exquisite fresh and artificial floral arrangements designed to convey love, gratitude, and joy. Each bouquet is artistically curated with premium blooms, lush greenery, and bespoke ribbons to match your specific celebration and personal style perfectly.",
     image: "public/images/rose bouquet.png",
     items: [
-      { id: 1, name: "Sweet Petite", price: "", image: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?q=80&w=600&auto=format&fit=crop" },
-      { id: 2, name: "Blossom Joy", price: "", popular: true, image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=600&auto=format&fit=crop" },
-      { id: 3, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-      { id: 4, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-      { id: 5, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-      { id: 6, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-      { id: 7, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-      { id: 8, name: "Grand Romance", price: "", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?q=80&w=600&auto=format&fit=crop" },
-
+      { id: 1, name: "Sweet Petite", price: "", image: "public/images/flower_bouquet_4k.png" },
+      { id: 2, name: "Blossom Joy", price: "", popular: true, image: "public/images/rose bouquet.png" },
+      { id: 3, name: "Magenta Elegance", price: "", image: "public/images/fb 4k 2.png" },
+      { id: 4, name: "Golden Rose Initial", price: "", image: "public/images/fb 4k 3.png" },
+      { id: 5, name: "Midnight Crimson", price: "", image: "public/images/fb 4k 4.png" },
+      { id: 6, name: "Scripted Faith", price: "", image: "public/images/fb 4k 5.png" },
+      { id: 7, name: "Heartfelt Sentiment", price: "", image: "public/images/fb 4k 6.png" },
+      { id: 8, name: "Blush Collection", price: "", image: "public/images/flower bouquet 4k 1.jpg" },
     ]
   },
   "#backdrops": {
@@ -51,13 +50,13 @@ const servicesData: Record<string, { title: string, description: string, image: 
     image: "public/images/backdrop 2.jpg",
     items: [
       { id: 1, name: "Shimmer Wall", price: "", image: "public/images/backdrop 2.jpg" },
-      { id: 2, name: "Floral Arch", price: "", popular: true, image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" },
-      { id: 3, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
-      { id: 4, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
-      { id: 5, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
-      { id: 6, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
-      { id: 7, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
-      { id: 8, name: "Custom Neon", price: "", image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop" },
+      { id: 2, name: "Floral Arch", price: "", popular: true, image: "public/images/backdrops bw.jpg" },
+      { id: 3, name: "Custom Neon", price: "", image: "public/images/backdrops.jpg" },
+      { id: 4, name: "Custom Neon", price: "", image: "public/images/backdrop 3.jpg" },
+      { id: 5, name: "Custom Neon", price: "", image: "public/images/backdrop 4.jpg" },
+      { id: 6, name: "Custom Neon", price: "", image: "public/images/backdrop 5.jpg" },
+      { id: 7, name: "Custom Neon", price: "", image: "public/images/backdrop 6.jpg" },
+      { id: 8, name: "Custom Neon", price: "", image: "public/images/backdrop 7.jpg" },
     ]
   },
   "#picnic-setup": {
@@ -81,7 +80,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
     image: "public/images/room decor.jpg",
     items: [
       { id: 1, name: "Standard Glow", price: "", image: "public/images/room decor.jpg" },
-      { id: 2, name: "Romantic Night", price: "", popular: true, image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=600&auto=format&fit=crop" },
+      { id: 2, name: "Romantic Night", price: "", popular: true, image: "" },
       { id: 3, name: "Luxury Surprise", price: "", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
       { id: 4, name: "Luxury Surprise", price: "", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
       { id: 5, name: "Luxury Surprise", price: "", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" },
@@ -332,21 +331,40 @@ export default function ServicesPage() {
 
 function ServiceItemCard({ item }: { item: any }) {
   return (
-    <div
-      className="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm transition-all duration-500"
+    <motion.div
+      whileHover={{ y: -10 }}
+      className="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl shadow-blue-900/10 transition-all duration-500"
     >
-      <div className="relative h-[30rem] overflow-hidden">
+      <div className="relative h-[30rem] overflow-hidden group">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
+
+        {/* Always-visible gradient overlay with name & button */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-8">
+          <div>
+            <h3 className="text-white text-2xl font-black mb-2">{item.name}</h3>
+            <p className="text-blue-400 text-[0.7rem] font-black uppercase tracking-[0.2em] mb-6">Exclusive Collection</p>
+
+            <a
+              href={`https://wa.me/233596405164?text=Hi%20Ashevents%20!%20I'm%20interested%20in%20the%20${encodeURIComponent(item.name)}%20from%20your%20collection.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-full py-4 bg-white text-slate-950 rounded-2xl font-black text-[0.8rem] uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Inquire Now
+            </a>
+          </div>
+        </div>
+
         {item.popular && (
-          <div className="absolute top-5 left-5 bg-blue-600 text-white px-4 py-1.5 rounded-full text-[0.65rem] font-black uppercase tracking-widest shadow-xl">
-            Popular
+          <div className="absolute top-6 left-6 bg-blue-600 text-white px-5 py-2 rounded-full text-[0.65rem] font-black uppercase tracking-[0.2em] shadow-xl z-20">
+            Most Loved
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
