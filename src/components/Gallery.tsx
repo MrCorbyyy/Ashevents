@@ -36,15 +36,15 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1657447512778-7d6f7a0d5b91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwcGljbmljJTIwbHV4dXJ5JTIwc2V0dXB8ZW58MXx8fHwxNzc1NjM3MjA2fDA&ixlib=rb-4.1.0&q=80&w=600",
-    label: "Luxury Picnic Setup",
-    category: "Picnic",
+    image: "public/images/premium package..jpg",
+    label: "Premium Room Decor",
+    category: "Balloon",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1768776182889-607915c299a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWxsb29uJTIwYXJjaCUyMGRlY29yYXRpb24lMjBldmVudHxlbnwxfHx8fDE3NzU2MzcyMDh8MA&ixlib=rb-4.1.0&q=80&w=600",
-    label: "Naming Ceremony",
-    category: "Ceremony",
+    image: "public/images/luxury package.jpg",
+    label: "Luxury Event Decor",
+    category: "Balloon",
   },
   {
     id: 7,
@@ -60,9 +60,9 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 9,
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop",
-    label: "Dreamy Engagement",
-    category: "Ceremony",
+    image: "public/images/bouquet 2.png",
+    label: "Balloon Bouquet",
+    category: "Balloon",
   },
   {
     id: 10,
@@ -75,6 +75,48 @@ const galleryItems: GalleryItem[] = [
     image: "public/images/backdrops.jpg",
     label: "Luxury Backdrop",
     category: "Backdrop",
+  },
+  {
+    id: 12,
+    image: "public/images/package 1.jpg",
+    label: "Birthday Celebration",
+    category: "Birthday",
+  },
+  {
+    id: 13,
+    image: "public/images/setup 1.jpg",
+    label: "Luxury Picnic",
+    category: "Picnic",
+  },
+  {
+    id: 14,
+    image: "public/images/fb 4k 2.png",
+    label: "Floral Arrangement",
+    category: "Bouquet",
+  },
+  {
+    id: 15,
+    image: "public/images/ballon decor 7.jpg",
+    label: "Balloon Arch",
+    category: "Balloon",
+  },
+  {
+    id: 16,
+    image: "public/images/backdrop 8.jpg",
+    label: "Premium Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 17,
+    image: "public/images/MB 4K 5.jpg",
+    label: "Gift Bouquet",
+    category: "Bouquet",
+  },
+  {
+    id: 18,
+    image: "public/images/standard package.jpg",
+    label: "Standard Decor",
+    category: "Balloon",
   },
 
 ];

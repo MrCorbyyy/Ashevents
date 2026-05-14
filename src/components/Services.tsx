@@ -20,7 +20,7 @@ const services = [
     id: 3,
     title: "Backdrops",
     description: "Custom and premium backdrops for photo opportunities — from floral walls to sequin panels, fabric drapes to neon signs.",
-    image: "public/images/backdrop 2.jpg",
+    image: "public/images/backdrop 8.jpg",
     anchor: "#backdrops",
   },
   {
@@ -32,17 +32,17 @@ const services = [
   },
   {
     id: 5,
-    title: "Room Decor",
+    title: "Ballon Bouquet",
     description: "Beautifully decorated naming ceremonies filled with cultural grace, elegant florals, and personalized touches that honor new beginnings.",
-    image: "public/images/room decor.jpg",
-    anchor: "#room-decor",
+    image: "public/images/bouquet 2.png",
+    anchor: "#ballon-bouquet",
   },
   {
     id: 6,
-    title: "Balloon Decor",
+    title: "Room Decor",
     description: "Stunning balloon arches, columns, walls, and centerpieces in any color palette — transforming any space into a celebratory paradise.",
     image: "public/images/ballon decor 2.jpg",
-    anchor: "#balloon-decor",
+    anchor: "#room-decor",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ const services = [
     id: 8,
     title: "Birthday Packages",
     description: "All-inclusive birthday packages with cake table setups, balloon decor, backdrops, and personalized styling for a truly unforgettable celebration.",
-    image: "public/images/birthday packages..jpg",
+    image: "public/images/package 1.jpg",
     anchor: "#birthday-packages",
   },
   {
@@ -138,29 +138,29 @@ export function Services({ isPreview = false }: ServicesProps) {
           {displayServices.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-50 transition-all duration-300"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-50 transition-all duration-300 flex flex-col"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               {/* Content */}
-              <div className="p-4">
+              <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-gray-900 mb-1.5 text-base font-bold">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 text-[0.82rem] leading-[1.6]">
+                <p className="text-gray-500 text-[0.82rem] leading-[1.6] mb-6 flex-grow">
                   {service.description}
                 </p>
-                <div className="mt-4">
+                <div className="pt-4 border-t border-slate-100 mt-auto">
                   <button
-                    className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold"
+                    className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold hover:shadow-md active:scale-95"
                     onClick={() => handleAction(service.anchor)}
                   >
                     View More
