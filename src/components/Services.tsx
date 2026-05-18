@@ -25,10 +25,10 @@ const services = [
   },
   {
     id: 4,
-    title: "Picnic Setup",
+    title: "Setup",
     description: "Luxurious outdoor picnic experiences with styled table setups, cushions, decorations, and all the finishing touches for a perfect day out.",
     image: "public/images/picnic setup.jpg",
-    anchor: "#picnic-setup",
+    anchor: "#setup",
   },
   {
     id: 5,

@@ -59,8 +59,8 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 8, name: "", price: "", image: "public/images/backdrop 7.jpg" },
     ]
   },
-  "#picnic-setup": {
-    title: "Picnic Setup",
+  "#setup": {
+    title: "Setups",
     description: "Get luxury picnic setup prices at AshEvents. Experience the ultimate in relaxation and style with our beautifully styled low-profile tables, plush cushions, and curated table decor. Perfect for romantic dates, intimate anniversaries, or group celebrations in the park or your garden, tailored to your aesthetic.",
     image: "public/images/setup 1.jpg",
     items: [
@@ -68,7 +68,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 2, name: "Garden Party", price: "", popular: true, image: "public/images/setup 1.jpg" },
       { id: 3, name: "Luxury Sunset", price: "", image: "public/images/setup 2.jpg" },
       { id: 4, name: "Luxury Sunset", price: "", image: "public/images/setup 3.jpg" },
-      { id: 5, name: "Luxury Sunset", price: "", image: "" },
+      { id: 5, name: "Luxury Sunset", price: "", image: "public/images/setup 4k.png" },
       { id: 6, name: "Luxury Sunset", price: "", image: "" },
       { id: 7, name: "Luxury Sunset", price: "", image: "" },
       { id: 8, name: "Luxury Sunset", price: "", image: "" },
@@ -82,8 +82,8 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Standard Glow", price: "", image: "public/images/ballon boquet 1.png" },
       { id: 2, name: "Romantic Night", price: "", popular: true, image: "public/images/bouquet 2.png" },
       { id: 3, name: "Luxury Surprise", price: "", image: "public/images/birthday packages..jpg" },
-      { id: 4, name: "Luxury Surprise", price: "", image: "" },
-      { id: 5, name: "Luxury Surprise", price: "", image: "" },
+      { id: 4, name: "Luxury Surprise", price: "", image: "public/images/ballon bouquet 3.png" },
+      { id: 5, name: "Luxury Surprise", price: "", image: "public/images/package 5.png" },
       { id: 6, name: "Luxury Surprise", price: "", image: "" },
       { id: 7, name: "Luxury Surprise", price: "", image: "" },
       { id: 8, name: "Luxury Surprise", price: "", image: "" },
