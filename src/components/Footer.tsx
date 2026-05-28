@@ -145,7 +145,7 @@ export function Footer() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-slate-500 font-black text-[0.55rem] uppercase tracking-wider mb-0.5">Our Studio</span>
+                  <span className="block text-slate-500 font-black text-[0.55rem] uppercase tracking-wider mb-0.5">Our Location</span>
                   <p className="font-bold text-[0.95rem]">Kumasi, Ghana</p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export function Footer() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="block text-slate-500 font-black text-[0.55rem] uppercase tracking-wider mb-0.5">Let's Talk</span>
+                  <span className="block text-slate-500 font-black text-[0.55rem] uppercase tracking-wider mb-0.5">Contact Us</span>
                   <p className="font-bold text-[0.95rem]">+233 59 640 5164</p>
                   <div className="flex items-center gap-1.5 text-[#25D366] text-[0.65rem] font-black uppercase tracking-widest mt-0.5">
 
