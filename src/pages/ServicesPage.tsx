@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, Sparkles, MessageSquare, PenTool, PartyPopper, Scroll, Flower, Zap, QrCode } from "lucide-react";
+import { ArrowLeft, MessageSquare, PenTool, PartyPopper, Scroll, Flower, Zap, QrCode } from "lucide-react";
 import { EventRoadmap } from "../components/EventRoadmap";
 import { Services } from "../components/Services";
 import { Link } from "react-router-dom";

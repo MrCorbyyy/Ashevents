@@ -61,10 +61,6 @@ export function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleScroll = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
