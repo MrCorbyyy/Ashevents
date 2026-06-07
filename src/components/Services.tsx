@@ -53,17 +53,10 @@ const services = [
   },
   {
     id: 8,
-    title: "Birthday Packages",
+    title: "Gift Packages",
     description: "All-inclusive birthday packages with cake table setups, balloon decor, backdrops, and personalized styling for a truly unforgettable celebration.",
     image: "public/images/package 1.jpg",
-    anchor: "#birthday-packages",
-  },
-  {
-    id: 9,
-    title: "Proposal Decor",
-    description: "Creating the perfect romantic setting for your special 'Yes' — from candlelit paths to 'Marry Me' neon signs and floral magic.",
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop",
-    anchor: "#proposal-decor",
+    anchor: "#gift-packages",
   },
 ];
 

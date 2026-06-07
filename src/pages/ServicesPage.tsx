@@ -64,29 +64,29 @@ const servicesData: Record<string, { title: string, description: string, image: 
     description: "Get luxury picnic setup prices at AshEvents. Experience the ultimate in relaxation and style with our beautifully styled low-profile tables, plush cushions, and curated table decor. Perfect for romantic dates, intimate anniversaries, or group celebrations in the park or your garden, tailored to your aesthetic.",
     image: "public/images/setup 1.jpg",
     items: [
-      { id: 1, name: "Cozy Duo", price: "", image: "public/images/picnic setup.jpg" },
-      { id: 2, name: "Garden Party", price: "", popular: true, image: "public/images/setup 1.jpg" },
-      { id: 3, name: "Luxury Sunset", price: "", image: "public/images/setup 2.jpg" },
-      { id: 4, name: "Luxury Sunset", price: "", image: "public/images/setup 3.jpg" },
-      { id: 5, name: "Luxury Sunset", price: "", image: "public/images/setup 4k.png" },
-      { id: 6, name: "Luxury Sunset", price: "", image: "" },
-      { id: 7, name: "Luxury Sunset", price: "", image: "" },
-      { id: 8, name: "Luxury Sunset", price: "", image: "" },
+      { id: 1, name: "", price: "", image: "public/images/picnic setup.jpg" },
+      { id: 2, name: "", price: "", popular: true, image: "public/images/setup 1.jpg" },
+      { id: 3, name: "", price: "", image: "public/images/setup 2.jpg" },
+      { id: 4, name: "", price: "", image: "public/images/setup 3.jpg" },
+      { id: 5, name: "", price: "", image: "public/images/setup 4k.png" },
+      { id: 6, name: "", price: "", image: "public/images/setup 33.jpg" },
+      { id: 7, name: "", price: "", image: "public/images/setup 34.jpg" },
+      { id: 8, name: "", price: "", image: "public/images/setup 35.jpg" },
     ]
   },
   "#ballon-bouquet": {
     title: "Ballon Bouquet",
     description: "Get elegant ballon bouquet prices at AshEvents. Turn any room into a magical sanctuary for romantic surprises, proposals, or intimate naming ceremonies. Our room decor services include artistic balloon styling, rose petals, ambient lighting, and personalized touches that speak from the heart and create a lasting impression.",
-    image: "public/images/bouquet 2.png",
+    image: "public/images/birthday packages..jpg",
     items: [
       { id: 1, name: "Standard Glow", price: "", image: "public/images/ballon boquet 1.png" },
       { id: 2, name: "Romantic Night", price: "", popular: true, image: "public/images/bouquet 2.png" },
       { id: 3, name: "Luxury Surprise", price: "", image: "public/images/birthday packages..jpg" },
-      { id: 4, name: "Luxury Surprise", price: "", image: "public/images/ballon bouquet 3.png" },
-      { id: 5, name: "Luxury Surprise", price: "", image: "public/images/package 5.png" },
-      { id: 6, name: "Luxury Surprise", price: "", image: "" },
-      { id: 7, name: "Luxury Surprise", price: "", image: "" },
-      { id: 8, name: "Luxury Surprise", price: "", image: "" },
+      { id: 4, name: "", price: "", image: "public/images/ballon bouquet 3.png" },
+      { id: 5, name: "", price: "", image: "public/images/package 5.png" },
+      { id: 6, name: "", price: "", image: "public/images/bb 33.jpg" },
+      { id: 7, name: "", price: "", image: "public/images/bb 22.jpg" },
+      { id: 8, name: "", price: "", image: "public/images/bb 44.jpg" },
 
     ]
   },
@@ -124,19 +124,19 @@ const servicesData: Record<string, { title: string, description: string, image: 
 
     ]
   },
-  "#birthday-packages": {
-    title: "Birthday Packages",
-    description: "Get all-inclusive birthday package prices at AshEvents. Our birthday packages combine our best services—including backdrops, balloon decor, and table styling—into a cohesive, stunning event experience that is stress-free, beautiful, and tailored perfectly to the celebrant's unique personality and vision.",
+  "#gift-packages": {
+    title: "Gift Packages",
+    description: "Get all-inclusive gift packages prices at AshEvents. Our birthday packages combine our best services—including backdrops, balloon decor, and table styling—into a cohesive, stunning event experience that is stress-free, beautiful, and tailored perfectly to the celebrant's unique personality and vision.",
     image: "public/images/package 1.jpg",
     items: [
-      { id: 1, name: "Sweet 16", price: "", image: "public/images/birthday packages..jpg" },
-      { id: 2, name: "Dirty 30", price: "", popular: true, image: "public/images/package 1.jpg" },
-      { id: 3, name: "Golden Jubilee", price: "", image: "public/images/package 2.jpg" },
-      { id: 4, name: "Golden Jubilee", price: "", image: "" },
-      { id: 5, name: "Golden Jubilee", price: "", image: "" },
-      { id: 6, name: "Golden Jubilee", price: "", image: "" },
-      { id: 7, name: "Golden Jubilee", price: "", image: ""},
-      { id: 8, name: "Golden Jubilee", price: "", image: "" },
+      { id: 1, name: "", price: "", image: "public/images/birthday packages..jpg" },
+      { id: 2, name: "", price: "", popular: true, image: "public/images/package 1.jpg" },
+      { id: 3, name: "", price: "", image: "public/images/package 2.jpg" },
+      { id: 4, name: "", price: "", image: "public/images/gift package 3.jpg" },
+      { id: 5, name: "", price: "", image: "public/images/gift package 4.jpg" },
+      { id: 6, name: "", price: "", image: "public/images/gift package 5.jpg" },
+      { id: 7, name: "", price: "", image: "public/images/gift package 6.jpg"},
+      { id: 8, name: "", price: "", image: "public/images/gift package 7.jpg" },
     ]
   },
 };

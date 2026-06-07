@@ -167,12 +167,12 @@ export function Hero() {
                 {/* Deep Orbiting Beam */}
                 <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#3b82f6_5%,#60a5fa_10%,#3b82f6_15%,transparent_20%)] opacity-100" />
 
-                <button
-                  onClick={() => handleScroll("#contact")}
-                  className="relative px-10 py-4 bg-white border-2 border-blue-100 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all duration-300"
+                <Link
+                  to="/gallery"
+                  className="relative inline-flex items-center justify-center px-10 py-4 bg-white border-2 border-blue-100 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition-all duration-300"
                 >
                   Event Gallery
-                </button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

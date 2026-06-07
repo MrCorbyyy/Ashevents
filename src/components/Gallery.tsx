@@ -10,118 +10,491 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
+  // ── Birthday ──────────────────────────────────────────────
   {
     id: 1,
-    image: "public/images/birthday packages..jpg",
+    image: "/images/birthday packages..jpg",
     label: "Birthday Packages",
     category: "Birthday",
   },
   {
-    id: 2,
-    image: "public/images/10 bouquet.4k.png",
-    label: "Money Bouquet",
-    category: "Bouquet",
+    id: 12,
+    image: "/images/package 1.jpg",
+    label: "Birthday Celebration",
+    category: "Birthday",
   },
   {
-    id: 3,
-    image: "public/images/flower_bouquet_4k.png",
-    label: "Flower Bouquet",
-    category: "Bouquet",
+    id: 19,
+    image: "/images/birthday packages.jpg",
+    label: "Birthday Decor",
+    category: "Birthday",
   },
   {
-    id: 4,
-    image: "public/images/backdrops bw.jpg",
-    label: "Luxury Backdrop",
-    category: "Backdrop",
+    id: 20,
+    image: "/images/birthday celeb.jpg",
+    label: "Birthday Celebration Setup",
+    category: "Birthday",
   },
+  {
+    id: 21,
+    image: "/images/package 2.jpg",
+    label: "Birthday Package",
+    category: "Birthday",
+  },
+  {
+    id: 22,
+    image: "/images/basic package.jpg",
+    label: "Basic Birthday Package",
+    category: "Birthday",
+  },
+  {
+    id: 23,
+    image: "/images/basic package 1.jpg",
+    label: "Starter Birthday Package",
+    category: "Birthday",
+  },
+  // ── Balloon ───────────────────────────────────────────────
   {
     id: 5,
-    image: "public/images/premium package..jpg",
+    image: "/images/premium package..jpg",
     label: "Premium Room Decor",
     category: "Balloon",
   },
   {
     id: 6,
-    image: "public/images/luxury package.jpg",
+    image: "/images/luxury package.jpg",
     label: "Luxury Event Decor",
     category: "Balloon",
   },
   {
-    id: 7,
-    image: "public/images/money_bouquet_4k.png",
-    label: "Money Bouquet Gift",
-    category: "Bouquet",
-  },
-  {
-    id: 8,
-    image: "public/images/table setup.jpg",
-    label: "Table Setup",
-    category: "Ceremony",
-  },
-  {
     id: 9,
-    image: "public/images/bouquet 2.png",
+    image: "/images/bouquet 2.png",
     label: "Balloon Bouquet",
     category: "Balloon",
   },
   {
-    id: 10,
-    image: "public/images/backdrop 2.jpg",
-    label: "Luxury Backdrop",
-    category: "Backdrop",
-  },
-  {
-    id: 11,
-    image: "public/images/backdrops.jpg",
-    label: "Luxury Backdrop",
-    category: "Backdrop",
-  },
-  {
-    id: 12,
-    image: "public/images/package 1.jpg",
-    label: "Birthday Celebration",
-    category: "Birthday",
-  },
-  {
-    id: 13,
-    image: "public/images/setup 1.jpg",
-    label: "Luxury Picnic",
-    category: "Picnic",
-  },
-  {
-    id: 14,
-    image: "public/images/fb 4k 2.png",
-    label: "Floral Arrangement",
-    category: "Bouquet",
-  },
-  {
     id: 15,
-    image: "public/images/ballon decor 7.jpg",
+    image: "/images/ballon decor 7.jpg",
     label: "Balloon Arch",
     category: "Balloon",
   },
   {
-    id: 16,
-    image: "public/images/backdrop 8.jpg",
+    id: 18,
+    image: "/images/standard package.jpg",
+    label: "Standard Balloon Decor",
+    category: "Balloon",
+  },
+  {
+    id: 24,
+    image: "/images/ballon decor.jpg",
+    label: "Balloon Decoration",
+    category: "Balloon",
+  },
+  {
+    id: 25,
+    image: "/images/ballon decor 1.jpg",
+    label: "Balloon Decor Setup",
+    category: "Balloon",
+  },
+  {
+    id: 26,
+    image: "/images/ballon decor 2.jpg",
+    label: "Balloon Decor Display",
+    category: "Balloon",
+  },
+  {
+    id: 27,
+    image: "/images/ballon decor 3.jpg",
+    label: "Balloon Decor Arch",
+    category: "Balloon",
+  },
+  {
+    id: 28,
+    image: "/images/ballon decor 4.jpg",
+    label: "Balloon Column Decor",
+    category: "Balloon",
+  },
+  {
+    id: 29,
+    image: "/images/ballon decor 5.jpg",
+    label: "Balloon Garland",
+    category: "Balloon",
+  },
+  {
+    id: 30,
+    image: "/images/ballon decor 6.jpg",
+    label: "Balloon Balloon Art",
+    category: "Balloon",
+  },
+  {
+    id: 31,
+    image: "/images/ballon decor 8.jpg",
+    label: "Balloon Cluster",
+    category: "Balloon",
+  },
+  {
+    id: 32,
+    image: "/images/ballon boquet 1.png",
+    label: "Balloon Bouquet Arrangement",
+    category: "Balloon",
+  },
+  {
+    id: 33,
+    image: "/images/ballon bouquet 3.png",
+    label: "Balloon Bouquet Premium",
+    category: "Balloon",
+  },
+  {
+    id: 34,
+    image: "/images/bb 22.jpg",
+    label: "Balloon Bouquet",
+    category: "Balloon",
+  },
+  {
+    id: 35,
+    image: "/images/bb 33.jpg",
+    label: "Balloon Bundle",
+    category: "Balloon",
+  },
+  {
+    id: 36,
+    image: "/images/bb 44.jpg",
+    label: "Balloon Display",
+    category: "Balloon",
+  },
+  {
+    id: 37,
+    image: "/images/luxury package 1.jpg",
+    label: "Luxury Balloon Package",
+    category: "Balloon",
+  },
+  {
+    id: 38,
+    image: "/images/premium package 2..jpg",
+    label: "Premium Balloon Package",
+    category: "Balloon",
+  },
+  {
+    id: 39,
+    image: "/images/room decor.jpg",
+    label: "Room Balloon Decor",
+    category: "Balloon",
+  },
+  // ── Bouquet ───────────────────────────────────────────────
+  {
+    id: 2,
+    image: "/images/10 bouquet.4k.png",
+    label: "Money Bouquet",
+    category: "Bouquet",
+  },
+  {
+    id: 3,
+    image: "/images/flower_bouquet_4k.png",
+    label: "Flower Bouquet",
+    category: "Bouquet",
+  },
+  {
+    id: 7,
+    image: "/images/money_bouquet_4k.png",
+    label: "Money Bouquet Gift",
+    category: "Bouquet",
+  },
+  {
+    id: 14,
+    image: "/images/fb 4k 2.png",
+    label: "Floral Arrangement",
+    category: "Bouquet",
+  },
+  {
+    id: 17,
+    image: "/images/MB 4K 5.jpg",
+    label: "Money Bouquet Premium",
+    category: "Bouquet",
+  },
+  {
+    id: 40,
+    image: "/images/MB 4k 1.png",
+    label: "Money Bouquet Classic",
+    category: "Bouquet",
+  },
+  {
+    id: 41,
+    image: "/images/MB 4K 2.png",
+    label: "Money Bouquet Deluxe",
+    category: "Bouquet",
+  },
+  {
+    id: 42,
+    image: "/images/MB 4K 3.png",
+    label: "Money Bouquet Gold",
+    category: "Bouquet",
+  },
+  {
+    id: 43,
+    image: "/images/MB 4K 4.jpg",
+    label: "Money Bouquet Elegant",
+    category: "Bouquet",
+  },
+  {
+    id: 44,
+    image: "/images/MB 4K 6.jpg",
+    label: "Money Bouquet Luxury",
+    category: "Bouquet",
+  },
+  {
+    id: 45,
+    image: "/images/money bouquet 22.jpg",
+    label: "Money Bouquet Styled",
+    category: "Bouquet",
+  },
+  {
+    id: 46,
+    image: "/images/fb 4k 3.png",
+    label: "Floral Bouquet Premium",
+    category: "Bouquet",
+  },
+  {
+    id: 47,
+    image: "/images/fb 4k 4.png",
+    label: "Floral Arrangement Gold",
+    category: "Bouquet",
+  },
+  {
+    id: 48,
+    image: "/images/fb 4k 5.png",
+    label: "Floral Decor",
+    category: "Bouquet",
+  },
+  {
+    id: 49,
+    image: "/images/fb 4k 6.png",
+    label: "Floral Styling",
+    category: "Bouquet",
+  },
+  {
+    id: 50,
+    image: "/images/flower bouquet 4k 1.jpg",
+    label: "Flower Bouquet Classic",
+    category: "Bouquet",
+  },
+  {
+    id: 51,
+    image: "/images/rose bouquet.png",
+    label: "Rose Bouquet",
+    category: "Bouquet",
+  },
+  // ── Backdrop ──────────────────────────────────────────────
+  {
+    id: 4,
+    image: "/images/backdrops bw.jpg",
+    label: "Luxury Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 10,
+    image: "/images/backdrop 2.jpg",
+    label: "Event Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 11,
+    image: "/images/backdrops.jpg",
     label: "Premium Backdrop",
     category: "Backdrop",
   },
   {
-    id: 17,
-    image: "public/images/MB 4K 5.jpg",
-    label: "Gift Bouquet",
-    category: "Bouquet",
+    id: 16,
+    image: "/images/backdrop 8.jpg",
+    label: "Designer Backdrop",
+    category: "Backdrop",
   },
   {
-    id: 18,
-    image: "public/images/standard package.jpg",
-    label: "Standard Decor",
-    category: "Balloon",
+    id: 52,
+    image: "/images/backdrop 3.jpg",
+    label: "Backdrop Arrangement",
+    category: "Backdrop",
   },
-
+  {
+    id: 53,
+    image: "/images/backdrop 4.jpg",
+    label: "Backdrop Display",
+    category: "Backdrop",
+  },
+  {
+    id: 54,
+    image: "/images/backdrop 5.jpg",
+    label: "Balloon Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 55,
+    image: "/images/backdrop 6.jpg",
+    label: "Floral Backdrop",
+    category: "Backdrop",
+  },
+  {
+    id: 56,
+    image: "/images/backdrop 7.jpg",
+    label: "Luxury Event Backdrop",
+    category: "Backdrop",
+  },
+  // ── Gift ──────────────────────────────────────────────────
+  {
+    id: 57,
+    image: "/images/gift package 3.jpg",
+    label: "Gift Package",
+    category: "Gift",
+  },
+  {
+    id: 58,
+    image: "/images/gift package 4.jpg",
+    label: "Gift Package Deluxe",
+    category: "Gift",
+  },
+  {
+    id: 59,
+    image: "/images/gift package 5.jpg",
+    label: "Gift Hamper",
+    category: "Gift",
+  },
+  {
+    id: 60,
+    image: "/images/gift package 6.jpg",
+    label: "Gift Basket",
+    category: "Gift",
+  },
+  {
+    id: 61,
+    image: "/images/gift package 7.jpg",
+    label: "Premium Gift Package",
+    category: "Gift",
+  },
+  {
+    id: 62,
+    image: "/images/package 5.png",
+    label: "Luxury Gift Package",
+    category: "Gift",
+  },
+  // ── Setup / Ceremony ──────────────────────────────────────
+  {
+    id: 8,
+    image: "/images/table setup.jpg",
+    label: "Table Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 63,
+    image: "/images/setup 2.jpg",
+    label: "Event Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 64,
+    image: "/images/setup 3.jpg",
+    label: "Ceremony Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 65,
+    image: "/images/setup 33.jpg",
+    label: "Dining Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 66,
+    image: "/images/setup 34.jpg",
+    label: "Banquet Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 67,
+    image: "/images/setup 35.jpg",
+    label: "Grand Ceremony Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 68,
+    image: "/images/setup 4k.png",
+    label: "Premium Event Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 69,
+    image: "/images/setup.png",
+    label: "Elegant Event Setup",
+    category: "Ceremony",
+  },
+  {
+    id: 70,
+    image: "/images/ceremonies.jpg",
+    label: "Ceremony Decor",
+    category: "Ceremony",
+  },
+  // ── Picnic ────────────────────────────────────────────────
+  {
+    id: 13,
+    image: "/images/setup 1.jpg",
+    label: "Luxury Picnic",
+    category: "Picnic",
+  },
+  {
+    id: 71,
+    image: "/images/picnic setup.jpg",
+    label: "Picnic Setup",
+    category: "Picnic",
+  },
+  // ── Cards ─────────────────────────────────────────────────
+  {
+    id: 72,
+    image: "/images/cards.jpg",
+    label: "Event Cards",
+    category: "Cards",
+  },
+  {
+    id: 73,
+    image: "/images/cards...jpg",
+    label: "Greeting Cards",
+    category: "Cards",
+  },
+  {
+    id: 74,
+    image: "/images/carda1.jpg",
+    label: "Birthday Card",
+    category: "Cards",
+  },
+  {
+    id: 75,
+    image: "/images/card 2.jpg",
+    label: "Event Card Design",
+    category: "Cards",
+  },
+  {
+    id: 76,
+    image: "/images/card 3.jpg",
+    label: "Celebration Card",
+    category: "Cards",
+  },
+  {
+    id: 77,
+    image: "/images/card 4.jpg",
+    label: "Premium Card",
+    category: "Cards",
+  },
+  {
+    id: 78,
+    image: "/images/card 5.jpg",
+    label: "Luxury Card",
+    category: "Cards",
+  },
+  {
+    id: 79,
+    image: "/images/fb.jpg",
+    label: "Floral Backdrop Card",
+    category: "Cards",
+  },
 ];
 
-const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Picnic", "Ceremony"];
+const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Gift", "Ceremony", "Picnic", "Cards"];
 
 interface GalleryProps {
   isPreview?: boolean;
@@ -209,22 +582,25 @@ export function Gallery({ isPreview = false }: GalleryProps) {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <div className="inline-block relative group p-[2px] rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
-            {/* Deep Orbiting Beam */}
-            <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#1e40af_5%,#2563eb_10%,#1e40af_15%,transparent_20%)] opacity-100" />
 
-            <Link
-              to="/gallery"
-              className="relative inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.9rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
-            >
-              View Full Gallery
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
+        {isPreview && (
+          <div className="mt-12 text-center">
+            <div className="inline-block relative group p-[2px] rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20">
+              {/* Deep Orbiting Beam */}
+              <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#1e40af_5%,#2563eb_10%,#1e40af_15%,transparent_20%)] opacity-100" />
+
+              <Link
+                to="/gallery"
+                className="relative inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 rounded-full transition-all duration-300 text-[0.9rem] font-bold group-hover:bg-blue-600 dark:group-hover:bg-blue-500 group-hover:text-white"
+              >
+                View Full Gallery
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Lightbox */}
