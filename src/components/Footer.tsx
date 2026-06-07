@@ -1,4 +1,4 @@
-import { Heart, Instagram, MapPin, Phone, Mail, } from "lucide-react";
+import { Heart, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
 
