@@ -31,7 +31,7 @@ export function CEOSection() {
             <div className="relative rounded-[2rem] overflow-hidden h-[540px] shadow-2xl shadow-blue-900/15 bg-white dark:bg-slate-900 group max-w-[580px] mx-auto lg:ml-auto lg:mr-0">
               {/* Main image */}
               <img
-                src="public/images/ceo..jpg"
+                src="/images/ceo..jpg"
                 alt="Nana Achiaa Peprah Boadu Asha — Founder & CEO of AshEvents"
                 className="relative z-10 w-full h-full object-cover object-top select-none"
               />

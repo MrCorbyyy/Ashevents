@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const heroSlides = [
   {
-    image: "public/images/10 bouquet.4k.png",
+    image: "/images/10 bouquet.4k.png",
     label: "Money Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -14,7 +14,7 @@ const heroSlides = [
     shadowClass: "shadow-emerald-600/20"
   },
   {
-    image: "public/images/flower_bouquet_4k.png",
+    image: "/images/flower_bouquet_4k.png",
     label: "Flower Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -23,7 +23,7 @@ const heroSlides = [
     shadowClass: "shadow-rose-500/20"
   },
   {
-    image: "public/images/money_bouquet_4k.png",
+    image: "/images/money_bouquet_4k.png",
     label: "Money Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -32,7 +32,7 @@ const heroSlides = [
     shadowClass: "shadow-emerald-600/20"
   },
   {
-    image: "public/images/birthday packages..jpg",
+    image: "/images/birthday packages..jpg",
     label: "Birthday Packages",
     type: "Premium Service",
     icon: <Star className="w-5 h-5 fill-current" />,
@@ -41,7 +41,7 @@ const heroSlides = [
     shadowClass: "shadow-blue-600/20"
   },
   {
-    image: "public/images/birthday packages.jpg",
+    image: "/images/birthday packages.jpg",
     label: "Cards",
     type: "Premium Service",
     icon: <Star className="w-5 h-5 fill-current" />,
