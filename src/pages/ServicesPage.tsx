@@ -297,22 +297,49 @@ export default function ServicesPage() {
                 <p className="text-slate-500 max-w-xl mx-auto font-medium">Elevate your gift or event with our curated extras. These small touches transform a service into a lasting memory.</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 relative z-10">
                 {[
-                  { title: "Customized Cards", sub: "Handwritten messages", icon: <Scroll className="w-8 h-8" /> },
-                  { title: "Scented Packaging", sub: "Signature floral scent", icon: <Flower className="w-8 h-8" /> },
-                  { title: "Rush Delivery", sub: "For urgent surprises", icon: <Zap className="w-8 h-8" /> },
-                  { title: "Video Message", sub: "Scan-to-play QR card", icon: <QrCode className="w-8 h-8" /> },
+                  {
+                    title: "Customised Cards",
+                    sub: "With pictures — can be handwritten or printed",
+                    icon: <Scroll className="w-8 h-8" />,
+                  },
+                  {
+                    title: "Magazines",
+                    sub: "Beautifully designed custom magazines",
+                    icon: <PenTool className="w-8 h-8" />,
+                  },
+                  {
+                    title: "Birthday Menu Cards",
+                    sub: "Suitable for birthday, picnic, bridal shower setups & more",
+                    icon: <PartyPopper className="w-8 h-8" />,
+                  },
+                  {
+                    title: "Name Cards",
+                    sub: "Perfect for table setups & place settings",
+                    icon: <QrCode className="w-8 h-8" />,
+                  },
+                  {
+                    title: "Birthday Girl Question Cards",
+                    sub: "A fun interactive add-on for birthday setups",
+                    icon: <Flower className="w-8 h-8" />,
+                  },
                 ].map((addon, i) => (
                   <div
                     key={i}
-                    className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center"
+                    className="bg-white rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center overflow-hidden flex flex-col"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform">
-                      {addon.icon}
+                    {/* Image slot — images to be added */}
+                    <div className="h-52 bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <div className="text-blue-300 group-hover:scale-110 transition-transform">
+                        {addon.icon}
+                      </div>
                     </div>
-                    <h3 className="text-xl font-black text-slate-900 mb-3">{addon.title}</h3>
-                    <p className="text-slate-500 font-medium leading-relaxed">{addon.sub}</p>
+
+                    <div className="p-8 flex flex-col flex-1">
+                      <h3 className="text-lg font-black text-slate-900 mb-3">{addon.title}</h3>
+                      <p className="text-slate-500 font-medium leading-relaxed text-[0.85rem]">{addon.sub}</p>
+                    </div>
                   </div>
                 ))}
               </div>

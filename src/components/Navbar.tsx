@@ -162,12 +162,21 @@ export function Navbar() {
 
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center mr-12">
-            <img
-              src="/images/logo (2).jpg"
-              alt="AshEvents Logo"
-              className="h-14 w-auto object-contain"
-              style={{ mixBlendMode: "multiply" }}
-            />
+            {/* White bg wrapper ensures mix-blend-mode:multiply removes any gray/off-white logo background */}
+            <div style={{ background: "white", display: "inline-flex", alignItems: "center", padding: "2px" }}>
+              <img
+                src="/images/logo (2).jpg"
+                alt="AshEvents Logo"
+                style={{
+                  mixBlendMode: "multiply",
+                  height: "64px",
+                  width: "220px",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  display: "block",
+                }}
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
