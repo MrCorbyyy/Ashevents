@@ -162,10 +162,12 @@ export function Navbar() {
 
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center mr-12">
-            <div className="flex items-center font-black tracking-tighter text-[1.45rem]">
-              <span className="text-blue-700">Ash</span>
-              <span className="text-black dark:text-white">Events</span>
-            </div>
+            <img
+              src="/images/logo (2).jpg"
+              alt="AshEvents Logo"
+              className="h-14 w-auto object-contain"
+              style={{ mixBlendMode: "multiply" }}
+            />
           </Link>
 
           {/* Desktop Nav */}

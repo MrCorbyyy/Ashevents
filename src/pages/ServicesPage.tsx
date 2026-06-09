@@ -31,7 +31,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#flower-bouquet": {
     title: "Flower Bouquet",
-    description: "Get beautiful flower bouquet prices at AshEvents. Exquisite fresh and artificial floral arrangements designed to convey love, gratitude, and joy. Each bouquet is artistically curated with premium blooms, lush greenery, and bespoke ribbons to match your specific celebration and personal style perfectly.",
+    description: "We have both fresh and artificial flowers available. Our best seller, Faux Flowers also known as Eternal Flowers is loved for its lasting beauty and elegance.",
     image: "/images/rose bouquet.png",
     items: [
       { id: 1, name: "Sweet Petite", price: "", image: "/images/flower_bouquet_4k.png" },
@@ -61,7 +61,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#setup": {
     title: "Setups",
-    description: "Get luxury picnic setup prices at AshEvents. Experience the ultimate in relaxation and style with our beautifully styled low-profile tables, plush cushions, and curated table decor. Perfect for romantic dates, intimate anniversaries, or group celebrations in the park or your garden, tailored to your aesthetic.",
+    description: "We offer variety of setups for birthdays, slumber parties, bridal showers, graduation parties, naming ceremonies, picnic setups , get togethers etc",
     image: "/images/setup 1.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/picnic setup.jpg" },
@@ -76,7 +76,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#ballon-bouquet": {
     title: "Ballon Bouquet",
-    description: "Get elegant ballon bouquet prices at AshEvents. Turn any room into a magical sanctuary for romantic surprises, proposals, or intimate naming ceremonies. Our room decor services include artistic balloon styling, rose petals, ambient lighting, and personalized touches that speak from the heart and create a lasting impression.",
+    description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
     image: "/images/birthday packages..jpg",
     items: [
       { id: 1, name: "Standard Glow", price: "", image: "/images/ballon boquet 1.png" },
@@ -92,7 +92,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#room-decor": {
     title: "Room Decor",
-    description: "Get vibrant room decor prices at AshEvents. We specialize in stunning organic arches, balloon walls, and personalized jumbo balloons tailored to your event's theme. Our high-quality balloons bring energy, color, and a festive atmosphere to any celebratory space, making every moment pop with joy.",
+    description: "Transform any space into a memorable experience with our beautifully designed room décor setups. We offer Basic, Standard, Premium, and Luxury packages, all tailored to suit our clients’ preferences, style, and occasion.\n\nPlease Note:\n\t•\tPrices do not include hotel/apartment reservations or transportation.\n\t•\tCustomized gifts, cards, flowers, and other add-ons can be included at an additional fee.\n\t•\tAll setups can be personalized to match your desired theme and color palette.",
     image: "/images/premium package 2..jpg",
     items: [
       { id: 1, name: "Premium Package", price: "", image: "/images/premium package..jpg" },
@@ -107,7 +107,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#cards-magazines": {
     title: "Cards & Magazines",
-    description: "Get custom card and magazine prices at AshEvents. Capture your most cherished memories in a beautiful, lasting format. Our professionally designed cards and premium magazines serve as perfect keepsakes, beautifully documenting your unique life stories, special events, and heartfelt messages in high resolution.",
+    description: "Create lasting memories with our beautifully designed custom cards and magazines. Our cards can be personalized with photos, illustrations, cartoons, and heartfelt handwritten messages to make every occasion extra special.\n\nOur custom magazines are thoughtfully designed based on each client’s inspiration, story, and preferences, making them a unique and memorable keepsake.\n\nPlease Note:\nCustom cards and magazines require 48–96 hours for design and production, depending on the level of customization.",
     image: "/images/carda1.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/cards.jpg" },
@@ -126,7 +126,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   },
   "#gift-packages": {
     title: "Gift Packages",
-    description: "Get all-inclusive gift packages prices at AshEvents. Our birthday packages combine our best services—including backdrops, balloon decor, and table styling—into a cohesive, stunning event experience that is stress-free, beautiful, and tailored perfectly to the celebrant's unique personality and vision.",
+    description: "We offer thoughtfully curated gift packages for both males and females, perfect for birthdays, graduations, anniversaries, and other special occasions.\n\nAll packages can be customized to suit each client’s preferences, budget, and gifting needs, ensuring a truly personal experience.\n\nPlease Note:\n\t•\tPackage contents can be adjusted based on your preferences.\n\t•\tCustom cards, magazines, and other personalized add-ons are available at an additional fee.",
     image: "/images/package 1.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/birthday packages..jpg" },
@@ -181,7 +181,7 @@ export default function ServicesPage() {
                     <span className="text-slate-950">Our </span>
                     <span className="text-blue-600">{currentCategory.title}</span>
                   </h1>
-                  <p className="text-slate-950 text-[clamp(1.2rem,2.2vw,1.4rem)] leading-[1.8] font-medium mb-10 max-w-2xl">
+                  <p className="text-slate-950 text-[clamp(1.2rem,2.2vw,1.4rem)] leading-[1.8] font-medium mb-10 max-w-2xl whitespace-pre-line">
                     {currentCategory.description}
                   </p>
                 </div>

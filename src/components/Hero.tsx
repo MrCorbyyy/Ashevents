@@ -136,8 +136,8 @@ export function Hero() {
 
             {/* Description */}
             <p className="text-slate-900 max-w-xl mb-10 text-[clamp(1.15rem,2.2vw,1.4rem)] leading-[1.8] font-bold tracking-tight">
-              Ashevents specializes in balloon decor, event setups, stunning backdrops, gift curation, bouquets, and customized cards. ✨
-              We bring your ideas to life with services thoughtfully tailored to suit your style and special moments.
+              At Ashevents, we specialize in balloon décor, Birthday/ picnic setups , proposal setups, floral arrangements, backdrops, gift curation, snack boxes, balloon bouquets, money bouquets, mosaic frames, bridal fans, props, and more.
+✨ From intimate celebrations to grand occasions, we bring your vision to life with creativity, elegance, and attention to every detail.
             </p>
 
             {/* CTA Buttons */}

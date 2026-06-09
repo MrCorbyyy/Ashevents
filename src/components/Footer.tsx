@@ -83,13 +83,12 @@ export function Footer() {
           {/* Column 1: Brand & Philosophy (5 cols) */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-2xl">
-                <span className="text-slate-950 font-black text-xl tracking-tighter">AE</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tighter">AshEvents</span>
-                <span className="text-blue-500 font-black text-[0.6rem] uppercase tracking-[0.3em]">Boutique Experience</span>
-              </div>
+              <img
+                src="/images/logo (2).jpg"
+                alt="AshEvents Logo"
+                className="h-20 w-auto object-contain"
+                style={{ mixBlendMode: "screen" }}
+              />
             </div>
 
             <blockquote className="text-[1.1rem] font-medium leading-relaxed mb-6 italic text-slate-300 max-w-md">

@@ -12,7 +12,7 @@ const services = [
   {
     id: 2,
     title: "Flower Bouquet",
-    description: "Gorgeous fresh and artificial flower arrangements crafted to express love, appreciation, and celebration for any occasion.",
+    description: "We have both fresh and artificial flowers available. Our best seller, Faux Flowers also known as Eternal Flowers is loved for its lasting beauty and elegance.",
     image: "/images/rose bouquet.png",
     anchor: "#flower-bouquet",
   },
@@ -26,35 +26,35 @@ const services = [
   {
     id: 4,
     title: "Setup",
-    description: "Luxurious outdoor picnic experiences with styled table setups, cushions, decorations, and all the finishing touches for a perfect day out.",
+    description: "We offer variety of setups for birthdays, slumber parties, bridal showers, graduation parties, naming ceremonies, picnic setups , get togethers etc",
     image: "/images/picnic setup.jpg",
     anchor: "#setup",
   },
   {
     id: 5,
     title: "Ballon Bouquet",
-    description: "Beautifully decorated naming ceremonies filled with cultural grace, elegant florals, and personalized touches that honor new beginnings.",
+    description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
     image: "/images/bouquet 2.png",
     anchor: "#ballon-bouquet",
   },
   {
     id: 6,
     title: "Room Decor",
-    description: "Stunning balloon arches, columns, walls, and centerpieces in any color palette — transforming any space into a celebratory paradise.",
+    description: "Transform any space into a memorable experience with our beautifully designed room décor setups. We offer Basic, Standard, Premium, and Luxury packages, all tailored to suit our clients’ preferences, style, and occasion.",
     image: "/images/ballon decor 2.jpg",
     anchor: "#room-decor",
   },
   {
     id: 7,
     title: "Card/Magazines",
-    description: "Custom and premium backdrops for photo opportunities — from floral walls to sequin panels, fabric drapes to neon signs.",
+    description: "Create lasting memories with our beautifully designed custom cards and magazines. Our cards can be personalized with photos, illustrations, cartoons, and heartfelt handwritten messages to make every occasion extra special.",
     image: "/images/cards.jpg",
     anchor: "#cards-magazines",
   },
   {
     id: 8,
     title: "Gift Packages",
-    description: "All-inclusive birthday packages with cake table setups, balloon decor, backdrops, and personalized styling for a truly unforgettable celebration.",
+    description: "We offer thoughtfully curated gift packages for both males and females, perfect for birthdays, graduations, anniversaries, and other special occasions. All packages can be customized to suit each client’s preferences.",
     image: "/images/package 1.jpg",
     anchor: "#gift-packages",
   },
@@ -90,7 +90,7 @@ export function Services({ isPreview = false }: ServicesProps) {
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">Services</span>
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base leading-[1.7]">
-            We offer a wide range of event services to make every celebration special, memorable, and uniquely yours.
+            We offer a wide range of  services to make every celebration special, memorable, and uniquely yours.
           </p>
           <div className="mt-4 flex items-center justify-center gap-3">
             <motion.div
