@@ -103,12 +103,7 @@ export function CEOSection() {
 
             {/* Bio */}
             <p className="text-slate-600 dark:text-slate-400 text-[1.15rem] leading-relaxed font-medium mb-10">
-              Asha is a Marketing graduate and the founder of Ashevents, a brand she established two years ago
-              during her university days. Driven by her love for celebrations and her innovative mindset, she
-              transformed her passion into a growing business. Asha is known for her creativity, attention to
-              detail, and ability to bring unique ideas to life. Through Ashevents, she specializes in creating
-              memorable experiences from intimate setups to elegant event decor  ensuring every moment feels
-              special and unforgettable.
+              Asha is a Marketing graduate and the founder of Ashevents, a brand she established in 2024 during her university days. Driven by her love for celebrations and her innovative mindset, she transformed her passion into a growing business. Asha is known for her creativity, attention to detail, and ability to bring unique ideas to life. Through Ashevents, she specializes in creating memorable experiences from intimate setups to elegant event decor ensuring every moment feels special and unforgettable.
             </p>
 
             {/* Stats */}
