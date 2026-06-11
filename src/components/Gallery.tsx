@@ -492,9 +492,16 @@ const galleryItems: GalleryItem[] = [
     label: "Floral Backdrop Card",
     category: "Cards",
   },
+
+  {
+    id: 80,
+    image: "",
+    label: "Dowry wrapping",
+    category: "Dowry Wrapping"
+  },
 ];
 
-const categories = ["All", "Birthday", "Balloon", "Bouquet", "Backdrop", "Gift", "Ceremony", "Picnic", "Cards"];
+const categories = ["All", "Bouquet", "Backdrop", "Setups",  "Gift", "Events", "Dowry Wrapping", "Cards", "Props", ];
 
 interface GalleryProps {
   isPreview?: boolean;

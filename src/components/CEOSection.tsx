@@ -156,14 +156,14 @@ export function CEOSection() {
 
               {/* Snapchat */}
               <a
-  href="https://www.snapchat.com/add/blacashaaa"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-14 h-14 rounded-full bg-[#FFFC00] hover:bg-[#efec00] text-black flex items-center justify-center transition-all duration-300 shadow-lg shadow-[#FFFC00]/30 hover:scale-110 active:scale-95"
-  title="Add on Snapchat"
->
-  <FaSnapchat className="w-7 h-7" />
-</a>
+                href="https://www.snapchat.com/add/blacashaaa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-[#FFFC00] hover:bg-[#efec00] text-black flex items-center justify-center transition-all duration-300 shadow-lg shadow-[#FFFC00]/30 hover:scale-110 active:scale-95"
+                title="Add on Snapchat"
+              >
+                <FaSnapchat className="w-7 h-7" />
+              </a>
 
               {/* TikTok */}
               <a

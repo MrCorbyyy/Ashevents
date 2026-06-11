@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
+//import { Description } from "@radix-ui/react-dialog";
 
 const services = [
   {
@@ -58,6 +59,14 @@ const services = [
     image: "/images/package 1.jpg",
     anchor: "#gift-packages",
   },
+
+  {
+    id: 9,
+    title: "Dowry Wraping",
+    description: "",
+    image: "",
+    anchor: "",
+  }
 ];
 
 interface ServicesProps {

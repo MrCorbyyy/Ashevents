@@ -93,7 +93,7 @@ export function Footer() {
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/images/logo (2).jpg"
+                src="/images/ashevents logo..png"
                 alt="AshEvents Logo"
                 className="h-20 w-auto object-contain"
                 style={{ mixBlendMode: "screen" }}
