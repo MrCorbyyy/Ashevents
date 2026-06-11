@@ -161,21 +161,11 @@ export function Navbar() {
 
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center mr-8">
-            {/* White bg wrapper ensures mix-blend-mode:multiply removes any gray/off-white logo background */}
-            <div style={{ background: "white", display: "inline-flex", alignItems: "center", padding: "2px" }}>
-              <img
-                src="/images/ashevents logo..png"
-                alt="AshEvents Logo"
-                style={{
-                  mixBlendMode: "multiply",
-                  height: "64px",
-                  width: "220px",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  display: "block",
-                }}
-              />
-            </div>
+            <img
+              src="/images/ashevents logo..png"
+              alt="AshEvents Logo"
+              className="h-[64px] w-[220px] object-contain object-center block mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Nav */}
