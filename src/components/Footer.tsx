@@ -96,7 +96,7 @@ export function Footer() {
                 src="/images/ashevents logo..png"
                 alt="AshEvents Logo"
                 className="h-20 w-auto object-contain"
-                style={{ mixBlendMode: "screen" }}
+                style={{ filter: "invert(1)", mixBlendMode: "screen" }}
               />
             </div>
 

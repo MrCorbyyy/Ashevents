@@ -156,11 +156,11 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/97 dark:bg-slate-950/97 backdrop-blur-sm shadow-sm border-b border-blue-100 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex items-center h-20">
 
           {/* Logo */}
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center mr-12">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center mr-8">
             {/* White bg wrapper ensures mix-blend-mode:multiply removes any gray/off-white logo background */}
             <div style={{ background: "white", display: "inline-flex", alignItems: "center", padding: "2px" }}>
               <img
