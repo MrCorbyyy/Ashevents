@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import { motion } from "motion/react";
 
 const testimonials = [
   {
@@ -113,7 +114,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white rounded-[2.5rem] p-8 shadow-sm border border-blue-50 relative"
+              className="bg-white rounded-[2.5rem] p-8 shadow-sm border border-blue-50 relative flex flex-col h-full"
             >
               {/* Quote Icon */}
               <Quote className="absolute top-6 right-8 w-8 h-8 text-blue-50" fill="currentColor" />
@@ -126,9 +127,32 @@ export function Testimonials() {
               </div>
 
               {/* Text */}
-              <p className="text-gray-600 mb-6 text-[0.88rem] leading-[1.8] italic">
-                "{t.text}"
-              </p>
+              <div className="flex-1">
+                <motion.div
+                  className="text-gray-600 mb-6 text-[0.88rem] leading-[1.8] italic"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, margin: "-50px" }}
+                  variants={{
+                    visible: { transition: { staggerChildren: 0.015 } },
+                    hidden: {}
+                  }}
+                >
+                  <motion.span variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>"</motion.span>
+                  {Array.from(new (Intl as any).Segmenter("en", { granularity: "grapheme" }).segment(t.text)).map((s: any, index: number) => (
+                    <motion.span
+                      key={index}
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: { opacity: 1 }
+                      }}
+                    >
+                      {s.segment}
+                    </motion.span>
+                  ))}
+                  <motion.span variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>"</motion.span>
+                </motion.div>
+              </div>
 
               {/* Footer */}
               <div className="flex items-center gap-4 pt-6 border-t border-blue-50">
