@@ -32,14 +32,17 @@ export function ContactChannels() {
       textColor: "text-pink-500",
     },
     {
-  name: "Snapchat",
-  description: "Get a behind-the-scenes look at how we create magic.",
-  cta: "Add Friend",
-  href: "https://www.snapchat.com/add/blacashaaa",
-  icon: ({ className }: { className?: string }) => (
-    <FaSnapchat className={className} />
-  ),
-},
+      name: "Snapchat",
+      description: "Get a behind-the-scenes look at how we create magic.",
+      cta: "Add Friend",
+      href: "https://www.snapchat.com/add/blacashaaa",
+      icon: ({ className }: { className?: string }) => (
+        <FaSnapchat className={className} />
+      ),
+      color: "bg-[#FFFC00]",
+      lightColor: "bg-[#FFFC00]",
+      textColor: "text-black",
+    },
 
     {
       name: "TikTok",
