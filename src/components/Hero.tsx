@@ -135,10 +135,30 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-slate-900 max-w-xl mb-10 text-[clamp(1.15rem,2.2vw,1.4rem)] leading-[1.8] font-bold tracking-tight">
-              At Ashevents, we specialize in balloon décor, Birthday/ picnic setups , proposal setups, floral arrangements, backdrops, gift curation, snack boxes, balloon bouquets, money bouquets, mosaic frames, bridal fans, props, and more.
-✨ From intimate celebrations to grand occasions, we bring your vision to life with creativity, elegance, and attention to every detail.
-            </p>
+            <motion.div
+              className="text-slate-900 max-w-xl mb-10 text-[clamp(1.15rem,2.2vw,1.4rem)] leading-[1.8] tracking-tight font-normal min-h-[140px]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, margin: "-50px" }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.015 } },
+                hidden: {}
+              }}
+            >
+              {Array.from(new (Intl as any).Segmenter("en", { granularity: "grapheme" }).segment(
+                "At Ashevents, we specialize in balloon décor, Birthday/ picnic setups, proposal setups, floral arrangements, backdrops, gift curation, snack boxes, balloon bouquets, money bouquets, mosaic frames, bridal fans, props, and more. ✨ From intimate celebrations to grand occasions, we bring your vision to life with creativity, elegance, and attention to every detail."
+              )).map((s: any, index: number) => (
+                <motion.span
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 }
+                  }}
+                >
+                  {s.segment}
+                </motion.span>
+              ))}
+            </motion.div>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-5">
