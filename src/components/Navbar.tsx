@@ -156,7 +156,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/97 dark:bg-slate-950/97 backdrop-blur-sm shadow-sm border-b border-blue-100 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-6">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-20">
 
           {/* Logo */}
@@ -164,7 +164,7 @@ export function Navbar() {
             <img
               src="/images/ashevents logo..png"
               alt="AshEvents Logo"
-              className="h-[64px] w-[220px] object-contain object-center block mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-300"
+              className="h-[64px] w-[220px] object-contain object-left block mix-blend-multiply dark:invert dark:mix-blend-screen transition-all duration-300"
             />
           </Link>
 
