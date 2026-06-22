@@ -82,11 +82,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "Standard Glow", price: "", image: "/images/ballon boquet 1.png" },
       { id: 2, name: "Romantic Night", price: "", popular: true, image: "/images/bouquet 2.png" },
       { id: 3, name: "Luxury Surprise", price: "", image: "/images/birthday packages..jpg" },
-      { id: 4, name: "", price: "", image: "/images/ballon bouquet 3.png" },
-      { id: 5, name: "", price: "", image: "/images/package 5.png" },
-      { id: 6, name: "", price: "", image: "/images/bb 33.jpg" },
-      { id: 7, name: "", price: "", image: "/images/bb 22.jpg" },
-      { id: 8, name: "", price: "", image: "/images/bb 44.jpg" },
+      { id: 4, name: "", price: "", image: "/images/bq 1.jpg" },
+      { id: 5, name: "", price: "", image: "/images/bq 2.jpg" },
+      { id: 6, name: "", price: "", image: "/images/bq 3.jpg" },
+      { id: 7, name: "", price: "", image: "/images/bq 4.jpg" },
+      { id: 8, name: "", price: "", image: "/images/bq 5.jpg" },
 
     ]
   },

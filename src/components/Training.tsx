@@ -12,7 +12,9 @@ export function Training({ isPreview = false }: { isPreview?: boolean }) {
     "/images/train 2.jpg",
     "/images/train 3.jpg",
     "/images/train 4.jpg",
-    "/images/train 5.jpg"
+    "/images/train 5.jpg",
+    "/images/train 6.jpg",
+    "/images/train 7.jpg"
   ];
 
   const contactOptions = [
