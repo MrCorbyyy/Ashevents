@@ -52,11 +52,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 1, name: "", price: "", image: "/images/backdrop 2.jpg" },
       { id: 2, name: "", price: "", popular: true, image: "/images/backdrops bw.jpg" },
       { id: 3, name: "", price: "", image: "/images/backdrops.jpg" },
-      { id: 4, name: "", price: "", image: "/images/backdrop 3.jpg" },
+      { id: 4, name: "", price: "", image: "/images/backdrop new 2.jpg" },
       { id: 5, name: "", price: "", image: "/images/backdrop 4.jpg" },
       { id: 6, name: "", price: "", image: "/images/backdrop 5.jpg" },
       { id: 7, name: "", price: "", image: "/images/backdrop 6.jpg" },
-      { id: 8, name: "", price: "", image: "/images/backdrop 7.jpg" },
+      { id: 8, name: "", price: "", image: "/images/backdrop new 1.jpg" },
     ]
   },
   "#setup": {
@@ -79,11 +79,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
     description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
     image: "/images/birthday packages..jpg",
     items: [
-      { id: 1, name: "Standard Glow", price: "", image: "/images/ballon boquet 1.png" },
-      { id: 2, name: "Romantic Night", price: "", popular: true, image: "/images/bouquet 2.png" },
-      { id: 3, name: "Luxury Surprise", price: "", image: "/images/birthday packages..jpg" },
+      { id: 1, name: "", price: "", image: "/images/ballon boquet 1.png" },
+      { id: 2, name: "", price: "", popular: true, image: "/images/bouquet 2.png" },
+      { id: 3, name: "", price: "", image: "/images/birthday packages..jpg" },
       { id: 4, name: "", price: "", image: "/images/bq 1.jpg" },
-      { id: 5, name: "", price: "", image: "/images/bq 2.jpg" },
+      { id: 5, name: "", price: "", image: "/images/bq 6.jpg" },
       { id: 6, name: "", price: "", image: "/images/bq 3.jpg" },
       { id: 7, name: "", price: "", image: "/images/bq 4.jpg" },
       { id: 8, name: "", price: "", image: "/images/bq 5.jpg" },
@@ -487,8 +487,8 @@ export default function ServicesPage() {
                     image: "/images/props.jpg",
                   },
                   {
-                    title: "Magazines",
-                    sub: "Beautifully designed custom magazines",
+                    title: "Customised Cards & Magazines",
+                    sub: "Beautifully designed custom magazines and cards",
                     image: "/images/carda1.jpg",
                   },
                   {
@@ -539,7 +539,7 @@ export default function ServicesPage() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Event Roadmap Section (Replacing Contact) */}
+      {/* Event Roadmap Section  */}
       <div className="border-t border-slate-50 pt-20">
         <EventRoadmap />
       </div>

@@ -323,7 +323,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 52,
-    image: "/images/backdrop 3.jpg",
+    image: "/images/backdrop new 2.jpg",
     label: "Backdrop",
     category: "Backdrop",
   },
@@ -347,7 +347,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 56,
-    image: "/images/backdrop 7.jpg",
+    image: "/images/backdrop new 1.jpg",
     label: " Backdrop",
     category: "Backdrop",
   },

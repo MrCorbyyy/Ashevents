@@ -49,7 +49,7 @@ const services = [
     id: 7,
     title: "Card/Magazines",
     description: "Create lasting memories with our beautifully designed custom cards and magazines. Our cards can be personalized with photos, illustrations, cartoons, and heartfelt handwritten messages to make every occasion extra special.",
-    image: "/images/cards.jpg",
+    image: "/images/card 3.0.jpg",
     anchor: "#cards-magazines",
   },
   {

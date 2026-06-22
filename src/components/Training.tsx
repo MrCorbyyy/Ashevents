@@ -8,12 +8,12 @@ export function Training({ isPreview = false }: { isPreview?: boolean }) {
   const [showContacts, setShowContacts] = useState(false);
 
   const images = [
-    "/images/train 1.jpg",
-    "/images/train 2.jpg",
-    "/images/train 3.jpg",
-    "/images/train 4.jpg",
-    "/images/train 5.jpg",
-    "/images/train 6.jpg",
+    "images/train 4.jpg",
+    "images/train 2.jpg",
+    "images/train 3.jpg",
+    "images/train 1.jpg",
+    "images/train 5.jpg",
+    "images/train 6.jpg",
     "/images/train 7.jpg"
   ];
 

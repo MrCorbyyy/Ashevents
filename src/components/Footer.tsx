@@ -100,10 +100,20 @@ export function Footer() {
               />
             </div>
 
-            <blockquote className="text-[1.1rem] font-medium leading-relaxed mb-6 italic text-slate-300 max-w-md">
-              "Creating magical, unforgettable celebrations where every detail
-              whispers luxury and every moment feels special."
-            </blockquote>
+            <motion.blockquote 
+              animate={{ 
+                opacity: [0.8, 1, 0.8],
+                y: [0, -4, 0]
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              className="text-[1.1rem] font-medium leading-relaxed mb-6 italic text-slate-300 max-w-md"
+            >
+              "Styling moments, wrapping memories!."
+            </motion.blockquote>
 
             <div className="flex items-center gap-5">
               {socialLinks.map((social) => {
