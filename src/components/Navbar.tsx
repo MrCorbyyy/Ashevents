@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Home", href: "#home", route: "/" },
   { label: "Services", href: "/services", route: "/services" },
   { label: "Gallery", href: "/gallery", route: "/gallery" },
-  { label: "Packages", href: "/packages", route: "/packages" },
+  { label: "Training", href: "/training", route: "/training" },
   { label: "Testimonials", href: "#testimonials", route: "/" },
 ];
 
@@ -52,7 +52,7 @@ const searchData = [
   { title: "Home", category: "Page", href: "/", type: "route" },
   { title: "Services", category: "Page", href: "/services", type: "route" },
   { title: "Gallery", category: "Page", href: "/gallery", type: "route" },
-  { title: "Packages", category: "Page", href: "/packages", type: "route" },
+  { title: "Training", category: "Page", href: "/training", type: "route" },
   { title: "Testimonials", category: "Section", href: "#testimonials", type: "anchor" },
   // Services
   { title: "Money Bouquet", category: "Service", href: "/services#money-bouquet", type: "route" },
@@ -62,13 +62,9 @@ const searchData = [
   { title: "Room Decor", category: "Service", href: "/services#room-decor", type: "route" },
   { title: "Balloon Decor", category: "Service", href: "/services#balloon-decor", type: "route" },
   { title: "Card/Magazines", category: "Service", href: "/services#cards-magazines", type: "route" },
-  { title: "Birthday Packages", category: "Service", href: "/services#birthday-packages", type: "route" },
   { title: "Proposal Decor", category: "Service", href: "/services#proposal-decor", type: "route" },
-  // Packages
-  { title: "Basic Joy Package", category: "Package", href: "/packages", type: "route" },
-  { title: "Premium Magic Package", category: "Package", href: "/packages", type: "route" },
-  { title: "Luxury Grandeur Package", category: "Package", href: "/packages", type: "route" },
-  { title: "Bespoke Signature Package", category: "Package", href: "/packages", type: "route" },
+  // Training
+  { title: "ATI Training Program", category: "Training", href: "/training", type: "route" },
 ];
 
 export function Navbar() {

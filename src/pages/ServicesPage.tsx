@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, MessageSquare, PenTool, PartyPopper, Scroll, Flower, Zap, QrCode } from "lucide-react";
+import { ArrowLeft, Zap, Lightbulb, Palette, Wand2, Sparkles } from "lucide-react";
 import { EventRoadmap } from "../components/EventRoadmap";
 import { Services } from "../components/Services";
 import { Link } from "react-router-dom";
@@ -135,11 +135,191 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 4, name: "", price: "", image: "/images/gift package 3.jpg" },
       { id: 5, name: "", price: "", image: "/images/gift package 4.jpg" },
       { id: 6, name: "", price: "", image: "/images/gift package 5.jpg" },
-      { id: 7, name: "", price: "", image: "/images/gift package 6.jpg"},
+      { id: 7, name: "", price: "", image: "/images/gift package 6.jpg" },
       { id: 8, name: "", price: "", image: "/images/gift package 7.jpg" },
     ]
   },
 };
+
+
+function VisionIcon() {
+  return (
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        variants={{
+          initial: { scale: 0.8, opacity: 0 },
+          hover: { scale: 1.5, opacity: 0.6 }
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 bg-blue-400/20 blur-xl rounded-full"
+      />
+      <motion.div
+        variants={{
+          initial: { scale: 1, rotate: 0, y: 0 },
+          hover: {
+            scale: 1.15,
+            y: -2,
+            rotate: [0, -10, 10, -10, 5, -5, 0],
+            transition: { duration: 0.6, ease: "easeInOut" }
+          }
+        }}
+      >
+        <Lightbulb className="w-8 h-8 text-blue-600 transition-colors duration-300 group-hover:text-blue-500" />
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { opacity: 0, scale: 0 },
+          hover: { opacity: 1, scale: 1 }
+        }}
+        className="absolute -top-1 -right-1"
+      >
+        <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400 animate-pulse" />
+      </motion.div>
+    </div>
+  );
+}
+
+function DesignIcon() {
+  return (
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        variants={{
+          initial: { scale: 0.8, opacity: 0 },
+          hover: { scale: 1.5, opacity: 0.5 }
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 bg-sky-400/20 blur-xl rounded-full"
+      />
+      <motion.div
+        variants={{
+          initial: { scale: 1, rotate: 0 },
+          hover: {
+            scale: 1.15,
+            rotate: [0, 15, -10, 15, -5, 0],
+            transition: { duration: 0.7, ease: "easeInOut" }
+          }
+        }}
+      >
+        <Palette className="w-8 h-8 text-blue-600" />
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { opacity: 0, y: 0, scale: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            y: [-5, -15],
+            x: [-10, -15],
+            scale: [0.5, 1, 0.5],
+            transition: { duration: 0.8, repeat: Infinity, repeatDelay: 0.2 }
+          }
+        }}
+        className="absolute w-2 h-2 rounded-full bg-rose-500"
+      />
+      <motion.div
+        variants={{
+          initial: { opacity: 0, y: 0, scale: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            y: [-10, -22],
+            x: [10, 15],
+            scale: [0.4, 0.8, 0.4],
+            transition: { duration: 0.8, delay: 0.3, repeat: Infinity, repeatDelay: 0.1 }
+          }
+        }}
+        className="absolute w-2 h-2 rounded-full bg-amber-400"
+      />
+      <motion.div
+        variants={{
+          initial: { opacity: 0, y: 0, scale: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            y: [-12, -26],
+            x: [0, -5],
+            scale: [0.5, 0.9, 0.5],
+            transition: { duration: 0.8, delay: 0.1, repeat: Infinity, repeatDelay: 0.3 }
+          }
+        }}
+        className="absolute w-2 h-2 rounded-full bg-emerald-400"
+      />
+    </div>
+  );
+}
+
+function MagicIcon() {
+  return (
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        variants={{
+          initial: { scale: 0.8, opacity: 0 },
+          hover: { scale: 1.5, opacity: 0.6 }
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute inset-0 bg-violet-400/20 blur-xl rounded-full"
+      />
+      <motion.div
+        variants={{
+          initial: { scale: 1, rotate: 0 },
+          hover: {
+            scale: 1.15,
+            rotate: [0, -20, 25, -15, 10, 0],
+            transition: { duration: 0.8, ease: "easeInOut" }
+          }
+        }}
+        className="relative z-10"
+      >
+        <Wand2 className="w-8 h-8 text-blue-600" />
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { opacity: 0, scale: 0, rotate: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            scale: [0.5, 1.3, 0.5],
+            rotate: [0, 90],
+            x: [0, 15],
+            y: [0, -15],
+            transition: { duration: 0.8, repeat: Infinity, repeatDelay: 0.2 }
+          }
+        }}
+        className="absolute top-0 right-0 text-amber-400"
+      >
+        <Sparkles className="w-4 h-4 fill-amber-400 text-amber-400" />
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { opacity: 0, scale: 0, rotate: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            scale: [0.4, 1.1, 0.4],
+            rotate: [0, -90],
+            x: [0, -18],
+            y: [0, -10],
+            transition: { duration: 0.8, delay: 0.2, repeat: Infinity, repeatDelay: 0.3 }
+          }
+        }}
+        className="absolute top-1 left-1 text-violet-400"
+      >
+        <Sparkles className="w-3.5 h-3.5 fill-violet-400 text-violet-400" />
+      </motion.div>
+      <motion.div
+        variants={{
+          initial: { opacity: 0, scale: 0, rotate: 0 },
+          hover: {
+            opacity: [0, 1, 0],
+            scale: [0.3, 0.9, 0.3],
+            rotate: [0, 120],
+            x: [0, 5],
+            y: [0, -22],
+            transition: { duration: 0.8, delay: 0.4, repeat: Infinity, repeatDelay: 0.1 }
+          }
+        }}
+        className="absolute top-0 text-sky-400"
+      >
+        <Sparkles className="w-3 h-3 fill-sky-400 text-sky-400" />
+      </motion.div>
+    </div>
+  );
+}
 
 export default function ServicesPage() {
   const location = useLocation();
@@ -162,7 +342,7 @@ export default function ServicesPage() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          {/* Back Navigation (Moved to top) */}
+          {/* Back Navigation */}
           {!showAll && (
             <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 mb-6">
               <Link to="/services" className="inline-flex items-center gap-2 text-blue-600 font-black text-[0.75rem] uppercase tracking-widest hover:opacity-70 transition-opacity">
@@ -255,34 +435,36 @@ export default function ServicesPage() {
                     step: "01",
                     title: "The Vision",
                     desc: "We start with a detailed consultation to understand your dream, color palette, and specific needs.",
-                    icon: <MessageSquare className="w-8 h-8 text-blue-600" />
+                    icon: <VisionIcon />
                   },
                   {
                     step: "02",
                     title: "The Design",
                     desc: "Our creative team crafts a bespoke concept, selecting the finest materials and unique arrangements.",
-                    icon: <PenTool className="w-8 h-8 text-blue-600" />
+                    icon: <DesignIcon />
                   },
                   {
                     step: "03",
                     title: "The Magic",
                     desc: "We bring it all to life with flawless execution, leaving you free to enjoy your celebration.",
-                    icon: <PartyPopper className="w-8 h-8 text-blue-600" />
+                    icon: <MagicIcon />
                   }
                 ].map((item, i) => (
-                  <div
+                  <motion.div
                     key={i}
-                    className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group"
+                    initial="initial"
+                    whileHover="hover"
+                    className="bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group cursor-pointer overflow-hidden"
                   >
                     <div className="absolute top-8 right-10 text-[3.5rem] font-black text-blue-50 opacity-0 group-hover:opacity-100 transition-opacity">
                       {item.step}
                     </div>
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 transition-all duration-300 group-hover:bg-blue-100/50">
                       {item.icon}
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-4">{item.title}</h3>
+                    <h3 className="text-2xl font-black text-slate-900 mb-4 transition-colors duration-300 group-hover:text-blue-600">{item.title}</h3>
                     <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -300,40 +482,49 @@ export default function ServicesPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 relative z-10">
                 {[
                   {
-                    title: "Customised Cards",
-                    sub: "With pictures — can be handwritten or printed",
-                    icon: <Scroll className="w-8 h-8" />,
+                    title: "Props",
+                    sub: "props for birthdays and special occassions",
+                    image: "/images/props.jpg",
                   },
                   {
                     title: "Magazines",
                     sub: "Beautifully designed custom magazines",
-                    icon: <PenTool className="w-8 h-8" />,
+                    image: "/images/carda1.jpg",
                   },
                   {
                     title: "Birthday Menu Cards",
                     sub: "Suitable for birthday, picnic, bridal shower setups & more",
-                    icon: <PartyPopper className="w-8 h-8" />,
+                    image: "/images/menu cards.jpg",
                   },
                   {
                     title: "Name Cards",
                     sub: "Perfect for table setups & place settings",
-                    icon: <QrCode className="w-8 h-8" />,
+                    image: "/images/name cards.jpg",
                   },
                   {
-                    title: "Birthday Girl Question Cards",
+                    title: "Birthday Question Cards",
                     sub: "A fun interactive add-on for birthday setups",
-                    icon: <Flower className="w-8 h-8" />,
+                    image: "/images/qc 1.jpg",
                   },
                 ].map((addon, i) => (
                   <div
                     key={i}
-                    className="bg-white rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center overflow-hidden flex flex-col"
+                    className="bg-white rounded-[3rem] border border-blue-100 shadow-xl shadow-blue-900/5 relative group text-center overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/10"
                   >
-                    {/* Image slot — images to be added */}
-                    <div className="h-52 bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                      <div className="text-blue-300 group-hover:scale-110 transition-transform">
-                        {addon.icon}
-                      </div>
+                    {/* Image slot */}
+                    <div className="h-52 bg-blue-50/50 flex items-center justify-center overflow-hidden relative transition-colors duration-300 group-hover:bg-blue-100/30">
+                      {addon.image ? (
+                        <>
+                          <img
+                            src={addon.image}
+                            alt={addon.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </>
+                      ) : (
+                        <div className="w-full h-full bg-blue-50/50" />
+                      )}
                     </div>
 
                     <div className="p-8 flex flex-col flex-1">

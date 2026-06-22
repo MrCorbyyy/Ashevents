@@ -60,13 +60,21 @@ const services = [
     anchor: "#gift-packages",
   },
 
-  {
-    id: 9,
-    title: "Dowry Wraping",
-    description: "",
-    image: "",
-    anchor: "",
-  }
+  // {
+  //   id: 9,
+  //   title: "Dowry Wraping",
+  //   description: "",
+  //   image: "",
+  //   anchor: "",
+  // },
+
+  //  {
+  //   id: 10,
+  //   title: "Props",
+  //   description: "",
+  //   image: "",
+  //   anchor: "",
+  // }
 ];
 
 interface ServicesProps {

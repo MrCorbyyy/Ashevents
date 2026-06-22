@@ -1,11 +1,11 @@
-import { BirthdayPackages } from "../components/BirthdayPackages";
+import { Training } from "../components/Training";
 import { ContactChannels } from "../components/ContactChannels";
 import { EventRoadmap } from "../components/EventRoadmap";
 
-export default function PackagesPage() {
+export default function TrainingPage() {
   return (
     <div className="pt-20">
-      <BirthdayPackages isPreview={false} />
+      <Training isPreview={false} />
       <EventRoadmap />
       <ContactChannels />
     </div>
