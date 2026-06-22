@@ -140,25 +140,25 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 33,
-    image: "/images/ballon bouquet 3.png",
+    image: "/images/bq 1.jpg",
     label: "Balloon Bouquet ",
     category: "Balloon",
   },
   {
     id: 34,
-    image: "/images/bb 22.jpg",
+    image: "/images/bq 4.jpg",
     label: "Balloon Bouquet",
     category: "Balloon",
   },
   {
     id: 35,
-    image: "/images/bb 33.jpg",
+    image: "/images/bq 3.jpg",
     label: "Balloon Bouquet",
     category: "Balloon",
   },
   {
     id: 36,
-    image: "/images/bb 44.jpg",
+    image: "/images/bq 5.jpg",
     label: "Balloon Bouquet",
     category: "Balloon",
   },
@@ -384,7 +384,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 62,
-    image: "/images/package 5.png",
+    image: "/images/bq 2.jpg",
     label: "Balloon Bouquet",
     category: "Balloon",
   },
