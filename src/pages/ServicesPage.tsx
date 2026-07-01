@@ -450,7 +450,7 @@ export default function ServicesPage() {
             ) : (
               <div className="mb-16">
                 <Services isPreview={false} />
-                <OtherServices isPreview={false} />
+                <OtherServices />
               </div>
             )}
 
