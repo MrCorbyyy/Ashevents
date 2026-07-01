@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <Services isPreview={true} />
-      <OtherServices isPreview={true} />
+      <OtherServices />
       <Gallery isPreview={true} />
       <CEOSection />
       <WhyChoose />
