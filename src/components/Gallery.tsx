@@ -505,16 +505,66 @@ const galleryItems: GalleryItem[] = [
     label: "Flower Bouquet with Card",
     category: "Bouquet",
   },
-  // // ── Dowry Wrapping ─────────────────────────────────────────
-  // {
-  //   id: 80,
-  //   image: "",
-  //   label: "Dowry wrapping",
-  //   category: "Dowry Wrapping"
-  // },
+  // ── Props & Mosaic Frames ────────────────────────────────
+  {
+    id: 80,
+    image: "/images/props 1.jpg",
+    label: "Props & Mosaic",
+    category: "Props"
+  },
+  {
+    id: 81,
+    image: "/images/props 2.jpg",
+    label: "Props & Mosaic",
+    category: "Props"
+  },
+  {
+    id: 82,
+    image: "/images/props 3.jpg",
+    label: "Props & Mosaic",
+    category: "Props"
+  },
+  // ── Bridal Fans ──────────────────────────────────────────
+  {
+    id: 83,
+    image: "/images/bridal fan 1.jpg",
+    label: "Bridal Fan",
+    category: "Bridal Fans"
+  },
+  {
+    id: 84,
+    image: "/images/bridal fan 2.jpg",
+    label: "Bridal Fan",
+    category: "Bridal Fans"
+  },
+  {
+    id: 85,
+    image: "/images/bridal fan 3.jpg",
+    label: "Bridal Fan",
+    category: "Bridal Fans"
+  },
+  // ── Dowry Wrapping ─────────────────────────────────────────
+  {
+    id: 86,
+    image: "/images/dowry 1.jpg",
+    label: "Dowry Wrapping",
+    category: "Dowry Wrapping"
+  },
+  {
+    id: 87,
+    image: "/images/dowry 2.jpg",
+    label: "Dowry Wrapping",
+    category: "Dowry Wrapping"
+  },
+  {
+    id: 88,
+    image: "/images/dowry 3.jpg",
+    label: "Dowry Wrapping",
+    category: "Dowry Wrapping"
+  },
 ];
 
-const categories = ["All", "Birthday", "Bouquet", "Flower Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards"];
+const categories = ["All", "Birthday", "Bouquet", "Flower Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards", "Props", "Bridal Fans", "Dowry Wrapping"];
 
 interface GalleryProps {
   isPreview?: boolean;

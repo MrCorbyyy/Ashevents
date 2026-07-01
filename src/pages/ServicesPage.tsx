@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { ArrowLeft, Zap, Lightbulb, Palette, Wand2, Sparkles } from "lucide-react";
 import { EventRoadmap } from "../components/EventRoadmap";
 import { Services } from "../components/Services";
+import { OtherServices } from "../components/OtherServices";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -118,15 +119,11 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 6, name: "", price: "", image: "/images/card 4.jpg" },
       { id: 7, name: "", price: "", image: "/images/card 5.jpg" },
       { id: 8, name: "", price: "", image: "" },
-
-
-
-
     ]
   },
   "#gift-packages": {
     title: "Gift Packages",
-    description: "We offer thoughtfully curated gift packages for both males and females, perfect for birthdays, graduations, anniversaries, and other special occasions.\n\nAll packages can be customized to suit each client’s preferences, budget, and gifting needs, ensuring a truly personal experience.\n\nPlease Note:\n\t•\tPackage contents can be adjusted based on your preferences.\n\t•\tCustom cards, magazines, and other personalized add-ons are available at an additional fee.",
+    description: "We offer thoughtfully curated gift packages for both males and females, perfect for birthdays, graduations, anniversaries, and other special occasions.\n\nAll packages can be customized to suit each client's preferences, budget, and gifting needs, ensuring a truly personal experience.\n\nPlease Note:\n\t•\tPackage contents can be adjusted based on your preferences.\n\t•\tCustom cards, magazines, and other personalized add-ons are available at an additional fee.",
     image: "/images/package 1.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/birthday packages..jpg" },
@@ -137,6 +134,46 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 6, name: "", price: "", image: "/images/gift package 5.jpg" },
       { id: 7, name: "", price: "", image: "/images/gift package 6.jpg" },
       { id: 8, name: "", price: "", image: "/images/gift package 7.jpg" },
+    ]
+  },
+  "#props-mosaic": {
+    title: "Props & Mosaic Frames",
+    description: "Add a fun, festive touch to any celebration with our curated props and stunning mosaic photo frames. Perfect for birthdays, bridal showers, graduations, and more.",
+    image: "/images/props 1.jpg",
+    items: [
+      { id: 1, name: "", price: "", image: "/images/props 1.jpg" },
+      { id: 2, name: "", price: "", image: "/images/props 2.jpg" },
+      { id: 3, name: "", price: "", image: "/images/props 3.jpg" },
+    ]
+  },
+  "#bridal-fans": {
+    title: "Bridal Fans",
+    description: "Elegant, hand-crafted bridal fans designed to complement every bridal look. Available in a variety of colours, styles, and custom designs to suit your special day.",
+    image: "/images/bridal fan 1.jpg",
+    items: [
+      { id: 1, name: "", price: "", image: "/images/bridal fan 1.jpg" },
+      { id: 2, name: "", price: "", image: "/images/bridal fan 2.jpg" },
+      { id: 3, name: "", price: "", image: "/images/bridal fan 3.jpg" },
+    ]
+  },
+  "#dowry-wrapping": {
+    title: "Dowry Wrapping",
+    description: "Beautifully presented dowry wrapping services that honour tradition while adding a modern, luxurious touch. Custom colours and styles available to match your theme.",
+    image: "/images/dowry 1.jpg",
+    items: [
+      { id: 1, name: "", price: "", image: "/images/dowry 1.jpg" },
+      { id: 2, name: "", price: "", image: "/images/dowry 2.jpg" },
+      { id: 3, name: "", price: "", image: "/images/dowry 3.jpg" },
+    ]
+  },
+  "#money-bundles": {
+    title: "Money Bundles",
+    description: "Make your cash gift truly stand out with our beautifully arranged money bundles. Elegantly presented and perfect for birthdays, graduations, weddings, and any milestone worth celebrating.",
+    image: "/images/money bundle 1.jpg",
+    items: [
+      { id: 1, name: "", price: "", image: "/images/money bundle 1.jpg" },
+      { id: 2, name: "", price: "", image: "/images/money bundle 2.jpg" },
+      { id: 3, name: "", price: "", image: "/images/money bundle 3.jpg" },
     ]
   },
 };
@@ -411,8 +448,9 @@ export default function ServicesPage() {
                 ))}
               </div>
             ) : (
-              <div className="mb-32">
+              <div className="mb-16">
                 <Services isPreview={false} />
+                <OtherServices isPreview={false} />
               </div>
             )}
 
