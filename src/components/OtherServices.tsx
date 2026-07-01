@@ -211,7 +211,7 @@ export function OtherServices(_props: OtherServicesProps) {
             <span className="text-blue-600">Extra Magic</span>
           </h2>
           <p className="text-slate-500 max-w-lg mx-auto font-medium leading-relaxed">
-            Beyond our core offerings — these specialty services add the finishing
+            Beyond our core offerings these specialty services add the finishing
             touches that make every occasion truly unforgettable.
           </p>
           {/* Divider */}
