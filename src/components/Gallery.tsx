@@ -254,24 +254,6 @@ const galleryItems: GalleryItem[] = [
     category: "Bouquet",
   },
   {
-    id: 47,
-    image: "/images/fb 4k 4.png",
-    label: "Flower Bouquet with Baby Breath",
-    category: "Flower Bouquet",
-  },
-  {
-    id: 48,
-    image: "/images/fb 4k 5.png",
-    label: "Flower Bouquet with Baby Breath",
-    category: "Flower Bouquet",
-  },
-  {
-    id: 49,
-    image: "/images/fb 4k 6.png",
-    label: "Flower Bouquet with Baby Breath",
-    category: "Flower Bouquet",
-  },
-  {
     id: 50,
     image: "/images/flower bouquet 4k 1.jpg",
     label: "Flower Bouquet with Custom Bows",
@@ -279,20 +261,8 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 51,
-    image: "/images/rose bouquet.png",
-    label: "Flower Bouquet with Baby Breath",
-    category: "Flower Bouquet",
-  },
-  {
-    id: 51,
-    image: "images/flower bouquet a.png",
+    image: "/images/flower bouquet a.png",
     label: "Flower Bouquet with initials",
-    category: "Bouquet",
-  },
-  {
-    id: 8,
-    image: "/images/flower bouquet!.png",
-    label: " Customized Flower Bouquet",
     category: "Bouquet",
   },
 
@@ -508,19 +478,19 @@ const galleryItems: GalleryItem[] = [
   // ── Props & Mosaic Frames ────────────────────────────────
   {
     id: 80,
-    image: "/images/props 1.jpg",
+    image: "/images/props 3.jpg",
     label: "Props & Mosaic",
     category: "Props"
   },
   {
     id: 81,
-    image: "/images/props 2.jpg",
-    label: "Props & Mosaic",
+    image: "/images/mosaic frame.jpg",
+    label: " Mosaic Frame",
     category: "Props"
   },
   {
     id: 82,
-    image: "/images/props 3.jpg",
+    image: "/images/mosaic & props.jpg",
     label: "Props & Mosaic",
     category: "Props"
   },
@@ -546,25 +516,25 @@ const galleryItems: GalleryItem[] = [
   // ── Dowry Wrapping ─────────────────────────────────────────
   {
     id: 86,
-    image: "/images/dowry 1.jpg",
+    image: "/images/dowry wrapping 1.jpg",
     label: "Dowry Wrapping",
     category: "Dowry Wrapping"
   },
   {
     id: 87,
-    image: "/images/dowry 2.jpg",
+    image: "/images/dowry wrapping.jpg",
     label: "Dowry Wrapping",
     category: "Dowry Wrapping"
   },
   {
     id: 88,
-    image: "/images/dowry 3.jpg",
+    image: "/images/dwory wrapping 2.jpg",
     label: "Dowry Wrapping",
     category: "Dowry Wrapping"
   },
 ];
 
-const categories = ["All", "Birthday", "Bouquet", "Flower Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards", "Props", "Bridal Fans", "Dowry Wrapping"];
+const categories = ["All", "Birthday", "Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards", "Props", "Bridal Fans", "Dowry Wrapping"];
 
 interface GalleryProps {
   isPreview?: boolean;
