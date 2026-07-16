@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Services", href: "/services", route: "/services" },
   { label: "Gallery", href: "/gallery", route: "/gallery" },
   { label: "Training", href: "/training", route: "/training" },
+  { label: "Policies & FAQ", href: "/policies", route: "/policies" },
   { label: "Testimonials", href: "#testimonials", route: "/" },
 ];
 
@@ -54,6 +55,7 @@ const searchData = [
   { title: "Gallery", category: "Page", href: "/gallery", type: "route" },
   { title: "Training", category: "Page", href: "/training", type: "route" },
   { title: "Testimonials", category: "Section", href: "#testimonials", type: "anchor" },
+  { title: "Policies & FAQ", category: "Page", href: "/policies", type: "route" },
   // Services
   { title: "Money Bouquet", category: "Service", href: "/services#money-bouquet", type: "route" },
   { title: "Flower Bouquet", category: "Service", href: "/services#flower-bouquet", type: "route" },
