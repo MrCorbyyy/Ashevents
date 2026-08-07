@@ -1,6 +1,6 @@
 # Ashevents — Event Planning Services
 
-A frontend codebase for an Event Planning Services app (design in Figma).
+A frontend codebase for an Event Planning Services website (design in Figma).
 
 This repository implements the UI and client-side behavior for Ashevents — a service for discovering, organizing, and managing events. The original design is available on Figma: https://www.figma.com/design/K5SFcLGdS1NPNZCTwj0Q0G/Event-Planning-Services
 
