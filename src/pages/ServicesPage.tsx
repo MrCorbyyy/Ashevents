@@ -48,7 +48,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#backdrops": {
     title: "Backdrops",
     description: "Get premium backdrop prices at AshEvents. Transform your event space with our stunning backdrops, from lush floral walls and shimmering sequin panels to custom neon signs and fabric drapes. We create the perfect, photo-worthy focal point that sets the stage for magical memories and beautiful photography.",
-    image: "/images/backdrop 8.jpg",
+    image: "/images/s4.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/backdrop 2.jpg" },
       { id: 2, name: "", price: "", popular: true, image: "/images/backdrops bw.jpg" },
@@ -58,12 +58,17 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 6, name: "", price: "", image: "/images/backdrop 5.jpg" },
       { id: 7, name: "", price: "", image: "/images/backdrop 6.jpg" },
       { id: 8, name: "", price: "", image: "/images/backdrop new 1.jpg" },
+      { id: 9, name: "", price: "", image: "/images/s1.jpg" },
+      { id: 10, name: "", price: "", image: "/images/s2.jpg" },
+      { id: 11, name: "", price: "", image: "/images/s3.jpg" },
+      { id: 12, name: "", price: "", image: "/images/s4.jpg" },
+      { id: 13, name: "", price: "", image: "/images/s5.jpg" },
     ]
   },
   "#setup": {
     title: "Setups",
     description: "We offer variety of setups for birthdays, slumber parties, bridal showers, graduation parties, naming ceremonies, picnic setups , get togethers etc",
-    image: "/images/setup 1.jpg",
+    image: "/images/b4.jpg",
     items: [
       { id: 1, name: "", price: "", image: "/images/picnic setup.jpg" },
       { id: 2, name: "", price: "", popular: true, image: "/images/setup 1.jpg" },
@@ -73,6 +78,10 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 6, name: "", price: "", image: "/images/setup 33.jpg" },
       { id: 7, name: "", price: "", image: "/images/setup 34.jpg" },
       { id: 8, name: "", price: "", image: "/images/setup 35.jpg" },
+      { id: 9, name: "", price: "", image: "/images/b1.jpg" },
+      { id: 10, name: "", price: "", image: "/images/b2.jpg" },
+      { id: 11, name: "", price: "", image: "/images/b3.jpg" },
+      { id: 12, name: "", price: "", image: "/images/b4.jpg" },
     ]
   },
   "#ballon-bouquet": {

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import { Star } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
 import { FaSnapchat } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export function CEOSection() {
   return (
@@ -179,12 +180,16 @@ export function CEOSection() {
               </a>
             </div>
 
-            {/* Tagline */}
+            {/* Tagline + CTA */}
             <div className="mt-10 pt-8 border-t border-slate-100 dark:border-slate-800">
-              <p className="text-slate-900 dark:text-white font-black text-[0.82rem] uppercase tracking-[0.2em]">
-
-              </p>
-
+              <p className="text-slate-900 dark:text-white font-black text-[0.82rem] uppercase tracking-[0.2em]"></p>
+              <Link
+                to="/ceo"
+                className="inline-flex items-center gap-2.5 mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold text-[0.85rem] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 group"
+              >
+                View Full Gallery &amp; Story
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
           </motion.div>
 
