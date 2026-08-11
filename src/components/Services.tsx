@@ -21,14 +21,14 @@ const services = [
     id: 3,
     title: "Backdrops",
     description: "Custom and premium backdrops for photo opportunities — from floral walls to sequin panels, fabric drapes to neon signs.",
-    image: "/images/backdrop 8.jpg",
+    image: "/images/s5.jpg",
     anchor: "#backdrops",
   },
   {
     id: 4,
     title: "Setup",
     description: "We offer variety of setups for birthdays, slumber parties, bridal showers, graduation parties, naming ceremonies, picnic setups , get togethers etc",
-    image: "/images/picnic setup.jpg",
+    image: "/images/b2.jpg",
     anchor: "#setup",
   },
   {

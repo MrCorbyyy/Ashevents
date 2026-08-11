@@ -217,7 +217,7 @@ export default function CEOPage() {
             </motion.div>
           </div>
 
-          {/* ── Photo Gallery: ceo 1, ceo 2, ceo 3 ── */}
+          {/* ── Photo Gallery ── */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

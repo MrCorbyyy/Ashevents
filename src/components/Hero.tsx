@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 const heroSlides = [
   {
-    image: "/images/10 bouquet.4k.png",
-    label: "Money Bouquet",
+    image: "/images/s5.jpg",
+    label: "Backdrop",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
     colorClass: "bg-emerald-600",
