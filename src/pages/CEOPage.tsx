@@ -5,8 +5,8 @@ import { FaSnapchat } from "react-icons/fa";
 
 const ceoPhotos = [
   { src: "/images/ceo 1.jpg", alt: "Nana Achiaa Peprah Boadu Asha — Photo 1" },
-  { src: "/images/ceo 2.jpg", alt: "Nana Achiaa Peprah Boadu Asha — Photo 2" },
-  { src: "/images/ceo 3.jpg", alt: "Nana Achiaa Peprah Boadu Asha — Photo 3" },
+  { src: "/images/ceo 3.jpg", alt: "Nana Achiaa Peprah Boadu Asha — Photo 2" },
+  { src: "/images/ceo 2.jpg", alt: "Nana Achiaa Peprah Boadu Asha — Photo 3" },
 ];
 
 export default function CEOPage() {
