@@ -453,7 +453,7 @@ export default function ServicesPage() {
             {!showAll ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-32">
                 {currentCategory.items.map((item: any) => (
-                  <ServiceItemCard key={item.id} item={item} />
+                  <ServiceItemCard key={item.id} item={item} categoryTitle={currentCategory.title} />
                 ))}
               </div>
             ) : (
@@ -594,7 +594,9 @@ export default function ServicesPage() {
   );
 }
 
-function ServiceItemCard({ item }: { item: any }) {
+function ServiceItemCard({ item, categoryTitle }: { item: any; categoryTitle: string }) {
+  const whatsappMessage = `Hi Ashevents! I want to make enquiries on your ${categoryTitle}.`;
+
   return (
     <motion.div
       whileHover={{ y: -10 }}
@@ -614,7 +616,7 @@ function ServiceItemCard({ item }: { item: any }) {
             <p className="text-blue-400 text-[0.7rem] font-black uppercase tracking-[0.2em] mb-6">Exclusive Collection</p>
 
             <a
-              href={`https://wa.me/233596405164?text=Hi%20Ashevents%20!%20I'm%20interested%20in%20the%20${encodeURIComponent(item.name)}%20from%20your%20collection.`}
+              href={`https://wa.me/233596405164?text=${encodeURIComponent(whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full py-4 bg-white text-slate-950 rounded-2xl font-black text-[0.8rem] uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-colors"
