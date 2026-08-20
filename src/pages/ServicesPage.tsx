@@ -88,7 +88,7 @@ const servicesData: Record<string, { title: string, description: string, image: 
     description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
     image: "/images/bq 8.jpg",
     items: [
-      { id: 1, name: "Ballon Bouquet with Flowere", price: "", image: "public/images/bq 8.jpg" },
+      { id: 1, name: "Ballon Bouquet with Flowere", price: "", image: "/images/bq 8.jpg" },
       { id: 2, name: "Ballon Bouquet with Flowers", price: "", popular: true, image: "/images/bq 7.jpg" },
       { id: 3, name: "Ballon Bouquet with Snacks", price: "", image: "/images/birthday packages..jpg" },
       { id: 4, name: "Balloon Bouquet with Flowers", price: "", image: "/images/bq 1.jpg" },
