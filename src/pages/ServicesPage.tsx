@@ -7,7 +7,6 @@ import { OtherServices } from "../components/OtherServices";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 
-// Data Definitions
 const servicesData: Record<string, { title: string, description: string, image: string, items: any[] }> = {
   "#money-bouquet": {
     title: "Money Bouquet",
@@ -33,16 +32,16 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#flower-bouquet": {
     title: "Flower Bouquet",
     description: "We have both fresh and artificial flowers available. Our best seller, Faux Flowers also known as Eternal Flowers is loved for its lasting beauty and elegance.",
-    image: "/images/rose bouquet.png",
+    image: "/images/initial A.jpg",
     items: [
-      { id: 1, name: "Sweet Petite", price: "", image: "/images/flower_bouquet_4k.png" },
-      { id: 2, name: "Blossom Joy", price: "", popular: true, image: "/images/rose bouquet.png" },
-      { id: 3, name: "Magenta Elegance", price: "", image: "/images/fb 4k 2.png" },
-      { id: 4, name: "Golden Rose Initial", price: "", image: "/images/fb 4k 3.png" },
-      { id: 5, name: "Midnight Crimson", price: "", image: "/images/fb 4k 4.png" },
-      { id: 6, name: "Scripted Faith", price: "", image: "/images/fb 4k 5.png" },
-      { id: 7, name: "Heartfelt Sentiment", price: "", image: "/images/fb 4k 6.png" },
-      { id: 8, name: "Blush Collection", price: "", image: "/images/flower bouquet 4k 1.jpg" },
+      { id: 1, name: "Flower Bouquet with Initial", price: "", image: "/images/initial A.jpg" },
+      { id: 2, name: "Flower Bouquet with Baby Breathe", price: "", popular: true, image: "/images/baby breathe 1.jpg" },
+      { id: 3, name: "Flowers with Custom Bows", price: "", image: "/images/fb 4k 2.png" },
+      { id: 4, name: "Flower Bouquet with Baby Breathe", price: "", image: "/images/baby breathe 2.jpg" },
+      { id: 5, name: "Customised Flower Bouquet", price: "", image: "/images/customised 1.jpg" },
+      { id: 6, name: "Flower Bouquet with Baby Breathe", price: "", image: "public/images/baby breathe 3.jpg" },
+      { id: 7, name: "Flower Bouquet with Baby Breathe", price: "", image: "public/images/baby breathe 4.jpg" },
+      { id: 8, name: "Customised Flower Bouquet", price: "", image: "public/images/customised 2.jpg" },
     ]
   },
   "#backdrops": {
@@ -87,16 +86,16 @@ const servicesData: Record<string, { title: string, description: string, image: 
   "#ballon-bouquet": {
     title: "Ballon Bouquet",
     description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
-    image: "/images/birthday packages..jpg",
+    image: "/images/bq 8.jpg",
     items: [
-      { id: 1, name: "", price: "", image: "/images/ballon boquet 1.png" },
-      { id: 2, name: "", price: "", popular: true, image: "/images/bouquet 2.png" },
-      { id: 3, name: "", price: "", image: "/images/birthday packages..jpg" },
-      { id: 4, name: "", price: "", image: "/images/bq 1.jpg" },
-      { id: 5, name: "", price: "", image: "/images/bq 6.jpg" },
-      { id: 6, name: "", price: "", image: "/images/bq 3.jpg" },
-      { id: 7, name: "", price: "", image: "/images/bq 4.jpg" },
-      { id: 8, name: "", price: "", image: "/images/bq 5.jpg" },
+      { id: 1, name: "Ballon Bouquet with Flowere", price: "", image: "public/images/bq 8.jpg" },
+      { id: 2, name: "Ballon Bouquet with Flowers", price: "", popular: true, image: "/images/bq 7.jpg" },
+      { id: 3, name: "Ballon Bouquet with Snacks", price: "", image: "/images/birthday packages..jpg" },
+      { id: 4, name: "Balloon Bouquet with Flowers", price: "", image: "/images/bq 1.jpg" },
+      { id: 5, name: "Balloon Bouquet with Snacks", price: "", image: "/images/bq 6.jpg" },
+      { id: 6, name: "Balloon Bouquet with Snacks", price: "", image: "/images/bq 3.jpg" },
+      { id: 7, name: "Balloon Bouquet with Snacks", price: "", image: "/images/bq 4.jpg" },
+      { id: 8, name: "Balloon Bouquet with Money", price: "", image: "/images/bq 5.jpg" },
 
     ]
   },

@@ -14,7 +14,7 @@ const services = [
     id: 2,
     title: "Flower Bouquet",
     description: "We have both fresh and artificial flowers available. Our best seller, Faux Flowers also known as Eternal Flowers is loved for its lasting beauty and elegance.",
-    image: "/images/rose bouquet.png",
+    image: "/images/initial A.jpg",
     anchor: "#flower-bouquet",
   },
   {
@@ -35,7 +35,7 @@ const services = [
     id: 5,
     title: "Ballon Bouquet",
     description: "Our balloon bouquets can be customized with snacks, money, or flowers, depending on our clients’ preferences. Perfect for birthdays, graduations, naming ceremonies, and other special occasions",
-    image: "/images/bouquet 2.png",
+    image: "/images/bq 3.jpg",
     anchor: "#ballon-bouquet",
   },
   {

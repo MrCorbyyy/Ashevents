@@ -14,7 +14,7 @@ const heroSlides = [
     shadowClass: "shadow-emerald-600/20"
   },
   {
-    image: "/images/flower_bouquet_4k.png",
+    image: "/images/initial A.jpg",
     label: "Flower Bouquet",
     type: "Featured Gift",
     icon: <Star className="w-5 h-5 fill-current" />,
