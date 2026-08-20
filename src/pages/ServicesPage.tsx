@@ -39,9 +39,9 @@ const servicesData: Record<string, { title: string, description: string, image: 
       { id: 3, name: "Flowers with Custom Bows", price: "", image: "/images/fb 4k 2.png" },
       { id: 4, name: "Flower Bouquet with Baby Breathe", price: "", image: "/images/baby breathe 2.jpg" },
       { id: 5, name: "Customised Flower Bouquet", price: "", image: "/images/customised 1.jpg" },
-      { id: 6, name: "Flower Bouquet with Baby Breathe", price: "", image: "public/images/baby breathe 3.jpg" },
-      { id: 7, name: "Flower Bouquet with Baby Breathe", price: "", image: "public/images/baby breathe 4.jpg" },
-      { id: 8, name: "Customised Flower Bouquet", price: "", image: "public/images/customised 2.jpg" },
+      { id: 6, name: "Flower Bouquet with Baby Breathe", price: "", image: "/images/baby breathe 3.jpg" },
+      { id: 7, name: "Flower Bouquet with Baby Breathe", price: "", image: "/images/baby breathe 4.jpg" },
+      { id: 8, name: "Customised Flower Bouquet", price: "", image: "/images/customised 2.jpg" },
     ]
   },
   "#backdrops": {
