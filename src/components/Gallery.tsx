@@ -677,7 +677,7 @@ export function Gallery({ isPreview = false }: GalleryProps) {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {displayItems.map((item) => (
             <div
-              key={item.image}
+              key={item.id}
               className="relative rounded-2xl overflow-hidden cursor-pointer shadow-sm border border-slate-100 aspect-square"
               onClick={() => setLightboxImg(item.image)}
             >
