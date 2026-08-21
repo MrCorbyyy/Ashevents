@@ -594,7 +594,12 @@ export default function ServicesPage() {
 }
 
 function ServiceItemCard({ item, categoryTitle }: { item: any; categoryTitle: string }) {
-  const whatsappMessage = `Hi Ashevents! I want to make enquiries on your ${categoryTitle}.`;
+  const isFlowerOrBalloon = categoryTitle === "Flower Bouquet" || categoryTitle === "Ballon Bouquet";
+  const itemLabel = isFlowerOrBalloon && item.name ? item.name : categoryTitle;
+  const imageUrl = item.image ? `${window.location.origin}${item.image}` : "";
+  const whatsappMessage = imageUrl
+    ? `Hi Ash Events! I want to make enquiries on your ${itemLabel}.\n\nItem image: ${imageUrl}`
+    : `Hi Ash Events! I want to make enquiries on your ${itemLabel}.`;
 
   return (
     <motion.div

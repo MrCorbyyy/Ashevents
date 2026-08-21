@@ -68,8 +68,8 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 9,
-    image: "/images/bouquet 2.png",
-    label: "Balloon Bouquet",
+    image: "/images/bq 8.jpg",
+    label: "Balloon Bouquet with Flowers",
     category: "Balloon",
   },
   {
@@ -134,32 +134,32 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 32,
-    image: "/images/ballon boquet 1.png",
-    label: "Balloon Bouquet ",
+    image: "/images/bq 7.jpg",
+    label: "Balloon Bouquet with Flowers",
     category: "Balloon",
   },
   {
     id: 33,
-    image: "/images/bq 1.jpg",
-    label: "Balloon Bouquet ",
+    image: "/images/birthday packages..jpg",
+    label: "Balloon Bouquet with Snacks",
     category: "Balloon",
   },
   {
     id: 34,
-    image: "/images/bq 4.jpg",
-    label: "Balloon Bouquet",
+    image: "/images/bq 1.jpg",
+    label: "Balloon Bouquet with Flowers",
     category: "Balloon",
   },
   {
     id: 35,
-    image: "/images/bq 3.jpg",
-    label: "Balloon Bouquet",
+    image: "/images/bq 6.jpg",
+    label: "Balloon Bouquet with Snacks",
     category: "Balloon",
   },
   {
     id: 36,
-    image: "/images/bq 5.jpg",
-    label: "Balloon Bouquet",
+    image: "/images/bq 3.jpg",
+    label: "Balloon Bouquet with Snacks",
     category: "Balloon",
   },
   {
@@ -180,90 +180,109 @@ const galleryItems: GalleryItem[] = [
     label: " Balloon Decor",
     category: "Decor",
   },
-  // ── Bouquet ───────────────────────────────────────────────
+  // ── Money Bouquet ─────────────────────────────────────────
   {
     id: 2,
     image: "/images/10 bouquet.4k.png",
     label: "Money Bouquet",
-    category: "Bouquet",
-  },
-  {
-    id: 3,
-    image: "/images/flower_bouquet_4k.png",
-    label: "Flower Bouquet with card",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 7,
     image: "/images/money_bouquet_4k.png",
     label: "Money Bouquet",
-    category: "Bouquet",
-  },
-  {
-    id: 14,
-    image: "/images/fb 4k 2.png",
-    label: "Flower Bouquet with Custom Bows",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 17,
     image: "/images/MB 4K 5.jpg",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 40,
     image: "/images/MB 4k 1.png",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 41,
     image: "/images/MB 4K 2.png",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 42,
     image: "/images/MB 4K 3.png",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 43,
     image: "/images/MB 4K 4.jpg",
-    label: "Money Bouquet ",
-    category: "Bouquet",
+    label: "Money Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 44,
     image: "/images/MB 4K 6.jpg",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
   },
   {
     id: 45,
     image: "/images/money bouquet 22.jpg",
     label: "Money Bouquet",
-    category: "Bouquet",
+    category: "Money Bouquet",
+  },
+  // ── Flower Bouquet ────────────────────────────────────────
+  {
+    id: 3,
+    image: "/images/initial A.jpg",
+    label: "Flower Bouquet with Initial",
+    category: "Flower Bouquet",
+  },
+  {
+    id: 14,
+    image: "/images/baby breathe 1.jpg",
+    label: "Flower Bouquet with Baby Breathe",
+    category: "Flower Bouquet",
   },
   {
     id: 46,
-    image: "/images/fb 4k 3.png",
-    label: "Flower Bouquet with Custom Bows",
-    category: "Bouquet",
+    image: "/images/fb 4k 2.png",
+    label: "Flowers with Custom Bows",
+    category: "Flower Bouquet",
   },
   {
     id: 50,
-    image: "/images/flower bouquet 4k 1.jpg",
-    label: "Flower Bouquet with Custom Bows",
-    category: "Bouquet",
+    image: "/images/baby breathe 2.jpg",
+    label: "Flower Bouquet with Baby Breathe",
+    category: "Flower Bouquet",
   },
   {
     id: 51,
-    image: "/images/flower bouquet a.png",
-    label: "Flower Bouquet with initials",
-    category: "Bouquet",
+    image: "/images/customised 1.jpg",
+    label: "Customised Flower Bouquet",
+    category: "Flower Bouquet",
+  },
+  {
+    id: 90,
+    image: "/images/baby breathe 3.jpg",
+    label: "Flower Bouquet with Baby Breathe",
+    category: "Flower Bouquet",
+  },
+  {
+    id: 91,
+    image: "/images/baby breathe 4.jpg",
+    label: "Flower Bouquet with Baby Breathe",
+    category: "Flower Bouquet",
+  },
+  {
+    id: 92,
+    image: "/images/customised 2.jpg",
+    label: "Customised Flower Bouquet",
+    category: "Flower Bouquet",
   },
 
   // ── Backdrop ──────────────────────────────────────────────
@@ -353,39 +372,45 @@ const galleryItems: GalleryItem[] = [
   },
   // ── Gift ──────────────────────────────────────────────────
   {
-    id: 62,
+    id: 100,
     image: "/images/gift package 3.jpg",
     label: "Gift Package",
     category: "Gift",
   },
   {
-    id: 63,
+    id: 101,
     image: "/images/gift package 4.jpg",
     label: "Gift Package",
     category: "Gift",
   },
   {
-    id: 64,
+    id: 102,
     image: "/images/gift package 5.jpg",
     label: "Gift Package",
     category: "Gift",
   },
   {
-    id: 65,
+    id: 103,
     image: "/images/gift package 6.jpg",
     label: "Gift Package",
     category: "Gift",
   },
   {
-    id: 66,
+    id: 104,
     image: "/images/gift package 7.jpg",
     label: "Gift Package",
     category: "Gift",
   },
   {
-    id: 62,
-    image: "/images/bq 2.jpg",
-    label: "Balloon Bouquet",
+    id: 105,
+    image: "/images/bq 4.jpg",
+    label: "Balloon Bouquet with Snacks",
+    category: "Balloon",
+  },
+  {
+    id: 89,
+    image: "/images/bq 5.jpg",
+    label: "Balloon Bouquet with Money",
     category: "Balloon",
   },
   // ── Setup / Ceremony ──────────────────────────────────────
@@ -396,25 +421,25 @@ const galleryItems: GalleryItem[] = [
     category: "Setups",
   },
   {
-    id: 63,
+    id: 106,
     image: "/images/setup 2.jpg",
-    label: " Setup",
+    label: "Setup",
     category: "Setups",
   },
   {
-    id: 64,
+    id: 107,
     image: "/images/setup 3.jpg",
     label: "Ceremony Setup",
     category: "Setups",
   },
   {
-    id: 65,
+    id: 108,
     image: "/images/setup 33.jpg",
-    label: " Setup",
+    label: "Setup",
     category: "Setups",
   },
   {
-    id: 66,
+    id: 109,
     image: "/images/setup 34.jpg",
     label: "Banquet Setup",
     category: "Setups",
@@ -527,42 +552,42 @@ const galleryItems: GalleryItem[] = [
     id: 83,
     image: "/images/fb.jpg",
     label: "Flower Bouquet with Card",
-    category: "Bouquet",
+    category: "Flower Bouquet",
   },
   // ── Props & Mosaic Frames ────────────────────────────────
   {
-    id: 80,
+    id: 110,
     image: "/images/props 3.jpg",
     label: "Props & Mosaic",
     category: "Props"
   },
   {
-    id: 81,
+    id: 111,
     image: "/images/mosaic frame.jpg",
     label: " Mosaic Frame",
     category: "Props"
   },
   {
-    id: 82,
+    id: 112,
     image: "/images/mosaic & props.jpg",
     label: "Props & Mosaic",
     category: "Props"
   },
   // ── Bridal Fans ──────────────────────────────────────────
   {
-    id: 83,
+    id: 113,
     image: "/images/bridal fan 1.jpg",
     label: "Bridal Fan",
     category: "Bridal Fans"
   },
   {
-    id: 84,
+    id: 114,
     image: "/images/bridal fan 2.jpg",
     label: "Bridal Fan",
     category: "Bridal Fans"
   },
   {
-    id: 85,
+    id: 115,
     image: "/images/bridal fan 3.jpg",
     label: "Bridal Fan",
     category: "Bridal Fans"
@@ -588,7 +613,7 @@ const galleryItems: GalleryItem[] = [
   },
 ];
 
-const categories = ["All", "Birthday", "Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards", "Props", "Bridal Fans", "Dowry Wrapping"];
+const categories = ["All", "Birthday", "Flower Bouquet", "Money Bouquet", "Balloon", "Backdrop", "Decor", "Setups", "Gift", "Cards", "Props", "Bridal Fans", "Dowry Wrapping"];
 
 interface GalleryProps {
   isPreview?: boolean;
@@ -652,7 +677,7 @@ export function Gallery({ isPreview = false }: GalleryProps) {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {displayItems.map((item) => (
             <div
-              key={item.id}
+              key={item.image}
               className="relative rounded-2xl overflow-hidden cursor-pointer shadow-sm border border-slate-100 aspect-square"
               onClick={() => setLightboxImg(item.image)}
             >
