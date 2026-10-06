@@ -484,7 +484,7 @@ export default function ServicesPage() {
                         transition={{ duration: 1, repeat: Infinity, repeatDelay: 0.5 }}
                         className="w-2 h-2 rounded-full bg-white inline-block"
                       />
-                      Temporarily On Hold
+                       On Hold
                     </div>
                     <h3 className="text-slate-900 text-[1.6rem] md:text-[2rem] font-black tracking-tight leading-tight mb-3">
                       Money Bouquet is{" "}
@@ -500,7 +500,7 @@ export default function ServicesPage() {
                       💕
                     </h3>
                     <p className="text-slate-600 font-medium leading-relaxed max-w-xl text-[1rem]">
-                      We love creating beautiful money bouquets for you! We are currently on a brief hold on this service and will be back soon with even more stunning designs. 🎀
+                      We love creating beautiful money bouquets for you! We are currently on a brief hold on this service. 🎀
                       <br />
                       <span className="text-rose-500 font-bold">Thank you so much for your patience and continued love & support!</span>
                     </p>
@@ -515,7 +515,7 @@ export default function ServicesPage() {
                     >
                       🎀
                     </motion.div>
-                    <span className="text-xs font-black text-rose-400 uppercase tracking-widest">Back Soon!</span>
+                    <span className="text-xs font-black text-rose-400 uppercase tracking-widest">Thank you!</span>
                   </div>
                 </div>
               </motion.div>
