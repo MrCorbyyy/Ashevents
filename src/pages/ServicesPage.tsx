@@ -447,6 +447,81 @@ export default function ServicesPage() {
             </div>
           )}
 
+          {/* Money Bouquet — On Hold Banner */}
+          {hash === "#money-bouquet" && (
+            <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 16, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="relative overflow-hidden rounded-[2.5rem] border border-rose-200/80 shadow-2xl shadow-rose-900/10"
+                style={{
+                  background: "linear-gradient(135deg, #fff1f5 0%, #ffe4ee 40%, #fdf0ff 100%)",
+                }}
+              >
+                {/* Decorative blobs */}
+                <div className="pointer-events-none absolute -top-10 -left-10 w-48 h-48 rounded-full bg-rose-300/20 blur-3xl" />
+                <div className="pointer-events-none absolute -bottom-10 -right-10 w-56 h-56 rounded-full bg-fuchsia-300/20 blur-3xl" />
+                <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-24 rounded-full bg-pink-200/30 blur-2xl" />
+
+                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 px-8 md:px-14 py-10 md:py-12 text-center md:text-left">
+                  {/* Icon bubble */}
+                  <motion.div
+                    animate={{ rotate: [0, -8, 8, -6, 6, 0], scale: [1, 1.05, 1] }}
+                    transition={{ duration: 3, repeat: Infinity, repeatDelay: 1.5, ease: "easeInOut" }}
+                    className="flex-shrink-0 w-20 h-20 rounded-[1.5rem] flex items-center justify-center text-5xl shadow-lg"
+                    style={{ background: "linear-gradient(135deg, #ffe4ee, #fce7f3)" }}
+                  >
+                    🌸
+                  </motion.div>
+
+                  {/* Text */}
+                  <div className="flex-1">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-3 text-[0.65rem] font-black uppercase tracking-[0.25em]"
+                      style={{ background: "linear-gradient(90deg, #f43f5e, #ec4899)", color: "#fff" }}>
+                      <motion.span
+                        animate={{ scale: [1, 1.4, 1] }}
+                        transition={{ duration: 1, repeat: Infinity, repeatDelay: 0.5 }}
+                        className="w-2 h-2 rounded-full bg-white inline-block"
+                      />
+                      Temporarily On Hold
+                    </div>
+                    <h3 className="text-slate-900 text-[1.6rem] md:text-[2rem] font-black tracking-tight leading-tight mb-3">
+                      Money Bouquet is{" "}
+                      <span
+                        style={{
+                          background: "linear-gradient(90deg, #f43f5e, #ec4899, #a855f7)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        paused for now
+                      </span>{" "}
+                      💕
+                    </h3>
+                    <p className="text-slate-600 font-medium leading-relaxed max-w-xl text-[1rem]">
+                      We love creating beautiful money bouquets for you! We are currently on a brief hold on this service and will be back soon with even more stunning designs. 🎀
+                      <br />
+                      <span className="text-rose-500 font-bold">Thank you so much for your patience and continued love & support!</span>
+                    </p>
+                  </div>
+
+                  {/* Right badge */}
+                  <div className="flex-shrink-0 hidden lg:flex flex-col items-center gap-2">
+                    <motion.div
+                      animate={{ y: [0, -6, 0] }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="text-6xl"
+                    >
+                      🎀
+                    </motion.div>
+                    <span className="text-xs font-black text-rose-400 uppercase tracking-widest">Back Soon!</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+
           {/* Main Content (Grid) */}
           <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 pb-20">
             {!showAll ? (
