@@ -168,13 +168,29 @@ export function Services({ isPreview = false }: ServicesProps) {
                 <p className="text-gray-500 text-[0.82rem] leading-[1.6] mb-6 flex-grow">
                   {service.description}
                 </p>
-                <div className="pt-4 border-t border-slate-100 mt-auto">
+                <div className="pt-4 border-t border-slate-100 mt-auto flex items-center justify-between gap-2 flex-wrap">
                   <button
                     className="px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-sm transition-all duration-300 text-[0.75rem] font-semibold hover:shadow-md active:scale-95"
                     onClick={() => handleAction(service.anchor)}
                   >
                     View More
                   </button>
+                  {service.anchor === "#money-bouquet" && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-[0.65rem] font-black uppercase tracking-wide shadow-md"
+                      style={{ background: "linear-gradient(135deg, #ef4444, #dc2626)" }}
+                    >
+                      <motion.span
+                        animate={{ opacity: [1, 0.2, 1] }}
+                        transition={{ duration: 1, repeat: Infinity }}
+                        className="w-1.5 h-1.5 rounded-full bg-white inline-block"
+                      />
+                      On Hold
+                    </motion.div>
+                  )}
                 </div>
               </div>
             </div>
